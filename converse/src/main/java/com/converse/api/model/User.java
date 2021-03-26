@@ -1,7 +1,7 @@
 package com.converse.api.model;
 
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,17 +10,19 @@ import java.io.File;
 import java.util.UUID;
 
 @Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     //UUid ?
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
-    public String firstName;
-    public String lastName;
+    private Long userId;
+    private String firstName;
+    private String lastName;
     private String email;
-    private Schedule schedule;
+//    private Schedule schedule;
     private File profilePicture;
     private String password;
-
-
 }

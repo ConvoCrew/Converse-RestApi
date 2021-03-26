@@ -1,9 +1,11 @@
 package com.converse.api.model;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+@Getter @Setter @AllArgsConstructor @NoArgsConstructor
 public class RoomByUser {
-    public Room room;
-    public Long id;
+    private Room room;
+    private Long hostId;
+
 }

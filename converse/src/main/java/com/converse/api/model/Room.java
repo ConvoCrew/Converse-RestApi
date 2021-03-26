@@ -1,24 +1,29 @@
 package com.converse.api.model;
 
 
-import lombok.Data;
+import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
 @Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Room {
-    public Status status;
-    public String title;
+    private Status status;
+    private String title;
     private String topic;
-    public int numOfParticipants;
+    private int maxNumOfParticipants;
     //true if public false is private
     boolean Accessible=true;
     private List<User> participants;
     private User host;
-    public Date liveDate;
+    private LocalDateTime liveDate;
 
-    public enum Status{LIVE, UPCOMING}
-    public enum Category{MATHEMATICS, }
+    private enum Status{LIVE, UPCOMING}
+    private enum Category{MATHEMATICS, }
 
 }
