@@ -3,9 +3,7 @@ package com.converse.api.model;
 
 import lombok.*;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.File;
 import java.util.UUID;
 
@@ -14,6 +12,7 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class User {
     @Id
     //UUid ?
@@ -22,7 +21,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-//    private Schedule schedule;
+    @Embedded
+    private Schedule schedule;
     private File profilePicture;
     private String password;
 }
