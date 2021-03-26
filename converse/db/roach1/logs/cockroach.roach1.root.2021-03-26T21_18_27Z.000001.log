@@ -1,0 +1,1211 @@
+I210326 21:18:27.304342 1 util/log/clog.go:1196  [config] file created at: 2021/03/26 21:18:27
+I210326 21:18:27.304342 1 util/log/clog.go:1196  [config] running on machine: roach1
+I210326 21:18:27.304342 1 util/log/clog.go:1196  [config] binary: CockroachDB CCL v19.2.5 (x86_64-unknown-linux-gnu, built 2020/03/16 18:27:12, go1.12.12)
+I210326 21:18:27.304342 1 util/log/clog.go:1196  [config] arguments: [/cockroach/cockroach start --insecure --advertise-addr=roach1]
+I210326 21:18:27.304342 1 util/log/clog.go:1196  line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
+I210326 21:18:27.304342 1 cli/start.go:1144  logging to directory /cockroach/cockroach-data/logs
+W210326 21:18:27.309625 1 cli/start.go:1182  RUNNING IN INSECURE MODE!
+
+- Your cluster is open for any client that can access <all your IP addresses>.
+- Any user, even root, can log in without providing a password.
+- Any user, connecting as root, can read or write any data in your cluster.
+- There is no network encryption nor authentication, and thus no confidentiality.
+
+Check out how to secure your cluster: https://www.cockroachlabs.com/docs/v19.2/secure-a-cluster.html
+I210326 21:18:27.310140 1 server/status/recorder.go:597  available memory from cgroups (8.0 EiB) is unsupported, using system memory 12 GiB instead: 
+W210326 21:18:27.310223 1 cli/start.go:1052  Using the default setting for --cache (128 MiB).
+  A significantly larger value is usually needed for good performance.
+  If you have a dedicated server a reasonable setting is --cache=.25 (3.1 GiB).
+I210326 21:18:27.310602 1 server/status/recorder.go:597  available memory from cgroups (8.0 EiB) is unsupported, using system memory 12 GiB instead: 
+W210326 21:18:27.310639 1 cli/start.go:1065  Using the default setting for --max-sql-memory (128 MiB).
+  A significantly larger value is usually needed in production.
+  If you have a dedicated server a reasonable setting is --max-sql-memory=.25 (3.1 GiB).
+I210326 21:18:27.310986 1 server/status/recorder.go:597  available memory from cgroups (8.0 EiB) is unsupported, using system memory 12 GiB instead: 
+I210326 21:18:27.311031 1 cli/start.go:1196  CockroachDB CCL v19.2.5 (x86_64-unknown-linux-gnu, built 2020/03/16 18:27:12, go1.12.12)
+W210326 21:18:27.422147 1 cli/start.go:511  running 'cockroach start' without --join is deprecated.
+Consider using 'cockroach start-single-node' or 'cockroach init' instead.
+I210326 21:18:27.445491 1 server/status/recorder.go:597  available memory from cgroups (8.0 EiB) is unsupported, using system memory 12 GiB instead: 
+I210326 21:18:27.445513 1 server/config.go:394  system total memory: 12 GiB
+I210326 21:18:27.445545 1 server/config.go:396  server configuration:
+max offset             500000000
+cache size             128 MiB
+SQL memory pool size   128 MiB
+scan interval          10m0s
+scan min idle time     10ms
+scan max idle time     1s
+event log enabled      true
+I210326 21:18:27.445559 1 cli/start.go:1030  using local environment variables: COCKROACH_CHANNEL=official-docker
+I210326 21:18:27.445577 1 cli/start.go:1037  process identity: uid 0 euid 0 gid 0 egid 0
+I210326 21:18:27.445623 1 cli/start.go:644  starting cockroach node
+I210326 21:18:27.449371 27 storage/engine/rocksdb.go:622  opening rocksdb instance at "/cockroach/cockroach-data/cockroach-temp458580656"
+I210326 21:18:27.627914 27 server/server.go:928  [n?] monitoring forward clock jumps based on server.clock.forward_jump_check_enabled
+I210326 21:18:27.631828 27 storage/engine/rocksdb.go:622  opening rocksdb instance at "/cockroach/cockroach-data"
+I210326 21:18:27.740718 27 server/config.go:502  [n?] 1 storage engine initialized
+I210326 21:18:27.740733 27 server/config.go:505  [n?] RocksDB cache size: 128 MiB
+I210326 21:18:27.740739 27 server/config.go:505  [n?] store 0: RocksDB, max size 0 B, max open file limit 1043576
+I210326 21:18:27.776829 27 server/server.go:1386  [n?] no stores bootstrapped and --join flag specified, awaiting init command or join with an already initialized node.
+I210326 21:18:27.776851 27 server/server.go:1396  [n?] **** add additional nodes by specifying --join=roach1:26257
+I210326 21:18:27.778957 46 gossip/server.go:227  [n?] received initial cluster-verification connection from roach3:26257
+I210326 21:18:27.860405 27 server/node.go:326  [n?] **** cluster c10acd2c-255d-47db-ba50-5ad4ec77f7ae has been created
+I210326 21:18:27.860628 27 gossip/gossip.go:394  [n1] NodeDescriptor set to node_id:1 address:<network_field:"tcp" address_field:"roach1:26257" > attrs:<> locality:<> ServerVersion:<major_val:19 minor_val:2 patch:0 unstable:0 > build_tag:"v19.2.5" started_at:1616793507860525700 cluster_name:"" sql_address:<network_field:"tcp" address_field:"roach1:26257" > 
+I210326 21:18:27.882381 141 gossip/server.go:227  [n1] received initial cluster-verification connection from roach2:26257
+I210326 21:18:27.883022 141 gossip/server.go:227  [n1] received initial cluster-verification connection from roach2:26257
+W210326 21:18:27.907068 232 storage/store.go:1530  [n1,s1,r6/1:/Table/{SystemCon…-11}] could not gossip system config: [NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown
+I210326 21:18:27.936796 27 server/node.go:431  [n1] initialized store [n1,s1]: disk (capacity=237 GiB, available=86 GiB, used=73 KiB, logicalBytes=11 KiB), ranges=24, leases=2, queries=0.00, writes=0.00, bytesPerReplica={p10=0.00 p25=0.00 p50=0.00 p75=0.00 p90=166.00 pMax=9955.00}, writesPerReplica={p10=0.00 p25=0.00 p50=0.00 p75=0.00 p90=0.00 pMax=0.00}
+I210326 21:18:27.936898 27 storage/stores.go:240  [n1] read 0 node addresses from persistent storage
+I210326 21:18:27.937030 27 server/node.go:645  [n1] connecting to gossip network to verify cluster ID...
+I210326 21:18:27.937052 27 server/node.go:665  [n1] node connected via gossip and verified as part of cluster "c10acd2c-255d-47db-ba50-5ad4ec77f7ae"
+I210326 21:18:27.937176 27 server/node.go:512  [n1] node=1: started with [<no-attributes>=/cockroach/cockroach-data] engine(s) and attributes []
+I210326 21:18:27.940352 27 server/server.go:1514  [n1] starting http server at [::]:8080 (use: roach1:8080)
+I210326 21:18:27.940367 27 server/server.go:1521  [n1] starting grpc/postgres server at [::]:26257
+I210326 21:18:27.940378 27 server/server.go:1522  [n1] advertising CockroachDB node at roach1:26257
+I210326 21:18:27.984765 29 storage/stores.go:259  [n1] wrote 1 node addresses to persistent storage
+I210326 21:18:28.034977 279 sql/event_log.go:130  [n1,intExec=optInToDiagnosticsStatReporting] Event: "set_cluster_setting", target: 0, info: {SettingName:diagnostics.reporting.enabled Value:true User:root}
+I210326 21:18:28.075537 59 sql/event_log.go:130  [n1,intExec=set-setting] Event: "set_cluster_setting", target: 0, info: {SettingName:version Value:19.2 User:root}
+I210326 21:18:28.099188 346 sql/event_log.go:130  [n1,intExec=disableNetTrace] Event: "set_cluster_setting", target: 0, info: {SettingName:trace.debug.enable Value:false User:root}
+I210326 21:18:28.182556 699 sql/event_log.go:130  [n1,intExec=initializeClusterSecret] Event: "set_cluster_setting", target: 0, info: {SettingName:cluster.secret Value:4203a1ef-cefa-4a6b-ba7e-ba6f841dfca0 User:root}
+I210326 21:18:28.222622 639 sql/event_log.go:130  [n1,intExec=create-default-db] Event: "create_database", target: 50, info: {DatabaseName:defaultdb Statement:CREATE DATABASE IF NOT EXISTS defaultdb User:root}
+I210326 21:18:28.233549 711 sql/event_log.go:130  [n1,intExec=create-default-db] Event: "create_database", target: 51, info: {DatabaseName:postgres Statement:CREATE DATABASE IF NOT EXISTS postgres User:root}
+I210326 21:18:28.312799 27 server/server.go:1590  [n1] done ensuring all necessary migrations have run
+I210326 21:18:28.312835 27 server/server.go:1841  [n1] serving sql connections
+I210326 21:18:28.312891 27 cli/start.go:803  [config] clusterID: c10acd2c-255d-47db-ba50-5ad4ec77f7ae
+I210326 21:18:28.312908 27 cli/start.go:812  node startup completed:
+CockroachDB node starting at 2021-03-26 21:18:28.3128507 +0000 UTC (took 1.0s)
+build:               CCL v19.2.5 @ 2020/03/16 18:27:12 (go1.12.12)
+webui:               http://roach1:8080
+sql:                 postgresql://root@roach1:26257?sslmode=disable
+RPC client flags:    /cockroach/cockroach <client cmd> --host=roach1:26257 --insecure
+logs:                /cockroach/cockroach-data/logs
+temp dir:            /cockroach/cockroach-data/cockroach-temp458580656
+external I/O path:   /cockroach/cockroach-data/extern
+store[0]:            path=/cockroach/cockroach-data
+status:              initialized new cluster
+clusterID:           c10acd2c-255d-47db-ba50-5ad4ec77f7ae
+nodeID:              1
+I210326 21:18:28.315964 932 server/server_update.go:53  [n1] no need to upgrade, cluster already at the newest version
+I210326 21:18:28.329683 934 sql/event_log.go:130  [n1] Event: "node_join", target: 1, info: {Descriptor:{NodeID:1 Address:roach1:26257 Attrs: Locality: ServerVersion:19.2 BuildTag:v19.2.5 StartedAt:1616793507860525700 LocalityAddress:[] ClusterName: SQLAddress:roach1:26257} ClusterID:c10acd2c-255d-47db-ba50-5ad4ec77f7ae StartedAt:1616793507860525700 LastUp:1616793507860525700}
+I210326 21:18:28.766603 1322 gossip/server.go:227  [n1] received initial cluster-verification connection from roach3:26257
+I210326 21:18:28.767562 1322 gossip/server.go:227  [n1] received initial cluster-verification connection from roach3:26257
+I210326 21:18:28.798134 29 storage/stores.go:259  [n1] wrote 2 node addresses to persistent storage
+I210326 21:18:28.882732 278 storage/replica_command.go:1586  [n1,replicate,s1,r17/1:/Table/2{1-2}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r17:/Table/2{1-2} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:28.885056 936 server/updates.go:267  [n1] A new version is available: 20.2.6, details: https://www.cockroachlabs.com/docs/releases/v20.2.6.html
+I210326 21:18:28.907635 278 storage/replica_raft.go:291  [n1,s1,r17/1:/Table/2{1-2}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:28.924018 278 storage/store_snapshot.go:988  [n1,replicate,s1,r17/1:/Table/2{1-2}] sending LEARNER snapshot c5667274 at applied index 22
+I210326 21:18:28.924195 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r17/1:/Table/2{1-2}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:28.924442 1356 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r17/1:/Table/2{1-2}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:29.273144 278 storage/replica_command.go:1586  [n1,replicate,s1,r17/1:/Table/2{1-2}] change replicas (add [(n3,s3):2] remove []): existing descriptor r17:/Table/2{1-2} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:29.279297 278 storage/replica_raft.go:291  [n1,s1,r17/1:/Table/2{1-2}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:29.303851 278 storage/replica_command.go:1586  [n1,replicate,s1,r17/1:/Table/2{1-2}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r17:/Table/2{1-2} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:29.321400 278 storage/replica_raft.go:291  [n1,s1,r17/1:/Table/2{1-2}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:29.327331 278 storage/store_snapshot.go:988  [n1,replicate,s1,r17/1:/Table/2{1-2}] sending LEARNER snapshot e1f922c9 at applied index 26
+I210326 21:18:29.327531 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r17/1:/Table/2{1-2}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 15, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:29.336358 1592 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r17/1:/Table/2{1-2}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:29.458104 125 gossip/gossip.go:1531  [n1] node has connected to cluster via gossip
+I210326 21:18:29.458302 125 storage/stores.go:259  [n1] wrote 2 node addresses to persistent storage
+I210326 21:18:29.646093 278 storage/replica_command.go:1586  [n1,replicate,s1,r17/1:/Table/2{1-2}] change replicas (add [(n2,s2):3] remove []): existing descriptor r17:/Table/2{1-2} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:29.664200 278 storage/replica_raft.go:291  [n1,s1,r17/1:/Table/2{1-2}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:29.679127 278 storage/replica_command.go:1586  [n1,replicate,s1,r3/1:/System/{NodeLive…-tsd}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r3:/System/{NodeLivenessMax-tsd} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:29.702594 278 storage/replica_raft.go:291  [n1,s1,r3/1:/System/{NodeLive…-tsd}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:29.711198 278 storage/store_snapshot.go:988  [n1,replicate,s1,r3/1:/System/{NodeLive…-tsd}] sending LEARNER snapshot 6c810fe2 at applied index 57
+I210326 21:18:29.711380 1618 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r3/1:/System/{NodeLive…-tsd}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:29.711593 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r3/1:/System/{NodeLive…-tsd}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 42, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:30.057132 278 storage/replica_command.go:1586  [n1,replicate,s1,r3/1:/System/{NodeLive…-tsd}] change replicas (add [(n2,s2):2] remove []): existing descriptor r3:/System/{NodeLivenessMax-tsd} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:30.075409 278 storage/replica_raft.go:291  [n1,s1,r3/1:/System/{NodeLive…-tsd}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:30.080404 278 storage/replica_command.go:1586  [n1,replicate,s1,r3/1:/System/{NodeLive…-tsd}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r3:/System/{NodeLivenessMax-tsd} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:30.110091 278 storage/replica_raft.go:291  [n1,s1,r3/1:/System/{NodeLive…-tsd}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:30.125094 278 storage/store_snapshot.go:988  [n1,replicate,s1,r3/1:/System/{NodeLive…-tsd}] sending LEARNER snapshot 089b11d6 at applied index 62
+I210326 21:18:30.125264 1622 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r3/1:/System/{NodeLive…-tsd}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:30.125451 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r3/1:/System/{NodeLive…-tsd}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 46, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:30.442442 278 storage/replica_command.go:1586  [n1,replicate,s1,r3/1:/System/{NodeLive…-tsd}] change replicas (add [(n3,s3):3] remove []): existing descriptor r3:/System/{NodeLivenessMax-tsd} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:30.447191 278 storage/replica_raft.go:291  [n1,s1,r3/1:/System/{NodeLive…-tsd}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:30.467314 278 storage/replica_command.go:1586  [n1,replicate,s1,r8/1:/Table/1{2-3}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r8:/Table/1{2-3} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:30.479051 278 storage/replica_raft.go:291  [n1,s1,r8/1:/Table/1{2-3}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:30.487721 278 storage/store_snapshot.go:988  [n1,replicate,s1,r8/1:/Table/1{2-3}] sending LEARNER snapshot 297a7486 at applied index 49
+I210326 21:18:30.487969 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r8/1:/Table/1{2-3}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 71, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:30.490016 1569 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r8/1:/Table/1{2-3}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:30.832152 278 storage/replica_command.go:1586  [n1,replicate,s1,r8/1:/Table/1{2-3}] change replicas (add [(n3,s3):2] remove []): existing descriptor r8:/Table/1{2-3} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:30.844601 278 storage/replica_raft.go:291  [n1,s1,r8/1:/Table/1{2-3}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:30.855174 278 storage/replica_command.go:1586  [n1,replicate,s1,r8/1:/Table/1{2-3}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r8:/Table/1{2-3} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:30.882900 278 storage/replica_raft.go:291  [n1,s1,r8/1:/Table/1{2-3}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:30.893703 278 storage/store_snapshot.go:988  [n1,replicate,s1,r8/1:/Table/1{2-3}] sending LEARNER snapshot 5c6651db at applied index 53
+I210326 21:18:30.893922 1703 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r8/1:/Table/1{2-3}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:30.894007 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r8/1:/Table/1{2-3}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 75, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:31.232581 278 storage/replica_command.go:1586  [n1,replicate,s1,r8/1:/Table/1{2-3}] change replicas (add [(n2,s2):3] remove []): existing descriptor r8:/Table/1{2-3} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:31.243756 278 storage/replica_raft.go:291  [n1,s1,r8/1:/Table/1{2-3}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:31.272062 278 storage/replica_command.go:1586  [n1,replicate,s1,r7/1:/Table/1{1-2}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r7:/Table/1{1-2} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:31.300035 278 storage/replica_raft.go:291  [n1,s1,r7/1:/Table/1{1-2}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:31.315356 278 storage/store_snapshot.go:988  [n1,replicate,s1,r7/1:/Table/1{1-2}] sending LEARNER snapshot d9998b2a at applied index 19
+I210326 21:18:31.315456 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r7/1:/Table/1{1-2}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:31.315559 1708 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r7/1:/Table/1{1-2}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:31.631655 278 storage/replica_command.go:1586  [n1,replicate,s1,r7/1:/Table/1{1-2}] change replicas (add [(n3,s3):2] remove []): existing descriptor r7:/Table/1{1-2} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:31.637177 278 storage/replica_raft.go:291  [n1,s1,r7/1:/Table/1{1-2}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:31.651256 278 storage/replica_command.go:1586  [n1,replicate,s1,r7/1:/Table/1{1-2}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r7:/Table/1{1-2} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:31.673076 278 storage/replica_raft.go:291  [n1,s1,r7/1:/Table/1{1-2}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:31.680896 278 storage/store_snapshot.go:988  [n1,replicate,s1,r7/1:/Table/1{1-2}] sending LEARNER snapshot e5ae159f at applied index 23
+I210326 21:18:31.680982 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r7/1:/Table/1{1-2}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:31.681007 1780 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r7/1:/Table/1{1-2}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:31.968842 278 storage/replica_command.go:1586  [n1,replicate,s1,r7/1:/Table/1{1-2}] change replicas (add [(n2,s2):3] remove []): existing descriptor r7:/Table/1{1-2} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:31.983100 278 storage/replica_raft.go:291  [n1,s1,r7/1:/Table/1{1-2}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:31.999395 278 storage/replica_command.go:1586  [n1,replicate,s1,r19/1:/Table/2{3-4}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r19:/Table/2{3-4} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:32.006732 278 storage/replica_raft.go:291  [n1,s1,r19/1:/Table/2{3-4}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:32.014843 278 storage/store_snapshot.go:988  [n1,replicate,s1,r19/1:/Table/2{3-4}] sending LEARNER snapshot 9ca85e68 at applied index 17
+I210326 21:18:32.014972 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r19/1:/Table/2{3-4}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 10, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:32.014986 1755 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r19/1:/Table/2{3-4}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:32.373044 278 storage/replica_command.go:1586  [n1,replicate,s1,r19/1:/Table/2{3-4}] change replicas (add [(n2,s2):2] remove []): existing descriptor r19:/Table/2{3-4} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:32.392577 278 storage/replica_raft.go:291  [n1,s1,r19/1:/Table/2{3-4}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:32.401961 278 storage/replica_command.go:1586  [n1,replicate,s1,r19/1:/Table/2{3-4}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r19:/Table/2{3-4} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:32.431665 278 storage/replica_raft.go:291  [n1,s1,r19/1:/Table/2{3-4}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:32.443614 278 storage/store_snapshot.go:988  [n1,replicate,s1,r19/1:/Table/2{3-4}] sending LEARNER snapshot 8f8b319e at applied index 21
+I210326 21:18:32.443731 1814 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r19/1:/Table/2{3-4}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:32.443784 278 storage/store_snapshot.go:1031  [n1,replicate,s1,r19/1:/Table/2{3-4}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 14, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:32.709300 278 storage/replica_command.go:1586  [n1,replicate,s1,r19/1:/Table/2{3-4}] change replicas (add [(n3,s3):3] remove []): existing descriptor r19:/Table/2{3-4} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:32.725379 278 storage/replica_raft.go:291  [n1,s1,r19/1:/Table/2{3-4}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:32.733058 278 storage/queue.go:1188  [n1,replicate] purgatory is now empty
+I210326 21:18:32.733585 1759 storage/replica_command.go:1586  [n1,replicate,s1,r9/1:/Table/1{3-4}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r9:/Table/1{3-4} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:32.764470 1759 storage/replica_raft.go:291  [n1,s1,r9/1:/Table/1{3-4}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:32.771294 1759 storage/store_snapshot.go:988  [n1,replicate,s1,r9/1:/Table/1{3-4}] sending LEARNER snapshot f9bb2e52 at applied index 71
+I210326 21:18:32.771466 1737 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r9/1:/Table/1{3-4}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:32.771509 1759 storage/store_snapshot.go:1031  [n1,replicate,s1,r9/1:/Table/1{3-4}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 111, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:33.088546 1759 storage/replica_command.go:1586  [n1,replicate,s1,r9/1:/Table/1{3-4}] change replicas (add [(n2,s2):2] remove []): existing descriptor r9:/Table/1{3-4} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:33.098520 1759 storage/replica_raft.go:291  [n1,s1,r9/1:/Table/1{3-4}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:33.118117 1759 storage/replica_command.go:1586  [n1,replicate,s1,r9/1:/Table/1{3-4}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r9:/Table/1{3-4} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:33.138745 1759 storage/replica_raft.go:291  [n1,s1,r9/1:/Table/1{3-4}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:33.146624 1759 storage/store_snapshot.go:988  [n1,replicate,s1,r9/1:/Table/1{3-4}] sending LEARNER snapshot 5fd91a35 at applied index 77
+I210326 21:18:33.146832 1742 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r9/1:/Table/1{3-4}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:33.147001 1759 storage/store_snapshot.go:1031  [n1,replicate,s1,r9/1:/Table/1{3-4}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 125, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:33.452280 1759 storage/replica_command.go:1586  [n1,replicate,s1,r9/1:/Table/1{3-4}] change replicas (add [(n3,s3):3] remove []): existing descriptor r9:/Table/1{3-4} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:33.470304 1759 storage/replica_raft.go:291  [n1,s1,r9/1:/Table/1{3-4}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:33.475170 1909 storage/replica_command.go:1586  [n1,replicate,s1,r18/1:/Table/2{2-3}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r18:/Table/2{2-3} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:33.490574 1909 storage/replica_raft.go:291  [n1,s1,r18/1:/Table/2{2-3}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:33.510683 1909 storage/store_snapshot.go:988  [n1,replicate,s1,r18/1:/Table/2{2-3}] sending LEARNER snapshot f2bbf5ea at applied index 18
+I210326 21:18:33.511612 1909 storage/store_snapshot.go:1031  [n1,replicate,s1,r18/1:/Table/2{2-3}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:33.513483 1924 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r18/1:/Table/2{2-3}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:33.844222 1909 storage/replica_command.go:1586  [n1,replicate,s1,r18/1:/Table/2{2-3}] change replicas (add [(n2,s2):2] remove []): existing descriptor r18:/Table/2{2-3} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:33.860995 1909 storage/replica_raft.go:291  [n1,s1,r18/1:/Table/2{2-3}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:33.866329 1909 storage/replica_command.go:1586  [n1,replicate,s1,r18/1:/Table/2{2-3}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r18:/Table/2{2-3} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:33.889220 1909 storage/replica_raft.go:291  [n1,s1,r18/1:/Table/2{2-3}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:33.902607 1909 storage/store_snapshot.go:988  [n1,replicate,s1,r18/1:/Table/2{2-3}] sending LEARNER snapshot ccf77905 at applied index 22
+I210326 21:18:33.902709 1909 storage/store_snapshot.go:1031  [n1,replicate,s1,r18/1:/Table/2{2-3}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:33.902723 1856 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r18/1:/Table/2{2-3}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:33.937951 1857 storage/replica_consistency.go:229  [n1,consistencyChecker,s1,r4/1:/System{/tsd-tse}] triggering stats recomputation to resolve delta of {ContainsEstimates:true LastUpdateNanos:1616793508876794900 IntentAge:0 GCBytesAge:0 LiveBytes:-100599 LiveCount:-1992 KeyBytes:-96357 KeyCount:-1992 ValBytes:-4242 ValCount:-1992 IntentBytes:0 IntentCount:0 SysBytes:0 SysCount:0}
+I210326 21:18:34.214063 1909 storage/replica_command.go:1586  [n1,replicate,s1,r18/1:/Table/2{2-3}] change replicas (add [(n3,s3):3] remove []): existing descriptor r18:/Table/2{2-3} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:34.238159 1909 storage/replica_raft.go:291  [n1,s1,r18/1:/Table/2{2-3}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:34.249584 1958 storage/replica_command.go:1586  [n1,replicate,s1,r22/1:/Table/2{6-7}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r22:/Table/2{6-7} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:34.279977 1958 storage/replica_raft.go:291  [n1,s1,r22/1:/Table/2{6-7}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:34.287269 1958 storage/store_snapshot.go:988  [n1,replicate,s1,r22/1:/Table/2{6-7}] sending LEARNER snapshot 21e1f057 at applied index 18
+I210326 21:18:34.287366 1958 storage/store_snapshot.go:1031  [n1,replicate,s1,r22/1:/Table/2{6-7}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:34.287379 1964 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r22/1:/Table/2{6-7}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:34.600345 1958 storage/replica_command.go:1586  [n1,replicate,s1,r22/1:/Table/2{6-7}] change replicas (add [(n3,s3):2] remove []): existing descriptor r22:/Table/2{6-7} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:34.622514 1958 storage/replica_raft.go:291  [n1,s1,r22/1:/Table/2{6-7}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:34.626039 1958 storage/replica_command.go:1586  [n1,replicate,s1,r22/1:/Table/2{6-7}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r22:/Table/2{6-7} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:34.659360 1958 storage/replica_raft.go:291  [n1,s1,r22/1:/Table/2{6-7}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:34.666645 1958 storage/store_snapshot.go:988  [n1,replicate,s1,r22/1:/Table/2{6-7}] sending LEARNER snapshot cbef3486 at applied index 22
+I210326 21:18:34.666783 1958 storage/store_snapshot.go:1031  [n1,replicate,s1,r22/1:/Table/2{6-7}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:34.667109 1664 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r22/1:/Table/2{6-7}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:34.997358 1958 storage/replica_command.go:1586  [n1,replicate,s1,r22/1:/Table/2{6-7}] change replicas (add [(n2,s2):3] remove []): existing descriptor r22:/Table/2{6-7} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:35.027058 1958 storage/replica_raft.go:291  [n1,s1,r22/1:/Table/2{6-7}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:35.030124 1983 storage/replica_command.go:1586  [n1,replicate,s1,r24/1:/{Table/28-Max}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r24:/{Table/28-Max} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:35.034881 1983 storage/replica_raft.go:291  [n1,s1,r24/1:/{Table/28-Max}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:35.058578 1983 storage/store_snapshot.go:988  [n1,replicate,s1,r24/1:/{Table/28-Max}] sending LEARNER snapshot ccbe387d at applied index 18
+I210326 21:18:35.058657 2068 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r24/1:/{Table/28-Max}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:35.058703 1983 storage/store_snapshot.go:1031  [n1,replicate,s1,r24/1:/{Table/28-Max}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:35.342334 1983 storage/replica_command.go:1586  [n1,replicate,s1,r24/1:/{Table/28-Max}] change replicas (add [(n3,s3):2] remove []): existing descriptor r24:/{Table/28-Max} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:35.359032 1983 storage/replica_raft.go:291  [n1,s1,r24/1:/{Table/28-Max}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:35.378845 1983 storage/replica_command.go:1586  [n1,replicate,s1,r24/1:/{Table/28-Max}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r24:/{Table/28-Max} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:35.397386 1983 storage/replica_raft.go:291  [n1,s1,r24/1:/{Table/28-Max}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:35.421111 1983 storage/store_snapshot.go:988  [n1,replicate,s1,r24/1:/{Table/28-Max}] sending LEARNER snapshot 54a4f410 at applied index 22
+I210326 21:18:35.421269 1983 storage/store_snapshot.go:1031  [n1,replicate,s1,r24/1:/{Table/28-Max}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:35.421276 2043 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r24/1:/{Table/28-Max}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:35.707438 1983 storage/replica_command.go:1586  [n1,replicate,s1,r24/1:/{Table/28-Max}] change replicas (add [(n2,s2):3] remove []): existing descriptor r24:/{Table/28-Max} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:35.729929 1983 storage/replica_raft.go:291  [n1,s1,r24/1:/{Table/28-Max}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:35.748512 2062 storage/replica_command.go:1586  [n1,replicate,s1,r16/1:/Table/2{0-1}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r16:/Table/2{0-1} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:35.765316 2062 storage/replica_raft.go:291  [n1,s1,r16/1:/Table/2{0-1}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:35.796636 2062 storage/store_snapshot.go:988  [n1,replicate,s1,r16/1:/Table/2{0-1}] sending LEARNER snapshot 68914e2a at applied index 18
+I210326 21:18:35.796772 2062 storage/store_snapshot.go:1031  [n1,replicate,s1,r16/1:/Table/2{0-1}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:35.796925 2081 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r16/1:/Table/2{0-1}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:36.063920 2062 storage/replica_command.go:1586  [n1,replicate,s1,r16/1:/Table/2{0-1}] change replicas (add [(n2,s2):2] remove []): existing descriptor r16:/Table/2{0-1} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:36.088608 2062 storage/replica_raft.go:291  [n1,s1,r16/1:/Table/2{0-1}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:36.091548 2062 storage/replica_command.go:1586  [n1,replicate,s1,r16/1:/Table/2{0-1}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r16:/Table/2{0-1} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:36.122708 2062 storage/replica_raft.go:291  [n1,s1,r16/1:/Table/2{0-1}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:36.142025 2062 storage/store_snapshot.go:988  [n1,replicate,s1,r16/1:/Table/2{0-1}] sending LEARNER snapshot d2a90081 at applied index 23
+I210326 21:18:36.142134 2062 storage/store_snapshot.go:1031  [n1,replicate,s1,r16/1:/Table/2{0-1}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:36.142175 2047 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r16/1:/Table/2{0-1}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:36.418257 2062 storage/replica_command.go:1586  [n1,replicate,s1,r16/1:/Table/2{0-1}] change replicas (add [(n3,s3):3] remove []): existing descriptor r16:/Table/2{0-1} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:36.439509 2062 storage/replica_raft.go:291  [n1,s1,r16/1:/Table/2{0-1}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:36.442871 2130 storage/replica_command.go:1586  [n1,replicate,s1,r4/1:/System{/tsd-tse}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r4:/System{/tsd-tse} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:36.471714 2130 storage/replica_raft.go:291  [n1,s1,r4/1:/System{/tsd-tse}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:36.476288 2130 storage/store_snapshot.go:988  [n1,replicate,s1,r4/1:/System{/tsd-tse}] sending LEARNER snapshot ae20d1ac at applied index 29
+I210326 21:18:36.478105 2121 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r4/1:/System{/tsd-tse}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:36.484151 2130 storage/store_snapshot.go:1031  [n1,replicate,s1,r4/1:/System{/tsd-tse}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 2000, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:36.763793 2130 storage/replica_command.go:1586  [n1,replicate,s1,r4/1:/System{/tsd-tse}] change replicas (add [(n3,s3):2] remove []): existing descriptor r4:/System{/tsd-tse} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:36.786245 2130 storage/replica_raft.go:291  [n1,s1,r4/1:/System{/tsd-tse}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:36.794086 2130 storage/replica_command.go:1586  [n1,replicate,s1,r4/1:/System{/tsd-tse}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r4:/System{/tsd-tse} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:36.824986 2130 storage/replica_raft.go:291  [n1,s1,r4/1:/System{/tsd-tse}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:36.832479 2130 storage/store_snapshot.go:988  [n1,replicate,s1,r4/1:/System{/tsd-tse}] sending LEARNER snapshot c21bb1ad at applied index 33
+I210326 21:18:36.832722 2138 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r4/1:/System{/tsd-tse}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:36.839754 2130 storage/store_snapshot.go:1031  [n1,replicate,s1,r4/1:/System{/tsd-tse}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 2004, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:37.093794 2130 storage/replica_command.go:1586  [n1,replicate,s1,r4/1:/System{/tsd-tse}] change replicas (add [(n2,s2):3] remove []): existing descriptor r4:/System{/tsd-tse} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:37.117381 2130 storage/replica_raft.go:291  [n1,s1,r4/1:/System{/tsd-tse}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:37.134750 2160 storage/replica_command.go:1586  [n1,replicate,s1,r11/1:/Table/1{5-6}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r11:/Table/1{5-6} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:37.154534 2160 storage/replica_raft.go:291  [n1,s1,r11/1:/Table/1{5-6}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:37.160515 2160 storage/store_snapshot.go:988  [n1,replicate,s1,r11/1:/Table/1{5-6}] sending LEARNER snapshot 30a1eec7 at applied index 18
+I210326 21:18:37.160627 2160 storage/store_snapshot.go:1031  [n1,replicate,s1,r11/1:/Table/1{5-6}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:37.160715 2168 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r11/1:/Table/1{5-6}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:37.419697 2160 storage/replica_command.go:1586  [n1,replicate,s1,r11/1:/Table/1{5-6}] change replicas (add [(n3,s3):2] remove []): existing descriptor r11:/Table/1{5-6} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:37.442772 2160 storage/replica_raft.go:291  [n1,s1,r11/1:/Table/1{5-6}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:37.452462 2160 storage/replica_command.go:1586  [n1,replicate,s1,r11/1:/Table/1{5-6}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r11:/Table/1{5-6} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:37.464290 2160 storage/replica_raft.go:291  [n1,s1,r11/1:/Table/1{5-6}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:37.473632 2160 storage/store_snapshot.go:988  [n1,replicate,s1,r11/1:/Table/1{5-6}] sending LEARNER snapshot 3a9cc1de at applied index 22
+I210326 21:18:37.473768 2160 storage/store_snapshot.go:1031  [n1,replicate,s1,r11/1:/Table/1{5-6}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:37.481417 2228 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r11/1:/Table/1{5-6}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:37.736092 2160 storage/replica_command.go:1586  [n1,replicate,s1,r11/1:/Table/1{5-6}] change replicas (add [(n2,s2):3] remove []): existing descriptor r11:/Table/1{5-6} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:37.748320 2160 storage/replica_raft.go:291  [n1,s1,r11/1:/Table/1{5-6}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:37.761591 2215 storage/replica_command.go:1586  [n1,replicate,s1,r5/1:/{Systemtse-Table/System…}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r5:/{Systemtse-Table/SystemConfigSpan/Start} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:37.768217 2215 storage/replica_raft.go:291  [n1,s1,r5/1:/{Systemtse-Table/System…}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:37.788523 2215 storage/store_snapshot.go:988  [n1,replicate,s1,r5/1:/{Systemtse-Table/System…}] sending LEARNER snapshot daa141af at applied index 19
+I210326 21:18:37.788555 2245 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r5/1:/{Systemtse-Table/System…}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:37.788623 2215 storage/store_snapshot.go:1031  [n1,replicate,s1,r5/1:/{Systemtse-Table/System…}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 8, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:37.941458 261 server/status/runtime.go:498  [n1] runtime stats: 255 MiB RSS, 255 goroutines, 98 MiB/22 MiB/136 MiB GO alloc/idle/total, 16 MiB/22 MiB CGO alloc/total, 0.0 CGO/sec, 0.0/0.0 %(u/s)time, 0.0 %gc (11x), 303 KiB/586 KiB (r/w)net
+W210326 21:18:38.061403 308 server/node.go:826  [n1,summaries] health alerts detected: {Alerts:[{StoreID:1 Category:METRICS Description:ranges.underreplicated Value:12}]}
+I210326 21:18:38.121380 2215 storage/replica_command.go:1586  [n1,replicate,s1,r5/1:/{Systemtse-Table/System…}] change replicas (add [(n2,s2):2] remove []): existing descriptor r5:/{Systemtse-Table/SystemConfigSpan/Start} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:38.145002 2215 storage/replica_raft.go:291  [n1,s1,r5/1:/{Systemtse-Table/System…}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:38.147676 2215 storage/replica_command.go:1586  [n1,replicate,s1,r5/1:/{Systemtse-Table/System…}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r5:/{Systemtse-Table/SystemConfigSpan/Start} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:38.175966 2215 storage/replica_raft.go:291  [n1,s1,r5/1:/{Systemtse-Table/System…}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:38.182561 2215 storage/store_snapshot.go:988  [n1,replicate,s1,r5/1:/{Systemtse-Table/System…}] sending LEARNER snapshot 7ce6996e at applied index 23
+I210326 21:18:38.182690 2215 storage/store_snapshot.go:1031  [n1,replicate,s1,r5/1:/{Systemtse-Table/System…}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 12, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:38.182784 2224 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r5/1:/{Systemtse-Table/System…}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:38.504317 2215 storage/replica_command.go:1586  [n1,replicate,s1,r5/1:/{Systemtse-Table/System…}] change replicas (add [(n3,s3):3] remove []): existing descriptor r5:/{Systemtse-Table/SystemConfigSpan/Start} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:38.527420 2215 storage/replica_raft.go:291  [n1,s1,r5/1:/{Systemtse-Table/System…}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:38.539873 2235 storage/replica_command.go:1586  [n1,replicate,s1,r1/1:/{Min-System/NodeL…}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r1:/{Min-System/NodeLiveness} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:38.556409 2235 storage/replica_raft.go:291  [n1,s1,r1/1:/{Min-System/NodeL…}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:38.580450 2235 storage/store_snapshot.go:988  [n1,replicate,s1,r1/1:/{Min-System/NodeL…}] sending LEARNER snapshot 2e27b057 at applied index 161
+I210326 21:18:38.580614 2235 storage/store_snapshot.go:1031  [n1,replicate,s1,r1/1:/{Min-System/NodeL…}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 86, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:38.580639 2323 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r1/1:/{Min-System/NodeL…}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:38.852743 2235 storage/replica_command.go:1586  [n1,replicate,s1,r1/1:/{Min-System/NodeL…}] change replicas (add [(n3,s3):2] remove []): existing descriptor r1:/{Min-System/NodeLiveness} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:38.876133 2235 storage/replica_raft.go:291  [n1,s1,r1/1:/{Min-System/NodeL…}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:38.879498 2235 storage/replica_command.go:1586  [n1,replicate,s1,r1/1:/{Min-System/NodeL…}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r1:/{Min-System/NodeLiveness} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:38.907138 2235 storage/replica_raft.go:291  [n1,s1,r1/1:/{Min-System/NodeL…}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:38.929414 2235 storage/store_snapshot.go:988  [n1,replicate,s1,r1/1:/{Min-System/NodeL…}] sending LEARNER snapshot 1d26582f at applied index 167
+I210326 21:18:38.929436 2356 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r1/1:/{Min-System/NodeL…}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:38.929736 2235 storage/store_snapshot.go:1031  [n1,replicate,s1,r1/1:/{Min-System/NodeL…}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 94, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:39.198415 2235 storage/replica_command.go:1586  [n1,replicate,s1,r1/1:/{Min-System/NodeL…}] change replicas (add [(n2,s2):3] remove []): existing descriptor r1:/{Min-System/NodeLiveness} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:39.224031 2235 storage/replica_raft.go:291  [n1,s1,r1/1:/{Min-System/NodeL…}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:39.228637 2287 storage/replica_command.go:1586  [n1,replicate,s1,r21/1:/Table/2{5-6}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r21:/Table/2{5-6} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:39.250966 2287 storage/replica_raft.go:291  [n1,s1,r21/1:/Table/2{5-6}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:39.264576 2287 storage/store_snapshot.go:988  [n1,replicate,s1,r21/1:/Table/2{5-6}] sending LEARNER snapshot 3fb12909 at applied index 18
+I210326 21:18:39.264694 2287 storage/store_snapshot.go:1031  [n1,replicate,s1,r21/1:/Table/2{5-6}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:39.264735 2332 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r21/1:/Table/2{5-6}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:39.548944 2287 storage/replica_command.go:1586  [n1,replicate,s1,r21/1:/Table/2{5-6}] change replicas (add [(n2,s2):2] remove []): existing descriptor r21:/Table/2{5-6} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:39.579665 2287 storage/replica_raft.go:291  [n1,s1,r21/1:/Table/2{5-6}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:39.582617 2287 storage/replica_command.go:1586  [n1,replicate,s1,r21/1:/Table/2{5-6}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r21:/Table/2{5-6} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:39.616434 2287 storage/replica_raft.go:291  [n1,s1,r21/1:/Table/2{5-6}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:39.634499 2287 storage/store_snapshot.go:988  [n1,replicate,s1,r21/1:/Table/2{5-6}] sending LEARNER snapshot f3246838 at applied index 22
+I210326 21:18:39.634546 2389 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r21/1:/Table/2{5-6}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:39.634635 2287 storage/store_snapshot.go:1031  [n1,replicate,s1,r21/1:/Table/2{5-6}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:39.914797 2287 storage/replica_command.go:1586  [n1,replicate,s1,r21/1:/Table/2{5-6}] change replicas (add [(n3,s3):3] remove []): existing descriptor r21:/Table/2{5-6} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:39.930068 2287 storage/replica_raft.go:291  [n1,s1,r21/1:/Table/2{5-6}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:39.954314 2419 storage/replica_command.go:1586  [n1,replicate,s1,r12/1:/Table/1{6-7}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r12:/Table/1{6-7} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:39.969301 2419 storage/replica_raft.go:291  [n1,s1,r12/1:/Table/1{6-7}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:39.992170 2419 storage/store_snapshot.go:988  [n1,replicate,s1,r12/1:/Table/1{6-7}] sending LEARNER snapshot 39f74776 at applied index 18
+I210326 21:18:39.992279 2419 storage/store_snapshot.go:1031  [n1,replicate,s1,r12/1:/Table/1{6-7}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:39.992338 2381 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r12/1:/Table/1{6-7}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:40.271933 2419 storage/replica_command.go:1586  [n1,replicate,s1,r12/1:/Table/1{6-7}] change replicas (add [(n2,s2):2] remove []): existing descriptor r12:/Table/1{6-7} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:40.300046 2419 storage/replica_raft.go:291  [n1,s1,r12/1:/Table/1{6-7}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:40.302369 2419 storage/replica_command.go:1586  [n1,replicate,s1,r12/1:/Table/1{6-7}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r12:/Table/1{6-7} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:40.351734 2419 storage/replica_raft.go:291  [n1,s1,r12/1:/Table/1{6-7}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:40.364881 2419 storage/store_snapshot.go:988  [n1,replicate,s1,r12/1:/Table/1{6-7}] sending LEARNER snapshot 11c37265 at applied index 22
+I210326 21:18:40.364966 2419 storage/store_snapshot.go:1031  [n1,replicate,s1,r12/1:/Table/1{6-7}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:40.364969 2483 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r12/1:/Table/1{6-7}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:40.644365 2419 storage/replica_command.go:1586  [n1,replicate,s1,r12/1:/Table/1{6-7}] change replicas (add [(n3,s3):3] remove []): existing descriptor r12:/Table/1{6-7} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:40.664559 2419 storage/replica_raft.go:291  [n1,s1,r12/1:/Table/1{6-7}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:40.921903 2494 storage/replica_command.go:1586  [n1,replicate,s1,r23/1:/Table/2{7-8}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r23:/Table/2{7-8} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:40.940841 2494 storage/replica_raft.go:291  [n1,s1,r23/1:/Table/2{7-8}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:40.960192 2494 storage/store_snapshot.go:988  [n1,replicate,s1,r23/1:/Table/2{7-8}] sending LEARNER snapshot 9f1bfc09 at applied index 17
+I210326 21:18:40.960366 2494 storage/store_snapshot.go:1031  [n1,replicate,s1,r23/1:/Table/2{7-8}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:40.960382 2472 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r23/1:/Table/2{7-8}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:41.358631 2494 storage/replica_command.go:1586  [n1,replicate,s1,r23/1:/Table/2{7-8}] change replicas (add [(n2,s2):2] remove []): existing descriptor r23:/Table/2{7-8} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:41.424276 2494 storage/replica_raft.go:291  [n1,s1,r23/1:/Table/2{7-8}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:41.427209 2494 storage/replica_command.go:1586  [n1,replicate,s1,r23/1:/Table/2{7-8}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r23:/Table/2{7-8} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:41.453241 2494 storage/replica_raft.go:291  [n1,s1,r23/1:/Table/2{7-8}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:41.472279 2494 storage/store_snapshot.go:988  [n1,replicate,s1,r23/1:/Table/2{7-8}] sending LEARNER snapshot cf9df1b8 at applied index 21
+I210326 21:18:41.472377 2448 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r23/1:/Table/2{7-8}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:41.472415 2494 storage/store_snapshot.go:1031  [n1,replicate,s1,r23/1:/Table/2{7-8}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:41.759815 2494 storage/replica_command.go:1586  [n1,replicate,s1,r23/1:/Table/2{7-8}] change replicas (add [(n3,s3):3] remove []): existing descriptor r23:/Table/2{7-8} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:41.791273 2494 storage/replica_raft.go:291  [n1,s1,r23/1:/Table/2{7-8}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:42.918480 2587 storage/replica_command.go:1586  [n1,replicate,s1,r20/1:/Table/2{4-5}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r20:/Table/2{4-5} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:42.946682 2587 storage/replica_raft.go:291  [n1,s1,r20/1:/Table/2{4-5}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:42.955402 2587 storage/store_snapshot.go:988  [n1,replicate,s1,r20/1:/Table/2{4-5}] sending LEARNER snapshot dd6b6eae at applied index 17
+I210326 21:18:42.955543 2587 storage/store_snapshot.go:1031  [n1,replicate,s1,r20/1:/Table/2{4-5}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:42.955573 2550 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r20/1:/Table/2{4-5}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:43.227120 2587 storage/replica_command.go:1586  [n1,replicate,s1,r20/1:/Table/2{4-5}] change replicas (add [(n3,s3):2] remove []): existing descriptor r20:/Table/2{4-5} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:43.250880 2587 storage/replica_raft.go:291  [n1,s1,r20/1:/Table/2{4-5}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:43.253231 2587 storage/replica_command.go:1586  [n1,replicate,s1,r20/1:/Table/2{4-5}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r20:/Table/2{4-5} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:43.277194 2587 storage/replica_raft.go:291  [n1,s1,r20/1:/Table/2{4-5}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:43.295135 2587 storage/store_snapshot.go:988  [n1,replicate,s1,r20/1:/Table/2{4-5}] sending LEARNER snapshot 1f27c03b at applied index 21
+I210326 21:18:43.295234 2587 storage/store_snapshot.go:1031  [n1,replicate,s1,r20/1:/Table/2{4-5}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:43.295305 2574 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r20/1:/Table/2{4-5}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:43.593350 2587 storage/replica_command.go:1586  [n1,replicate,s1,r20/1:/Table/2{4-5}] change replicas (add [(n2,s2):3] remove []): existing descriptor r20:/Table/2{4-5} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:43.611870 2587 storage/replica_raft.go:291  [n1,s1,r20/1:/Table/2{4-5}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:44.923740 2404 storage/replica_command.go:1586  [n1,replicate,s1,r10/1:/Table/1{4-5}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r10:/Table/1{4-5} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:44.933001 2404 storage/replica_raft.go:291  [n1,s1,r10/1:/Table/1{4-5}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:44.960124 2404 storage/store_snapshot.go:988  [n1,replicate,s1,r10/1:/Table/1{4-5}] sending LEARNER snapshot d77afc1c at applied index 17
+I210326 21:18:44.960249 2404 storage/store_snapshot.go:1031  [n1,replicate,s1,r10/1:/Table/1{4-5}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:44.960274 2409 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r10/1:/Table/1{4-5}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:45.248435 2404 storage/replica_command.go:1586  [n1,replicate,s1,r10/1:/Table/1{4-5}] change replicas (add [(n2,s2):2] remove []): existing descriptor r10:/Table/1{4-5} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:45.268867 2404 storage/replica_raft.go:291  [n1,s1,r10/1:/Table/1{4-5}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:45.277281 2404 storage/replica_command.go:1586  [n1,replicate,s1,r10/1:/Table/1{4-5}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r10:/Table/1{4-5} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:45.307482 2404 storage/replica_raft.go:291  [n1,s1,r10/1:/Table/1{4-5}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:45.322135 2404 storage/store_snapshot.go:988  [n1,replicate,s1,r10/1:/Table/1{4-5}] sending LEARNER snapshot 2a72eb36 at applied index 22
+I210326 21:18:45.322236 2404 storage/store_snapshot.go:1031  [n1,replicate,s1,r10/1:/Table/1{4-5}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:45.322255 2633 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r10/1:/Table/1{4-5}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:45.593388 2404 storage/replica_command.go:1586  [n1,replicate,s1,r10/1:/Table/1{4-5}] change replicas (add [(n3,s3):3] remove []): existing descriptor r10:/Table/1{4-5} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:45.626456 2404 storage/replica_raft.go:291  [n1,s1,r10/1:/Table/1{4-5}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:47.915606 2740 storage/replica_command.go:1586  [n1,replicate,s1,r6/1:/Table/{SystemCon…-11}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r6:/Table/{SystemConfigSpan/Start-11} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:47.941809 261 server/status/runtime.go:498  [n1] runtime stats: 265 MiB RSS, 251 goroutines, 122 MiB/61 MiB/203 MiB GO alloc/idle/total, 16 MiB/23 MiB CGO alloc/total, 697.5 CGO/sec, 6.5/3.9 %(u/s)time, 0.0 %gc (0x), 241 KiB/436 KiB (r/w)net
+I210326 21:18:47.943309 2740 storage/replica_raft.go:291  [n1,s1,r6/1:/Table/{SystemCon…-11}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:47.958476 2740 storage/store_snapshot.go:988  [n1,replicate,s1,r6/1:/Table/{SystemCon…-11}] sending LEARNER snapshot ac54b9bb at applied index 53
+I210326 21:18:47.958616 2712 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r6/1:/Table/{SystemCon…-11}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:47.958953 2740 storage/store_snapshot.go:1031  [n1,replicate,s1,r6/1:/Table/{SystemCon…-11}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 77, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:48.002796 240 storage/store.go:2364  [n1,s1] sstables (read amplification = 0):
+I210326 21:18:48.002952 240 storage/store.go:2365  [n1,s1] 
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sum      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Uptime(secs): 20.3 total, 20.3 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+estimated_pending_compaction_bytes: 0 B
+W210326 21:18:48.057029 308 server/node.go:826  [n1,summaries] health alerts detected: {Alerts:[{StoreID:1 Category:METRICS Description:ranges.underreplicated Value:5}]}
+I210326 21:18:48.277129 2740 storage/replica_command.go:1586  [n1,replicate,s1,r6/1:/Table/{SystemCon…-11}] change replicas (add [(n2,s2):2] remove []): existing descriptor r6:/Table/{SystemConfigSpan/Start-11} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:48.299061 2740 storage/replica_raft.go:291  [n1,s1,r6/1:/Table/{SystemCon…-11}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:48.306688 2740 storage/replica_command.go:1586  [n1,replicate,s1,r6/1:/Table/{SystemCon…-11}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r6:/Table/{SystemConfigSpan/Start-11} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:48.336367 2740 storage/replica_raft.go:291  [n1,s1,r6/1:/Table/{SystemCon…-11}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:48.347280 2740 storage/store_snapshot.go:988  [n1,replicate,s1,r6/1:/Table/{SystemCon…-11}] sending LEARNER snapshot 9d22a6f4 at applied index 57
+I210326 21:18:48.347482 2740 storage/store_snapshot.go:1031  [n1,replicate,s1,r6/1:/Table/{SystemCon…-11}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 81, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:48.347495 2693 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r6/1:/Table/{SystemCon…-11}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:48.669018 2740 storage/replica_command.go:1586  [n1,replicate,s1,r6/1:/Table/{SystemCon…-11}] change replicas (add [(n3,s3):3] remove []): existing descriptor r6:/Table/{SystemConfigSpan/Start-11} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:48.700044 2740 storage/replica_raft.go:291  [n1,s1,r6/1:/Table/{SystemCon…-11}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:48.926961 2791 storage/replica_command.go:1586  [n1,replicate,s1,r13/1:/Table/1{7-8}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r13:/Table/1{7-8} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:49.008242 2791 storage/replica_raft.go:291  [n1,s1,r13/1:/Table/1{7-8}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:49.038350 2791 storage/store_snapshot.go:988  [n1,replicate,s1,r13/1:/Table/1{7-8}] sending LEARNER snapshot 7669b198 at applied index 17
+I210326 21:18:49.038461 2791 storage/store_snapshot.go:1031  [n1,replicate,s1,r13/1:/Table/1{7-8}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:49.038506 2797 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r13/1:/Table/1{7-8}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:49.335866 2791 storage/replica_command.go:1586  [n1,replicate,s1,r13/1:/Table/1{7-8}] change replicas (add [(n2,s2):2] remove []): existing descriptor r13:/Table/1{7-8} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:49.346498 2791 storage/replica_raft.go:291  [n1,s1,r13/1:/Table/1{7-8}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:49.357925 2791 storage/replica_command.go:1586  [n1,replicate,s1,r13/1:/Table/1{7-8}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r13:/Table/1{7-8} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:49.387875 2791 storage/replica_raft.go:291  [n1,s1,r13/1:/Table/1{7-8}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:49.415835 2791 storage/store_snapshot.go:988  [n1,replicate,s1,r13/1:/Table/1{7-8}] sending LEARNER snapshot d479d273 at applied index 21
+I210326 21:18:49.416048 2842 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r13/1:/Table/1{7-8}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:49.416062 2791 storage/store_snapshot.go:1031  [n1,replicate,s1,r13/1:/Table/1{7-8}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:49.670857 2791 storage/replica_command.go:1586  [n1,replicate,s1,r13/1:/Table/1{7-8}] change replicas (add [(n3,s3):3] remove []): existing descriptor r13:/Table/1{7-8} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:49.690917 2791 storage/replica_raft.go:291  [n1,s1,r13/1:/Table/1{7-8}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:49.927053 2827 storage/replica_command.go:1586  [n1,replicate,s1,r14/1:/Table/1{8-9}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r14:/Table/1{8-9} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:49.953591 2827 storage/replica_raft.go:291  [n1,s1,r14/1:/Table/1{8-9}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:49.966014 2827 storage/store_snapshot.go:988  [n1,replicate,s1,r14/1:/Table/1{8-9}] sending LEARNER snapshot b1890ed8 at applied index 17
+I210326 21:18:49.966181 2827 storage/store_snapshot.go:1031  [n1,replicate,s1,r14/1:/Table/1{8-9}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 7, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:49.966225 2898 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r14/1:/Table/1{8-9}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:50.239371 2827 storage/replica_command.go:1586  [n1,replicate,s1,r14/1:/Table/1{8-9}] change replicas (add [(n2,s2):2] remove []): existing descriptor r14:/Table/1{8-9} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:50.264019 2827 storage/replica_raft.go:291  [n1,s1,r14/1:/Table/1{8-9}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:50.274681 2827 storage/replica_command.go:1586  [n1,replicate,s1,r14/1:/Table/1{8-9}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r14:/Table/1{8-9} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:50.302335 2827 storage/replica_raft.go:291  [n1,s1,r14/1:/Table/1{8-9}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:50.309719 2827 storage/store_snapshot.go:988  [n1,replicate,s1,r14/1:/Table/1{8-9}] sending LEARNER snapshot 00e6410c at applied index 21
+I210326 21:18:50.309805 2827 storage/store_snapshot.go:1031  [n1,replicate,s1,r14/1:/Table/1{8-9}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 11, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:50.309847 2916 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r14/1:/Table/1{8-9}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:50.578857 2827 storage/replica_command.go:1586  [n1,replicate,s1,r14/1:/Table/1{8-9}] change replicas (add [(n3,s3):3] remove []): existing descriptor r14:/Table/1{8-9} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:50.600986 2827 storage/replica_raft.go:291  [n1,s1,r14/1:/Table/1{8-9}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:50.916460 2946 storage/replica_command.go:1586  [n1,replicate,s1,r2/1:/System/NodeLiveness{-Max}] change replicas (add [(n2,s2):2LEARNER] remove []): existing descriptor r2:/System/NodeLiveness{-Max} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:50.934528 2946 storage/replica_raft.go:291  [n1,s1,r2/1:/System/NodeLiveness{-Max}] proposing ADD_REPLICA[(n2,s2):2LEARNER]: after=[(n1,s1):1 (n2,s2):2LEARNER] next=3
+I210326 21:18:50.947690 2946 storage/store_snapshot.go:988  [n1,replicate,s1,r2/1:/System/NodeLiveness{-Max}] sending LEARNER snapshot a2416bd6 at applied index 53
+I210326 21:18:50.947776 2951 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r2/1:/System/NodeLiveness{-Max}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210326 21:18:50.947851 2946 storage/store_snapshot.go:1031  [n1,replicate,s1,r2/1:/System/NodeLiveness{-Max}] streamed snapshot to (n2,s2):2LEARNER: kv pairs: 24, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:51.203051 2946 storage/replica_command.go:1586  [n1,replicate,s1,r2/1:/System/NodeLiveness{-Max}] change replicas (add [(n2,s2):2] remove []): existing descriptor r2:/System/NodeLiveness{-Max} [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210326 21:18:51.237100 2946 storage/replica_raft.go:291  [n1,s1,r2/1:/System/NodeLiveness{-Max}] proposing ADD_REPLICA[(n2,s2):2]: after=[(n1,s1):1 (n2,s2):2] next=3
+I210326 21:18:51.240511 2946 storage/replica_command.go:1586  [n1,replicate,s1,r2/1:/System/NodeLiveness{-Max}] change replicas (add [(n3,s3):3LEARNER] remove []): existing descriptor r2:/System/NodeLiveness{-Max} [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210326 21:18:51.270414 2946 storage/replica_raft.go:291  [n1,s1,r2/1:/System/NodeLiveness{-Max}] proposing ADD_REPLICA[(n3,s3):3LEARNER]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER] next=4
+I210326 21:18:51.290589 2946 storage/store_snapshot.go:988  [n1,replicate,s1,r2/1:/System/NodeLiveness{-Max}] sending LEARNER snapshot 77caaffd at applied index 57
+I210326 21:18:51.290716 2946 storage/store_snapshot.go:1031  [n1,replicate,s1,r2/1:/System/NodeLiveness{-Max}] streamed snapshot to (n3,s3):3LEARNER: kv pairs: 28, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:51.290822 2969 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r2/1:/System/NodeLiveness{-Max}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210326 21:18:51.540459 2946 storage/replica_command.go:1586  [n1,replicate,s1,r2/1:/System/NodeLiveness{-Max}] change replicas (add [(n3,s3):3] remove []): existing descriptor r2:/System/NodeLiveness{-Max} [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210326 21:18:51.565638 2946 storage/replica_raft.go:291  [n1,s1,r2/1:/System/NodeLiveness{-Max}] proposing ADD_REPLICA[(n3,s3):3]: after=[(n1,s1):1 (n2,s2):2 (n3,s3):3] next=4
+I210326 21:18:51.927126 2924 storage/replica_command.go:1586  [n1,replicate,s1,r15/1:/Table/{19-20}] change replicas (add [(n3,s3):2LEARNER] remove []): existing descriptor r15:/Table/{19-20} [(n1,s1):1, next=2, gen=0]
+I210326 21:18:51.935350 2924 storage/replica_raft.go:291  [n1,s1,r15/1:/Table/{19-20}] proposing ADD_REPLICA[(n3,s3):2LEARNER]: after=[(n1,s1):1 (n3,s3):2LEARNER] next=3
+I210326 21:18:51.950957 2924 storage/store_snapshot.go:988  [n1,replicate,s1,r15/1:/Table/{19-20}] sending LEARNER snapshot 357a92f2 at applied index 15
+I210326 21:18:51.951087 2924 storage/store_snapshot.go:1031  [n1,replicate,s1,r15/1:/Table/{19-20}] streamed snapshot to (n3,s3):2LEARNER: kv pairs: 6, log entries: 0, rate-limit: 8.0 MiB/sec, 0.00s
+I210326 21:18:51.956236 3034 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r15/1:/Table/{19-20}] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210326 21:18:52.265555 2924 storage/replica_command.go:1586  [n1,replicate,s1,r15/1:/Table/{19-20}] change replicas (add [(n3,s3):2] remove []): existing descriptor r15:/Table/{19-20} [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210326 21:18:52.289563 2924 storage/replica_raft.go:291  [n1,s1,r15/1:/Table/{19-20}] proposing ADD_REPLICA[(n3,s3):2]: after=[(n1,s1):1 (n3,s3):2] next=3
+I210326 21:18:52.301574 2924 storage/replica_command.go:1586  [n1,replicate,s1,r15/1:/Table/{19-20}] change replicas (add [(n2,s2):3LEARNER] remove []): existing descriptor r15:/Table/{19-20} [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210326 21:18:52.334075 2924 storage/replica_raft.go:291  [n1,s1,r15/1:/Table/{19-20}] proposing ADD_REPLICA[(n2,s2):3LEARNER]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER] next=4
+I210326 21:18:52.342518 2924 storage/store_snapshot.go:988  [n1,replicate,s1,r15/1:/Table/{19-20}] sending LEARNER snapshot a0375481 at applied index 19
+I210326 21:18:52.342659 3001 storage/raft_snapshot_queue.go:126  [n1,raftsnapshot,s1,r15/1:/Table/{19-20}] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210326 21:18:52.342668 2924 storage/store_snapshot.go:1031  [n1,replicate,s1,r15/1:/Table/{19-20}] streamed snapshot to (n2,s2):3LEARNER: kv pairs: 10, log entries: 0, rate-limit: 8.0 MiB/sec, 0.01s
+I210326 21:18:52.627670 2924 storage/replica_command.go:1586  [n1,replicate,s1,r15/1:/Table/{19-20}] change replicas (add [(n2,s2):3] remove []): existing descriptor r15:/Table/{19-20} [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210326 21:18:52.655154 2924 storage/replica_raft.go:291  [n1,s1,r15/1:/Table/{19-20}] proposing ADD_REPLICA[(n2,s2):3]: after=[(n1,s1):1 (n3,s3):2 (n2,s2):3] next=4
+I210326 21:18:57.942516 261 server/status/runtime.go:498  [n1] runtime stats: 283 MiB RSS, 250 goroutines, 89 MiB/89 MiB/203 MiB GO alloc/idle/total, 16 MiB/23 MiB CGO alloc/total, 500.0 CGO/sec, 4.9/4.0 %(u/s)time, 0.0 %gc (1x), 209 KiB/383 KiB (r/w)net
+I210326 21:19:07.942748 261 server/status/runtime.go:498  [n1] runtime stats: 284 MiB RSS, 249 goroutines, 101 MiB/79 MiB/203 MiB GO alloc/idle/total, 16 MiB/23 MiB CGO alloc/total, 44.0 CGO/sec, 1.5/1.9 %(u/s)time, 0.0 %gc (0x), 86 KiB/175 KiB (r/w)net
+I210326 21:19:17.943544 261 server/status/runtime.go:498  [n1] runtime stats: 286 MiB RSS, 249 goroutines, 112 MiB/68 MiB/203 MiB GO alloc/idle/total, 16 MiB/23 MiB CGO alloc/total, 39.4 CGO/sec, 1.6/2.1 %(u/s)time, 0.0 %gc (0x), 85 KiB/176 KiB (r/w)net
+I210326 21:19:27.937750 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 587/178 sent/received, bytes 278484B/41875B sent/received)
+  2: roach2:26257 (1m0s)
+  3: roach3:26257 (59s)
+gossip connectivity
+  n1 [sentinel];
+  n2 -> n1; n3 -> n1;
+I210326 21:19:27.943706 261 server/status/runtime.go:498  [n1] runtime stats: 286 MiB RSS, 252 goroutines, 123 MiB/58 MiB/203 MiB GO alloc/idle/total, 16 MiB/23 MiB CGO alloc/total, 40.7 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 84 KiB/174 KiB (r/w)net
+I210326 21:19:37.944153 261 server/status/runtime.go:498  [n1] runtime stats: 288 MiB RSS, 248 goroutines, 138 MiB/44 MiB/203 MiB GO alloc/idle/total, 16 MiB/24 MiB CGO alloc/total, 72.6 CGO/sec, 2.8/2.1 %(u/s)time, 0.0 %gc (0x), 98 KiB/187 KiB (r/w)net
+I210326 21:19:47.944413 261 server/status/runtime.go:498  [n1] runtime stats: 298 MiB RSS, 248 goroutines, 86 MiB/89 MiB/203 MiB GO alloc/idle/total, 16 MiB/24 MiB CGO alloc/total, 39.7 CGO/sec, 2.0/2.1 %(u/s)time, 0.0 %gc (1x), 82 KiB/171 KiB (r/w)net
+I210326 21:19:57.944361 261 server/status/runtime.go:498  [n1] runtime stats: 298 MiB RSS, 248 goroutines, 97 MiB/79 MiB/203 MiB GO alloc/idle/total, 16 MiB/24 MiB CGO alloc/total, 36.5 CGO/sec, 1.8/1.6 %(u/s)time, 0.0 %gc (0x), 78 KiB/167 KiB (r/w)net
+I210326 21:20:07.945159 261 server/status/runtime.go:498  [n1] runtime stats: 298 MiB RSS, 249 goroutines, 109 MiB/70 MiB/203 MiB GO alloc/idle/total, 16 MiB/24 MiB CGO alloc/total, 52.5 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 94 KiB/183 KiB (r/w)net
+I210326 21:20:17.945295 261 server/status/runtime.go:498  [n1] runtime stats: 301 MiB RSS, 249 goroutines, 119 MiB/60 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 34.6 CGO/sec, 1.4/1.8 %(u/s)time, 0.0 %gc (0x), 80 KiB/167 KiB (r/w)net
+I210326 21:20:27.937658 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 1004/293 sent/received, bytes 333023B/59963B sent/received)
+  2: roach2:26257 (2m0s)
+  3: roach3:26257 (1m59s)
+I210326 21:20:27.945696 261 server/status/runtime.go:498  [n1] runtime stats: 301 MiB RSS, 249 goroutines, 130 MiB/50 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 37.2 CGO/sec, 2.1/1.2 %(u/s)time, 0.0 %gc (0x), 82 KiB/171 KiB (r/w)net
+I210326 21:20:37.946040 261 server/status/runtime.go:498  [n1] runtime stats: 301 MiB RSS, 248 goroutines, 143 MiB/39 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 54.2 CGO/sec, 2.6/1.2 %(u/s)time, 0.0 %gc (0x), 95 KiB/182 KiB (r/w)net
+I210326 21:20:47.946419 261 server/status/runtime.go:498  [n1] runtime stats: 310 MiB RSS, 248 goroutines, 85 MiB/90 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 41.9 CGO/sec, 2.2/1.7 %(u/s)time, 0.0 %gc (1x), 85 KiB/176 KiB (r/w)net
+I210326 21:20:57.946690 261 server/status/runtime.go:498  [n1] runtime stats: 310 MiB RSS, 248 goroutines, 96 MiB/80 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 36.5 CGO/sec, 1.9/1.5 %(u/s)time, 0.0 %gc (0x), 82 KiB/171 KiB (r/w)net
+I210326 21:21:07.946930 261 server/status/runtime.go:498  [n1] runtime stats: 310 MiB RSS, 251 goroutines, 108 MiB/70 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 52.7 CGO/sec, 1.6/2.2 %(u/s)time, 0.0 %gc (0x), 94 KiB/185 KiB (r/w)net
+I210326 21:21:17.947108 261 server/status/runtime.go:498  [n1] runtime stats: 312 MiB RSS, 251 goroutines, 119 MiB/61 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 38.5 CGO/sec, 1.3/2.2 %(u/s)time, 0.0 %gc (0x), 80 KiB/170 KiB (r/w)net
+I210326 21:21:27.938339 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 1421/408 sent/received, bytes 387512B/78051B sent/received)
+  2: roach2:26257 (3m0s)
+  3: roach3:26257 (2m59s)
+I210326 21:21:27.947614 261 server/status/runtime.go:498  [n1] runtime stats: 312 MiB RSS, 251 goroutines, 129 MiB/51 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 39.9 CGO/sec, 1.8/1.7 %(u/s)time, 0.0 %gc (0x), 80 KiB/171 KiB (r/w)net
+I210326 21:21:37.947496 261 server/status/runtime.go:498  [n1] runtime stats: 312 MiB RSS, 250 goroutines, 142 MiB/40 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 59.5 CGO/sec, 2.5/1.6 %(u/s)time, 0.0 %gc (0x), 102 KiB/193 KiB (r/w)net
+I210326 21:21:47.948344 261 server/status/runtime.go:498  [n1] runtime stats: 314 MiB RSS, 250 goroutines, 153 MiB/30 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 36.8 CGO/sec, 1.9/1.4 %(u/s)time, 0.0 %gc (0x), 80 KiB/169 KiB (r/w)net
+I210326 21:21:57.948679 261 server/status/runtime.go:498  [n1] runtime stats: 318 MiB RSS, 250 goroutines, 95 MiB/80 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 35.9 CGO/sec, 2.7/1.6 %(u/s)time, 0.0 %gc (1x), 80 KiB/170 KiB (r/w)net
+I210326 21:22:07.948808 261 server/status/runtime.go:498  [n1] runtime stats: 318 MiB RSS, 251 goroutines, 107 MiB/70 MiB/203 MiB GO alloc/idle/total, 24 MiB/32 MiB CGO alloc/total, 44.7 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 86 KiB/176 KiB (r/w)net
+I210326 21:22:14.873697 5113 sql/event_log.go:130  [n1,client=127.0.0.1:58740,user=root] Event: "create_database", target: 52, info: {DatabaseName:converse Statement:CREATE DATABASE converse User:root}
+I210326 21:22:17.949079 261 server/status/runtime.go:498  [n1] runtime stats: 320 MiB RSS, 251 goroutines, 118 MiB/60 MiB/203 MiB GO alloc/idle/total, 32 MiB/40 MiB CGO alloc/total, 52.0 CGO/sec, 1.8/2.2 %(u/s)time, 0.0 %gc (0x), 91 KiB/194 KiB (r/w)net
+I210326 21:22:27.937971 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 1842/523 sent/received, bytes 488182B/96065B sent/received)
+  2: roach2:26257 (4m0s)
+  3: roach3:26257 (3m59s)
+I210326 21:22:27.949643 261 server/status/runtime.go:498  [n1] runtime stats: 320 MiB RSS, 251 goroutines, 130 MiB/50 MiB/203 MiB GO alloc/idle/total, 32 MiB/40 MiB CGO alloc/total, 53.7 CGO/sec, 1.9/1.7 %(u/s)time, 0.0 %gc (0x), 86 KiB/188 KiB (r/w)net
+I210326 21:22:37.949773 261 server/status/runtime.go:498  [n1] runtime stats: 320 MiB RSS, 250 goroutines, 142 MiB/40 MiB/203 MiB GO alloc/idle/total, 32 MiB/40 MiB CGO alloc/total, 52.5 CGO/sec, 2.0/2.1 %(u/s)time, 0.0 %gc (0x), 96 KiB/186 KiB (r/w)net
+I210326 21:22:47.950276 261 server/status/runtime.go:498  [n1] runtime stats: 322 MiB RSS, 250 goroutines, 153 MiB/30 MiB/203 MiB GO alloc/idle/total, 32 MiB/40 MiB CGO alloc/total, 43.4 CGO/sec, 1.8/1.7 %(u/s)time, 0.0 %gc (0x), 82 KiB/182 KiB (r/w)net
+I210326 21:22:57.950511 261 server/status/runtime.go:498  [n1] runtime stats: 332 MiB RSS, 250 goroutines, 89 MiB/86 MiB/203 MiB GO alloc/idle/total, 32 MiB/41 MiB CGO alloc/total, 42.0 CGO/sec, 1.9/2.6 %(u/s)time, 0.0 %gc (1x), 80 KiB/171 KiB (r/w)net
+I210326 21:23:07.950702 261 server/status/runtime.go:498  [n1] runtime stats: 355 MiB RSS, 256 goroutines, 141 MiB/100 MiB/229 MiB GO alloc/idle/total, 32 MiB/41 MiB CGO alloc/total, 45.7 CGO/sec, 3.3/2.2 %(u/s)time, 0.0 %gc (0x), 118 KiB/6.1 MiB (r/w)net
+I210326 21:23:17.950910 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 256 goroutines, 154 MiB/88 MiB/241 MiB GO alloc/idle/total, 32 MiB/41 MiB CGO alloc/total, 38.9 CGO/sec, 1.5/2.1 %(u/s)time, 0.0 %gc (0x), 87 KiB/251 KiB (r/w)net
+I210326 21:23:27.937907 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 2261/638 sent/received, bytes 565873B/114155B sent/received)
+  2: roach2:26257 (5m0s)
+  3: roach3:26257 (4m59s)
+I210326 21:23:27.951055 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 256 goroutines, 97 MiB/143 MiB/247 MiB GO alloc/idle/total, 32 MiB/41 MiB CGO alloc/total, 35.2 CGO/sec, 2.5/1.5 %(u/s)time, 0.0 %gc (1x), 86 KiB/250 KiB (r/w)net
+I210326 21:23:37.952058 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 255 goroutines, 111 MiB/131 MiB/247 MiB GO alloc/idle/total, 32 MiB/41 MiB CGO alloc/total, 55.2 CGO/sec, 2.4/1.7 %(u/s)time, 0.0 %gc (0x), 100 KiB/267 KiB (r/w)net
+I210326 21:23:47.951853 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 255 goroutines, 125 MiB/119 MiB/247 MiB GO alloc/idle/total, 32 MiB/41 MiB CGO alloc/total, 49.1 CGO/sec, 2.6/1.4 %(u/s)time, 0.0 %gc (0x), 92 KiB/260 KiB (r/w)net
+I210326 21:23:57.951875 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 255 goroutines, 138 MiB/108 MiB/254 MiB GO alloc/idle/total, 32 MiB/41 MiB CGO alloc/total, 41.9 CGO/sec, 1.4/2.2 %(u/s)time, 0.0 %gc (0x), 88 KiB/254 KiB (r/w)net
+I210326 21:24:07.952426 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 256 goroutines, 150 MiB/96 MiB/262 MiB GO alloc/idle/total, 32 MiB/41 MiB CGO alloc/total, 48.7 CGO/sec, 1.8/2.0 %(u/s)time, 0.0 %gc (0x), 93 KiB/259 KiB (r/w)net
+I210326 21:24:17.952611 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 256 goroutines, 88 MiB/151 MiB/267 MiB GO alloc/idle/total, 40 MiB/49 MiB CGO alloc/total, 34.3 CGO/sec, 2.4/1.3 %(u/s)time, 0.0 %gc (1x), 83 KiB/248 KiB (r/w)net
+I210326 21:24:27.937577 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 2678/753 sent/received, bytes 620366B/132245B sent/received)
+  2: roach2:26257 (6m0s)
+  3: roach3:26257 (5m59s)
+I210326 21:24:27.953287 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 256 goroutines, 102 MiB/138 MiB/267 MiB GO alloc/idle/total, 40 MiB/49 MiB CGO alloc/total, 40.3 CGO/sec, 1.8/1.8 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 21:24:37.953519 261 server/status/runtime.go:498  [n1] runtime stats: 365 MiB RSS, 255 goroutines, 116 MiB/127 MiB/267 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 62.2 CGO/sec, 2.8/1.4 %(u/s)time, 0.0 %gc (0x), 106 KiB/274 KiB (r/w)net
+I210326 21:24:47.953616 261 server/status/runtime.go:498  [n1] runtime stats: 367 MiB RSS, 255 goroutines, 128 MiB/116 MiB/267 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 32.7 CGO/sec, 2.6/0.8 %(u/s)time, 0.0 %gc (0x), 82 KiB/246 KiB (r/w)net
+I210326 21:24:57.954132 261 server/status/runtime.go:498  [n1] runtime stats: 367 MiB RSS, 255 goroutines, 142 MiB/104 MiB/267 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 39.6 CGO/sec, 2.2/1.5 %(u/s)time, 0.0 %gc (0x), 84 KiB/251 KiB (r/w)net
+I210326 21:25:07.954524 261 server/status/runtime.go:498  [n1] runtime stats: 367 MiB RSS, 256 goroutines, 153 MiB/93 MiB/267 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 44.6 CGO/sec, 1.4/2.5 %(u/s)time, 0.0 %gc (0x), 89 KiB/176 KiB (r/w)net
+I210326 21:25:17.954528 261 server/status/runtime.go:498  [n1] runtime stats: 369 MiB RSS, 256 goroutines, 94 MiB/145 MiB/268 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 40.4 CGO/sec, 2.9/1.3 %(u/s)time, 0.0 %gc (1x), 90 KiB/258 KiB (r/w)net
+I210326 21:25:27.937588 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 3096/869 sent/received, bytes 675340B/150493B sent/received)
+  2: roach2:26257 (7m0s)
+  3: roach3:26257 (6m59s)
+I210326 21:25:27.955185 261 server/status/runtime.go:498  [n1] runtime stats: 369 MiB RSS, 256 goroutines, 108 MiB/133 MiB/268 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 39.1 CGO/sec, 1.9/1.8 %(u/s)time, 0.0 %gc (0x), 87 KiB/252 KiB (r/w)net
+I210326 21:25:37.955390 261 server/status/runtime.go:498  [n1] runtime stats: 369 MiB RSS, 255 goroutines, 123 MiB/121 MiB/268 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 55.8 CGO/sec, 2.0/2.3 %(u/s)time, 0.0 %gc (0x), 100 KiB/266 KiB (r/w)net
+I210326 21:25:47.955450 261 server/status/runtime.go:498  [n1] runtime stats: 371 MiB RSS, 255 goroutines, 135 MiB/110 MiB/268 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 39.5 CGO/sec, 1.7/2.0 %(u/s)time, 0.0 %gc (0x), 88 KiB/252 KiB (r/w)net
+I210326 21:25:57.955871 261 server/status/runtime.go:498  [n1] runtime stats: 371 MiB RSS, 255 goroutines, 148 MiB/98 MiB/268 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 39.7 CGO/sec, 1.6/2.0 %(u/s)time, 0.0 %gc (0x), 86 KiB/252 KiB (r/w)net
+I210326 21:26:07.956294 261 server/status/runtime.go:498  [n1] runtime stats: 371 MiB RSS, 256 goroutines, 86 MiB/152 MiB/269 MiB GO alloc/idle/total, 40 MiB/50 MiB CGO alloc/total, 45.4 CGO/sec, 2.2/1.9 %(u/s)time, 0.0 %gc (1x), 94 KiB/261 KiB (r/w)net
+I210326 21:26:17.956977 261 server/status/runtime.go:498  [n1] runtime stats: 373 MiB RSS, 256 goroutines, 102 MiB/138 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 44.5 CGO/sec, 2.3/1.6 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 21:26:27.937653 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 3513/984 sent/received, bytes 729833B/168583B sent/received)
+  2: roach2:26257 (8m0s)
+  3: roach3:26257 (7m59s)
+I210326 21:26:27.956777 261 server/status/runtime.go:498  [n1] runtime stats: 373 MiB RSS, 256 goroutines, 115 MiB/127 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 41.3 CGO/sec, 1.6/2.0 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 21:26:37.956805 261 server/status/runtime.go:498  [n1] runtime stats: 373 MiB RSS, 255 goroutines, 129 MiB/116 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 56.5 CGO/sec, 1.7/2.3 %(u/s)time, 0.0 %gc (0x), 103 KiB/267 KiB (r/w)net
+I210326 21:26:47.957464 261 server/status/runtime.go:498  [n1] runtime stats: 375 MiB RSS, 255 goroutines, 142 MiB/104 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 45.3 CGO/sec, 1.7/2.0 %(u/s)time, 0.0 %gc (0x), 90 KiB/258 KiB (r/w)net
+I210326 21:26:57.957631 261 server/status/runtime.go:498  [n1] runtime stats: 375 MiB RSS, 255 goroutines, 152 MiB/94 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 35.6 CGO/sec, 2.0/1.4 %(u/s)time, 0.0 %gc (0x), 83 KiB/172 KiB (r/w)net
+I210326 21:27:07.958180 261 server/status/runtime.go:498  [n1] runtime stats: 375 MiB RSS, 256 goroutines, 94 MiB/145 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 49.3 CGO/sec, 2.3/1.7 %(u/s)time, 0.0 %gc (1x), 93 KiB/260 KiB (r/w)net
+I210326 21:27:17.958139 261 server/status/runtime.go:498  [n1] runtime stats: 377 MiB RSS, 256 goroutines, 109 MiB/132 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 34.9 CGO/sec, 2.7/0.7 %(u/s)time, 0.0 %gc (0x), 86 KiB/250 KiB (r/w)net
+I210326 21:27:27.937650 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 3930/1099 sent/received, bytes 784326B/186673B sent/received)
+  2: roach2:26257 (9m0s)
+  3: roach3:26257 (8m59s)
+I210326 21:27:27.958966 261 server/status/runtime.go:498  [n1] runtime stats: 377 MiB RSS, 256 goroutines, 122 MiB/121 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 40.4 CGO/sec, 1.2/2.4 %(u/s)time, 0.0 %gc (0x), 85 KiB/252 KiB (r/w)net
+I210326 21:27:37.958807 261 server/status/runtime.go:498  [n1] runtime stats: 377 MiB RSS, 255 goroutines, 138 MiB/107 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 61.8 CGO/sec, 2.2/2.2 %(u/s)time, 0.0 %gc (0x), 106 KiB/274 KiB (r/w)net
+I210326 21:27:47.958780 261 server/status/runtime.go:498  [n1] runtime stats: 379 MiB RSS, 255 goroutines, 150 MiB/96 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 38.4 CGO/sec, 1.8/1.7 %(u/s)time, 0.0 %gc (0x), 85 KiB/249 KiB (r/w)net
+I210326 21:27:57.959344 261 server/status/runtime.go:498  [n1] runtime stats: 379 MiB RSS, 255 goroutines, 90 MiB/149 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 35.7 CGO/sec, 2.3/1.5 %(u/s)time, 0.0 %gc (1x), 84 KiB/249 KiB (r/w)net
+I210326 21:28:07.959717 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 253 goroutines, 104 MiB/137 MiB/269 MiB GO alloc/idle/total, 48 MiB/58 MiB CGO alloc/total, 40.8 CGO/sec, 2.3/1.4 %(u/s)time, 0.0 %gc (0x), 91 KiB/256 KiB (r/w)net
+I210326 21:28:17.960604 261 server/status/runtime.go:498  [n1] runtime stats: 383 MiB RSS, 257 goroutines, 107 MiB/135 MiB/269 MiB GO alloc/idle/total, 57 MiB/66 MiB CGO alloc/total, 432.2 CGO/sec, 14.5/0.0 %(u/s)time, 0.0 %gc (2x), 138 KiB/306 KiB (r/w)net
+I210326 21:28:27.937717 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 4345/1214 sent/received, bytes 838850B/204772B sent/received)
+  2: roach2:26257 (10m0s)
+  3: roach3:26257 (9m59s)
+I210326 21:28:27.960508 261 server/status/runtime.go:498  [n1] runtime stats: 383 MiB RSS, 257 goroutines, 125 MiB/117 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 47.3 CGO/sec, 4.0/0.0 %(u/s)time, 0.0 %gc (0x), 117 KiB/380 KiB (r/w)net
+I210326 21:28:37.960533 261 server/status/runtime.go:498  [n1] runtime stats: 383 MiB RSS, 256 goroutines, 141 MiB/104 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 67.6 CGO/sec, 3.2/1.0 %(u/s)time, 0.0 %gc (0x), 105 KiB/273 KiB (r/w)net
+I210326 21:28:47.961279 261 server/status/runtime.go:498  [n1] runtime stats: 385 MiB RSS, 256 goroutines, 153 MiB/93 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 39.1 CGO/sec, 1.9/1.5 %(u/s)time, 0.0 %gc (0x), 87 KiB/252 KiB (r/w)net
+I210326 21:28:47.995425 240 storage/store.go:2364  [n1,s1] sstables (read amplification = 0):
+I210326 21:28:47.995499 240 storage/store.go:2365  [n1,s1] 
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sum      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Uptime(secs): 620.3 total, 600.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+estimated_pending_compaction_bytes: 0 B
+I210326 21:28:57.963169 261 server/status/runtime.go:498  [n1] runtime stats: 385 MiB RSS, 256 goroutines, 163 MiB/85 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 38.6 CGO/sec, 1.6/2.1 %(u/s)time, 0.0 %gc (1x), 86 KiB/253 KiB (r/w)net
+I210326 21:29:07.961938 261 server/status/runtime.go:498  [n1] runtime stats: 385 MiB RSS, 257 goroutines, 103 MiB/135 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 47.0 CGO/sec, 2.9/1.5 %(u/s)time, 0.0 %gc (0x), 95 KiB/262 KiB (r/w)net
+I210326 21:29:17.962319 261 server/status/runtime.go:498  [n1] runtime stats: 387 MiB RSS, 257 goroutines, 116 MiB/124 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 36.8 CGO/sec, 1.8/1.8 %(u/s)time, 0.0 %gc (0x), 87 KiB/251 KiB (r/w)net
+I210326 21:29:27.937646 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 4762/1329 sent/received, bytes 893343B/222862B sent/received)
+  2: roach2:26257 (11m0s)
+  3: roach3:26257 (10m59s)
+I210326 21:29:27.962511 261 server/status/runtime.go:498  [n1] runtime stats: 387 MiB RSS, 257 goroutines, 130 MiB/112 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 35.5 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 84 KiB/249 KiB (r/w)net
+I210326 21:29:37.962944 261 server/status/runtime.go:498  [n1] runtime stats: 387 MiB RSS, 256 goroutines, 144 MiB/100 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 56.1 CGO/sec, 2.3/1.7 %(u/s)time, 0.0 %gc (0x), 101 KiB/288 KiB (r/w)net
+I210326 21:29:47.962847 261 server/status/runtime.go:498  [n1] runtime stats: 389 MiB RSS, 256 goroutines, 155 MiB/90 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 43.5 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 90 KiB/159 KiB (r/w)net
+I210326 21:29:57.963394 261 server/status/runtime.go:498  [n1] runtime stats: 389 MiB RSS, 256 goroutines, 95 MiB/143 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 37.8 CGO/sec, 3.0/0.9 %(u/s)time, 0.0 %gc (1x), 84 KiB/272 KiB (r/w)net
+I210326 21:30:07.964068 261 server/status/runtime.go:498  [n1] runtime stats: 389 MiB RSS, 257 goroutines, 111 MiB/129 MiB/269 MiB GO alloc/idle/total, 56 MiB/67 MiB CGO alloc/total, 45.6 CGO/sec, 2.4/1.3 %(u/s)time, 0.0 %gc (0x), 92 KiB/258 KiB (r/w)net
+I210326 21:30:17.964567 261 server/status/runtime.go:498  [n1] runtime stats: 391 MiB RSS, 257 goroutines, 125 MiB/117 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 37.3 CGO/sec, 2.9/0.6 %(u/s)time, 0.0 %gc (0x), 85 KiB/250 KiB (r/w)net
+I210326 21:30:27.938114 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 5179/1444 sent/received, bytes 947886B/240952B sent/received)
+  2: roach2:26257 (12m0s)
+  3: roach3:26257 (11m59s)
+I210326 21:30:27.964712 261 server/status/runtime.go:498  [n1] runtime stats: 391 MiB RSS, 257 goroutines, 137 MiB/106 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 39.5 CGO/sec, 1.9/1.8 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 21:30:37.964360 261 server/status/runtime.go:498  [n1] runtime stats: 391 MiB RSS, 256 goroutines, 151 MiB/94 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 58.7 CGO/sec, 2.1/2.0 %(u/s)time, 0.0 %gc (0x), 103 KiB/270 KiB (r/w)net
+I210326 21:30:47.964552 261 server/status/runtime.go:498  [n1] runtime stats: 393 MiB RSS, 256 goroutines, 94 MiB/144 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 38.6 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (1x), 86 KiB/250 KiB (r/w)net
+I210326 21:30:57.965320 261 server/status/runtime.go:498  [n1] runtime stats: 393 MiB RSS, 256 goroutines, 106 MiB/133 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 36.6 CGO/sec, 1.8/1.7 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:31:07.965042 261 server/status/runtime.go:498  [n1] runtime stats: 393 MiB RSS, 257 goroutines, 120 MiB/121 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 50.5 CGO/sec, 1.4/2.2 %(u/s)time, 0.0 %gc (0x), 91 KiB/259 KiB (r/w)net
+I210326 21:31:17.965861 261 server/status/runtime.go:498  [n1] runtime stats: 395 MiB RSS, 257 goroutines, 132 MiB/111 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 41.9 CGO/sec, 2.6/1.3 %(u/s)time, 0.0 %gc (0x), 91 KiB/256 KiB (r/w)net
+I210326 21:31:27.937725 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 5597/1560 sent/received, bytes 1002710B/259200B sent/received)
+  2: roach2:26257 (13m0s)
+  3: roach3:26257 (12m59s)
+I210326 21:31:27.965868 261 server/status/runtime.go:498  [n1] runtime stats: 395 MiB RSS, 257 goroutines, 145 MiB/99 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 43.4 CGO/sec, 1.9/1.9 %(u/s)time, 0.0 %gc (0x), 88 KiB/254 KiB (r/w)net
+I210326 21:31:37.966332 261 server/status/runtime.go:498  [n1] runtime stats: 395 MiB RSS, 256 goroutines, 84 MiB/153 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 54.2 CGO/sec, 2.0/2.4 %(u/s)time, 0.0 %gc (1x), 102 KiB/268 KiB (r/w)net
+I210326 21:31:47.966917 261 server/status/runtime.go:498  [n1] runtime stats: 397 MiB RSS, 256 goroutines, 100 MiB/138 MiB/269 MiB GO alloc/idle/total, 64 MiB/75 MiB CGO alloc/total, 36.7 CGO/sec, 1.1/2.4 %(u/s)time, 0.0 %gc (0x), 84 KiB/173 KiB (r/w)net
+I210326 21:31:57.967179 261 server/status/runtime.go:498  [n1] runtime stats: 397 MiB RSS, 256 goroutines, 114 MiB/125 MiB/269 MiB GO alloc/idle/total, 63 MiB/75 MiB CGO alloc/total, 40.0 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 21:32:07.967306 261 server/status/runtime.go:498  [n1] runtime stats: 397 MiB RSS, 257 goroutines, 127 MiB/115 MiB/269 MiB GO alloc/idle/total, 63 MiB/75 MiB CGO alloc/total, 44.9 CGO/sec, 2.6/1.2 %(u/s)time, 0.0 %gc (0x), 94 KiB/260 KiB (r/w)net
+I210326 21:32:17.967401 261 server/status/runtime.go:498  [n1] runtime stats: 399 MiB RSS, 257 goroutines, 139 MiB/104 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 37.3 CGO/sec, 1.8/1.7 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:32:27.937737 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 6014/1675 sent/received, bytes 1057203B/277290B sent/received)
+  2: roach2:26257 (14m0s)
+  3: roach3:26257 (13m59s)
+I210326 21:32:27.968434 261 server/status/runtime.go:498  [n1] runtime stats: 399 MiB RSS, 257 goroutines, 152 MiB/92 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 40.7 CGO/sec, 1.8/1.9 %(u/s)time, 0.0 %gc (0x), 88 KiB/253 KiB (r/w)net
+I210326 21:32:37.968960 261 server/status/runtime.go:498  [n1] runtime stats: 399 MiB RSS, 256 goroutines, 93 MiB/144 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 58.0 CGO/sec, 1.6/2.7 %(u/s)time, 0.0 %gc (1x), 102 KiB/267 KiB (r/w)net
+I210326 21:32:47.969259 261 server/status/runtime.go:498  [n1] runtime stats: 401 MiB RSS, 256 goroutines, 109 MiB/131 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 43.5 CGO/sec, 2.2/1.7 %(u/s)time, 0.0 %gc (0x), 91 KiB/259 KiB (r/w)net
+I210326 21:32:57.969375 261 server/status/runtime.go:498  [n1] runtime stats: 401 MiB RSS, 256 goroutines, 121 MiB/120 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 39.8 CGO/sec, 2.5/0.9 %(u/s)time, 0.0 %gc (0x), 86 KiB/242 KiB (r/w)net
+I210326 21:33:07.969582 261 server/status/runtime.go:498  [n1] runtime stats: 401 MiB RSS, 257 goroutines, 134 MiB/109 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 45.2 CGO/sec, 2.4/1.2 %(u/s)time, 0.0 %gc (0x), 90 KiB/268 KiB (r/w)net
+I210326 21:33:17.969891 261 server/status/runtime.go:498  [n1] runtime stats: 403 MiB RSS, 253 goroutines, 146 MiB/98 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 37.7 CGO/sec, 1.9/1.8 %(u/s)time, 0.0 %gc (0x), 86 KiB/251 KiB (r/w)net
+I210326 21:33:27.937783 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 6431/1790 sent/received, bytes 1111696B/295380B sent/received)
+  2: roach2:26257 (15m0s)
+  3: roach3:26257 (14m59s)
+I210326 21:33:27.970186 261 server/status/runtime.go:498  [n1] runtime stats: 403 MiB RSS, 253 goroutines, 87 MiB/149 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 51.3 CGO/sec, 2.0/1.9 %(u/s)time, 0.0 %gc (1x), 91 KiB/260 KiB (r/w)net
+I210326 21:33:37.970485 261 server/status/runtime.go:498  [n1] runtime stats: 403 MiB RSS, 252 goroutines, 103 MiB/135 MiB/269 MiB GO alloc/idle/total, 71 MiB/83 MiB CGO alloc/total, 59.0 CGO/sec, 1.8/2.3 %(u/s)time, 0.0 %gc (0x), 102 KiB/191 KiB (r/w)net
+I210326 21:33:47.970707 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 252 goroutines, 116 MiB/125 MiB/269 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 35.8 CGO/sec, 8.8/0.0 %(u/s)time, 0.0 %gc (0x), 85 KiB/250 KiB (r/w)net
+I210326 21:33:57.971307 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 252 goroutines, 129 MiB/113 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 38.9 CGO/sec, 2.1/1.2 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:34:07.971435 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 253 goroutines, 142 MiB/102 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 43.1 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 92 KiB/257 KiB (r/w)net
+I210326 21:34:17.971660 261 server/status/runtime.go:498  [n1] runtime stats: 346 MiB RSS, 253 goroutines, 155 MiB/90 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 49.1 CGO/sec, 2.0/1.7 %(u/s)time, 0.0 %gc (0x), 92 KiB/261 KiB (r/w)net
+I210326 21:34:27.937745 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 6849/1906 sent/received, bytes 1166520B/313628B sent/received)
+  3: roach3:26257 (15m59s)
+  2: roach2:26257 (16m0s)
+I210326 21:34:27.973501 261 server/status/runtime.go:498  [n1] runtime stats: 346 MiB RSS, 253 goroutines, 95 MiB/143 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 40.0 CGO/sec, 1.8/2.0 %(u/s)time, 0.0 %gc (1x), 88 KiB/255 KiB (r/w)net
+I210326 21:34:37.972350 261 server/status/runtime.go:498  [n1] runtime stats: 346 MiB RSS, 252 goroutines, 111 MiB/130 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 58.9 CGO/sec, 1.9/2.2 %(u/s)time, 0.0 %gc (0x), 102 KiB/269 KiB (r/w)net
+I210326 21:34:47.972712 261 server/status/runtime.go:498  [n1] runtime stats: 349 MiB RSS, 252 goroutines, 124 MiB/119 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 33.7 CGO/sec, 1.6/1.9 %(u/s)time, 0.0 %gc (0x), 83 KiB/248 KiB (r/w)net
+I210326 21:34:57.973196 261 server/status/runtime.go:498  [n1] runtime stats: 349 MiB RSS, 252 goroutines, 136 MiB/108 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 40.0 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 21:35:07.973656 261 server/status/runtime.go:498  [n1] runtime stats: 349 MiB RSS, 253 goroutines, 148 MiB/97 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 44.1 CGO/sec, 2.1/1.7 %(u/s)time, 0.0 %gc (0x), 92 KiB/257 KiB (r/w)net
+I210326 21:35:17.973827 261 server/status/runtime.go:498  [n1] runtime stats: 351 MiB RSS, 253 goroutines, 90 MiB/147 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 41.5 CGO/sec, 2.3/1.4 %(u/s)time, 0.0 %gc (1x), 88 KiB/254 KiB (r/w)net
+I210326 21:35:27.938143 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 7266/2021 sent/received, bytes 1221015B/331720B sent/received)
+  2: roach2:26257 (17m0s)
+  3: roach3:26257 (16m59s)
+I210326 21:35:27.974793 261 server/status/runtime.go:498  [n1] runtime stats: 351 MiB RSS, 253 goroutines, 104 MiB/134 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 36.6 CGO/sec, 2.2/1.3 %(u/s)time, 0.0 %gc (0x), 82 KiB/171 KiB (r/w)net
+I210326 21:35:37.974854 261 server/status/runtime.go:498  [n1] runtime stats: 351 MiB RSS, 252 goroutines, 118 MiB/123 MiB/269 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 53.5 CGO/sec, 2.6/1.5 %(u/s)time, 0.0 %gc (0x), 98 KiB/263 KiB (r/w)net
+I210326 21:35:47.974616 261 server/status/runtime.go:498  [n1] runtime stats: 353 MiB RSS, 252 goroutines, 130 MiB/112 MiB/269 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 44.3 CGO/sec, 2.1/1.6 %(u/s)time, 0.0 %gc (0x), 89 KiB/258 KiB (r/w)net
+I210326 21:35:57.975293 261 server/status/runtime.go:498  [n1] runtime stats: 353 MiB RSS, 252 goroutines, 143 MiB/101 MiB/266 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 38.2 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 88 KiB/255 KiB (r/w)net
+I210326 21:36:07.975530 261 server/status/runtime.go:498  [n1] runtime stats: 353 MiB RSS, 253 goroutines, 83 MiB/154 MiB/266 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 55.6 CGO/sec, 2.2/1.9 %(u/s)time, 0.0 %gc (1x), 94 KiB/262 KiB (r/w)net
+I210326 21:36:17.976021 261 server/status/runtime.go:498  [n1] runtime stats: 355 MiB RSS, 253 goroutines, 100 MiB/138 MiB/266 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 35.9 CGO/sec, 2.1/1.4 %(u/s)time, 0.0 %gc (0x), 86 KiB/250 KiB (r/w)net
+I210326 21:36:27.937725 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 7683/2136 sent/received, bytes 1275510B/349812B sent/received)
+  2: roach2:26257 (18m0s)
+  3: roach3:26257 (17m59s)
+I210326 21:36:27.975996 261 server/status/runtime.go:498  [n1] runtime stats: 355 MiB RSS, 253 goroutines, 114 MiB/126 MiB/266 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 41.2 CGO/sec, 0.8/2.7 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 21:36:37.976218 261 server/status/runtime.go:498  [n1] runtime stats: 355 MiB RSS, 252 goroutines, 128 MiB/115 MiB/266 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 58.3 CGO/sec, 2.9/1.3 %(u/s)time, 0.0 %gc (0x), 104 KiB/271 KiB (r/w)net
+I210326 21:36:47.976995 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 252 goroutines, 140 MiB/104 MiB/266 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 38.4 CGO/sec, 1.8/1.5 %(u/s)time, 0.0 %gc (0x), 84 KiB/249 KiB (r/w)net
+I210326 21:36:57.976710 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 252 goroutines, 152 MiB/93 MiB/266 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 37.4 CGO/sec, 2.0/1.4 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:37:07.976980 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 253 goroutines, 93 MiB/144 MiB/267 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 40.2 CGO/sec, 2.2/1.5 %(u/s)time, 0.0 %gc (1x), 88 KiB/253 KiB (r/w)net
+I210326 21:37:17.977459 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 253 goroutines, 108 MiB/132 MiB/267 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 42.8 CGO/sec, 1.1/2.5 %(u/s)time, 0.0 %gc (0x), 90 KiB/257 KiB (r/w)net
+I210326 21:37:27.937859 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 8101/2252 sent/received, bytes 1330086B/368062B sent/received)
+  2: roach2:26257 (19m0s)
+  3: roach3:26257 (18m59s)
+I210326 21:37:27.977613 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 253 goroutines, 119 MiB/122 MiB/267 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 42.7 CGO/sec, 1.5/2.1 %(u/s)time, 0.0 %gc (0x), 87 KiB/175 KiB (r/w)net
+I210326 21:37:37.977998 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 252 goroutines, 133 MiB/110 MiB/267 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 56.5 CGO/sec, 2.4/1.7 %(u/s)time, 0.0 %gc (0x), 101 KiB/268 KiB (r/w)net
+I210326 21:37:47.978337 261 server/status/runtime.go:498  [n1] runtime stats: 361 MiB RSS, 252 goroutines, 145 MiB/99 MiB/267 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 34.5 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 85 KiB/249 KiB (r/w)net
+I210326 21:37:57.978517 261 server/status/runtime.go:498  [n1] runtime stats: 361 MiB RSS, 252 goroutines, 84 MiB/152 MiB/268 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 42.4 CGO/sec, 1.2/2.6 %(u/s)time, 0.0 %gc (1x), 87 KiB/256 KiB (r/w)net
+I210326 21:38:07.978604 261 server/status/runtime.go:498  [n1] runtime stats: 361 MiB RSS, 253 goroutines, 102 MiB/136 MiB/268 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 47.3 CGO/sec, 1.2/2.6 %(u/s)time, 0.0 %gc (0x), 94 KiB/262 KiB (r/w)net
+I210326 21:38:17.978928 261 server/status/runtime.go:498  [n1] runtime stats: 363 MiB RSS, 253 goroutines, 115 MiB/125 MiB/268 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 36.0 CGO/sec, 1.6/1.9 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:38:27.937727 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 8518/2367 sent/received, bytes 1384631B/386154B sent/received)
+  2: roach2:26257 (20m0s)
+  3: roach3:26257 (19m59s)
+I210326 21:38:27.979981 261 server/status/runtime.go:498  [n1] runtime stats: 363 MiB RSS, 254 goroutines, 129 MiB/113 MiB/186 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 39.2 CGO/sec, 2.7/0.9 %(u/s)time, 0.0 %gc (0x), 87 KiB/252 KiB (r/w)net
+I210326 21:38:37.980222 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 252 goroutines, 143 MiB/101 MiB/186 MiB GO alloc/idle/total, 32 MiB/46 MiB CGO alloc/total, 70.2 CGO/sec, 2.7/1.9 %(u/s)time, 0.0 %gc (0x), 107 KiB/273 KiB (r/w)net
+I210326 21:38:47.980269 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 252 goroutines, 156 MiB/90 MiB/186 MiB GO alloc/idle/total, 32 MiB/46 MiB CGO alloc/total, 42.7 CGO/sec, 2.5/1.0 %(u/s)time, 0.0 %gc (0x), 90 KiB/259 KiB (r/w)net
+I210326 21:38:47.994911 240 storage/store.go:2364  [n1,s1] sstables (read amplification = 1):
+0 [ 440K 1 ]: 440K
+I210326 21:38:47.995025 240 storage/store.go:2365  [n1,s1] 
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      1/0   440.05 KB   0.5      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.8      0.56              0.50         1    0.556       0      0
+ Sum      1/0   440.05 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.8      0.56              0.50         1    0.556       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.8      0.56              0.50         1    0.556       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.8      0.56              0.50         1    0.556       0      0
+Uptime(secs): 1220.3 total, 600.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.6 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.6 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+estimated_pending_compaction_bytes: 0 B
+I210326 21:38:57.980469 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 252 goroutines, 95 MiB/143 MiB/186 MiB GO alloc/idle/total, 32 MiB/46 MiB CGO alloc/total, 40.3 CGO/sec, 2.9/0.6 %(u/s)time, 0.0 %gc (1x), 85 KiB/251 KiB (r/w)net
+I210326 21:39:07.980517 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 256 goroutines, 108 MiB/131 MiB/186 MiB GO alloc/idle/total, 32 MiB/46 MiB CGO alloc/total, 42.3 CGO/sec, 2.7/1.2 %(u/s)time, 0.0 %gc (0x), 91 KiB/180 KiB (r/w)net
+I210326 21:39:17.981064 261 server/status/runtime.go:498  [n1] runtime stats: 368 MiB RSS, 254 goroutines, 120 MiB/122 MiB/186 MiB GO alloc/idle/total, 32 MiB/46 MiB CGO alloc/total, 41.1 CGO/sec, 1.9/1.6 %(u/s)time, 0.0 %gc (0x), 85 KiB/252 KiB (r/w)net
+I210326 21:39:27.937619 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 8935/2482 sent/received, bytes 1439076B/404246B sent/received)
+  2: roach2:26257 (21m0s)
+  3: roach3:26257 (20m59s)
+I210326 21:39:27.981299 261 server/status/runtime.go:498  [n1] runtime stats: 368 MiB RSS, 253 goroutines, 132 MiB/111 MiB/186 MiB GO alloc/idle/total, 32 MiB/46 MiB CGO alloc/total, 42.0 CGO/sec, 1.7/1.8 %(u/s)time, 0.0 %gc (0x), 85 KiB/253 KiB (r/w)net
+I210326 21:39:37.981420 261 server/status/runtime.go:498  [n1] runtime stats: 368 MiB RSS, 252 goroutines, 146 MiB/99 MiB/186 MiB GO alloc/idle/total, 32 MiB/46 MiB CGO alloc/total, 63.9 CGO/sec, 2.1/2.3 %(u/s)time, 0.0 %gc (0x), 106 KiB/275 KiB (r/w)net
+I210326 21:39:47.982105 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 252 goroutines, 84 MiB/153 MiB/186 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 38.1 CGO/sec, 1.4/2.5 %(u/s)time, 0.0 %gc (1x), 87 KiB/252 KiB (r/w)net
+I210326 21:39:57.982231 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 253 goroutines, 100 MiB/138 MiB/186 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 38.4 CGO/sec, 1.9/1.6 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:40:07.982647 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 253 goroutines, 112 MiB/128 MiB/186 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 41.9 CGO/sec, 1.9/1.3 %(u/s)time, 0.0 %gc (0x), 90 KiB/255 KiB (r/w)net
+I210326 21:40:17.982887 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 254 goroutines, 126 MiB/116 MiB/186 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 43.2 CGO/sec, 2.0/1.9 %(u/s)time, 0.0 %gc (0x), 92 KiB/259 KiB (r/w)net
+I210326 21:40:27.937612 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 9353/2598 sent/received, bytes 1494002B/422496B sent/received)
+  2: roach2:26257 (22m0s)
+  3: roach3:26257 (21m59s)
+I210326 21:40:27.983504 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 254 goroutines, 140 MiB/104 MiB/186 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 40.9 CGO/sec, 2.2/1.5 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 21:40:37.983526 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 253 goroutines, 153 MiB/91 MiB/186 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 56.6 CGO/sec, 2.6/1.7 %(u/s)time, 0.0 %gc (0x), 102 KiB/268 KiB (r/w)net
+I210326 21:40:47.984308 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 253 goroutines, 94 MiB/143 MiB/186 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 36.9 CGO/sec, 1.9/1.9 %(u/s)time, 0.0 %gc (1x), 85 KiB/250 KiB (r/w)net
+I210326 21:40:57.985328 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 254 goroutines, 109 MiB/131 MiB/185 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 48.7 CGO/sec, 2.2/1.8 %(u/s)time, 0.0 %gc (0x), 91 KiB/260 KiB (r/w)net
+I210326 21:41:07.985330 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 253 goroutines, 120 MiB/121 MiB/185 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 46.1 CGO/sec, 2.4/1.4 %(u/s)time, 0.0 %gc (0x), 92 KiB/182 KiB (r/w)net
+I210326 21:41:17.985658 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 254 goroutines, 133 MiB/110 MiB/185 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 38.5 CGO/sec, 2.0/1.8 %(u/s)time, 0.0 %gc (0x), 86 KiB/252 KiB (r/w)net
+I210326 21:41:27.937677 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 9770/2713 sent/received, bytes 1548497B/440588B sent/received)
+  3: roach3:26257 (22m59s)
+  2: roach2:26257 (23m0s)
+I210326 21:41:27.985899 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 254 goroutines, 146 MiB/98 MiB/185 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 37.5 CGO/sec, 2.0/1.7 %(u/s)time, 0.0 %gc (0x), 84 KiB/249 KiB (r/w)net
+I210326 21:41:37.986156 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 253 goroutines, 85 MiB/151 MiB/185 MiB GO alloc/idle/total, 40 MiB/54 MiB CGO alloc/total, 56.4 CGO/sec, 2.4/2.0 %(u/s)time, 0.0 %gc (1x), 101 KiB/268 KiB (r/w)net
+I210326 21:41:47.986467 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 252 goroutines, 102 MiB/136 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 44.2 CGO/sec, 2.6/1.3 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 21:41:57.986857 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 253 goroutines, 116 MiB/124 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 41.5 CGO/sec, 1.8/1.9 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 21:42:07.987333 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 253 goroutines, 128 MiB/114 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 44.2 CGO/sec, 2.0/1.8 %(u/s)time, 0.0 %gc (0x), 93 KiB/260 KiB (r/w)net
+I210326 21:42:17.988229 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 254 goroutines, 141 MiB/102 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 35.3 CGO/sec, 2.1/1.4 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 21:42:27.938022 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 10187/2828 sent/received, bytes 1603042B/458680B sent/received)
+  2: roach2:26257 (24m0s)
+  3: roach3:26257 (23m59s)
+I210326 21:42:27.988057 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 254 goroutines, 154 MiB/90 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 39.9 CGO/sec, 1.1/2.6 %(u/s)time, 0.0 %gc (0x), 85 KiB/252 KiB (r/w)net
+I210326 21:42:37.988081 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 253 goroutines, 98 MiB/141 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 56.1 CGO/sec, 2.8/1.4 %(u/s)time, 0.0 %gc (1x), 102 KiB/269 KiB (r/w)net
+I210326 21:42:47.988524 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 253 goroutines, 112 MiB/129 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 42.5 CGO/sec, 2.1/1.5 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 21:42:57.988784 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 253 goroutines, 123 MiB/120 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 35.3 CGO/sec, 1.1/2.3 %(u/s)time, 0.0 %gc (0x), 83 KiB/171 KiB (r/w)net
+I210326 21:43:07.989162 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 254 goroutines, 136 MiB/108 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 45.0 CGO/sec, 1.3/2.6 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 21:43:17.989389 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 254 goroutines, 149 MiB/96 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 41.1 CGO/sec, 1.5/1.9 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 21:43:27.938097 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 10605/2944 sent/received, bytes 1657868B/476930B sent/received)
+  2: roach2:26257 (25m0s)
+  3: roach3:26257 (24m59s)
+I210326 21:43:27.989700 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 254 goroutines, 90 MiB/148 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 45.2 CGO/sec, 2.8/1.3 %(u/s)time, 0.0 %gc (1x), 87 KiB/254 KiB (r/w)net
+I210326 21:43:37.989978 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 253 goroutines, 106 MiB/134 MiB/185 MiB GO alloc/idle/total, 48 MiB/62 MiB CGO alloc/total, 57.6 CGO/sec, 1.7/2.3 %(u/s)time, 0.0 %gc (0x), 102 KiB/269 KiB (r/w)net
+I210326 21:43:47.990260 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 252 goroutines, 119 MiB/123 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 38.0 CGO/sec, 1.0/2.7 %(u/s)time, 0.0 %gc (0x), 84 KiB/251 KiB (r/w)net
+I210326 21:43:57.990757 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 252 goroutines, 132 MiB/111 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 34.1 CGO/sec, 1.2/2.1 %(u/s)time, 0.0 %gc (0x), 83 KiB/248 KiB (r/w)net
+I210326 21:44:07.991129 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 254 goroutines, 145 MiB/100 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 53.8 CGO/sec, 2.5/1.8 %(u/s)time, 0.0 %gc (0x), 99 KiB/266 KiB (r/w)net
+I210326 21:44:17.990766 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 253 goroutines, 157 MiB/89 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 34.8 CGO/sec, 1.4/1.9 %(u/s)time, 0.0 %gc (0x), 85 KiB/250 KiB (r/w)net
+I210326 21:44:27.937728 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 11022/3059 sent/received, bytes 1712363B/495022B sent/received)
+  3: roach3:26257 (25m59s)
+  2: roach2:26257 (26m0s)
+I210326 21:44:27.991061 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 253 goroutines, 95 MiB/142 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 43.6 CGO/sec, 3.0/1.1 %(u/s)time, 0.0 %gc (1x), 87 KiB/254 KiB (r/w)net
+I210326 21:44:37.991976 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 252 goroutines, 108 MiB/132 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 53.3 CGO/sec, 1.8/2.2 %(u/s)time, 0.0 %gc (0x), 100 KiB/187 KiB (r/w)net
+I210326 21:44:47.991762 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 252 goroutines, 121 MiB/121 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 41.3 CGO/sec, 2.3/1.4 %(u/s)time, 0.0 %gc (0x), 88 KiB/256 KiB (r/w)net
+I210326 21:44:57.992298 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 252 goroutines, 133 MiB/111 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 41.4 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 86 KiB/252 KiB (r/w)net
+I210326 21:45:07.992545 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 254 goroutines, 146 MiB/99 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 44.9 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 21:45:17.992876 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 254 goroutines, 85 MiB/152 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 37.9 CGO/sec, 2.2/1.7 %(u/s)time, 0.0 %gc (1x), 86 KiB/251 KiB (r/w)net
+I210326 21:45:27.937900 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 11439/3174 sent/received, bytes 1766858B/513114B sent/received)
+  2: roach2:26257 (27m0s)
+  3: roach3:26257 (26m59s)
+I210326 21:45:27.993276 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 253 goroutines, 101 MiB/137 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 39.7 CGO/sec, 1.8/1.8 %(u/s)time, 0.0 %gc (0x), 85 KiB/252 KiB (r/w)net
+I210326 21:45:37.993551 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 252 goroutines, 116 MiB/126 MiB/185 MiB GO alloc/idle/total, 55 MiB/70 MiB CGO alloc/total, 57.7 CGO/sec, 2.4/1.8 %(u/s)time, 0.0 %gc (0x), 105 KiB/269 KiB (r/w)net
+I210326 21:45:47.994339 261 server/status/runtime.go:498  [n1] runtime stats: 394 MiB RSS, 253 goroutines, 128 MiB/115 MiB/185 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 44.8 CGO/sec, 1.8/1.7 %(u/s)time, 0.0 %gc (0x), 87 KiB/256 KiB (r/w)net
+I210326 21:45:57.994080 261 server/status/runtime.go:498  [n1] runtime stats: 394 MiB RSS, 252 goroutines, 141 MiB/103 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 40.6 CGO/sec, 2.8/0.9 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 21:46:07.994778 261 server/status/runtime.go:498  [n1] runtime stats: 394 MiB RSS, 253 goroutines, 153 MiB/92 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 40.5 CGO/sec, 2.3/1.3 %(u/s)time, 0.0 %gc (0x), 90 KiB/255 KiB (r/w)net
+I210326 21:46:17.994512 261 server/status/runtime.go:498  [n1] runtime stats: 396 MiB RSS, 253 goroutines, 93 MiB/144 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 42.5 CGO/sec, 3.4/0.5 %(u/s)time, 0.0 %gc (1x), 92 KiB/258 KiB (r/w)net
+I210326 21:46:27.937678 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 11857/3290 sent/received, bytes 1821684B/531364B sent/received)
+  2: roach2:26257 (28m0s)
+  3: roach3:26257 (27m59s)
+I210326 21:46:27.995210 261 server/status/runtime.go:498  [n1] runtime stats: 396 MiB RSS, 253 goroutines, 106 MiB/133 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 37.9 CGO/sec, 1.8/1.8 %(u/s)time, 0.0 %gc (0x), 84 KiB/251 KiB (r/w)net
+I210326 21:46:37.995134 261 server/status/runtime.go:498  [n1] runtime stats: 396 MiB RSS, 252 goroutines, 119 MiB/123 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 56.5 CGO/sec, 1.5/2.4 %(u/s)time, 0.0 %gc (0x), 100 KiB/189 KiB (r/w)net
+I210326 21:46:47.995306 261 server/status/runtime.go:498  [n1] runtime stats: 398 MiB RSS, 252 goroutines, 133 MiB/110 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 36.9 CGO/sec, 1.5/2.0 %(u/s)time, 0.0 %gc (0x), 85 KiB/250 KiB (r/w)net
+I210326 21:46:57.996100 261 server/status/runtime.go:498  [n1] runtime stats: 398 MiB RSS, 252 goroutines, 146 MiB/99 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 39.2 CGO/sec, 1.9/1.5 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:47:07.996200 261 server/status/runtime.go:498  [n1] runtime stats: 398 MiB RSS, 253 goroutines, 88 MiB/149 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 52.4 CGO/sec, 2.6/1.6 %(u/s)time, 0.0 %gc (1x), 96 KiB/264 KiB (r/w)net
+I210326 21:47:17.996723 261 server/status/runtime.go:498  [n1] runtime stats: 400 MiB RSS, 253 goroutines, 104 MiB/135 MiB/184 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 34.9 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:47:27.937854 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 12274/3405 sent/received, bytes 1876229B/549456B sent/received)
+  3: roach3:26257 (28m59s)
+  2: roach2:26257 (29m0s)
+I210326 21:47:27.996874 261 server/status/runtime.go:498  [n1] runtime stats: 400 MiB RSS, 253 goroutines, 117 MiB/123 MiB/185 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 37.7 CGO/sec, 2.0/1.4 %(u/s)time, 0.0 %gc (0x), 83 KiB/250 KiB (r/w)net
+I210326 21:47:37.997380 261 server/status/runtime.go:498  [n1] runtime stats: 400 MiB RSS, 252 goroutines, 131 MiB/112 MiB/185 MiB GO alloc/idle/total, 63 MiB/78 MiB CGO alloc/total, 58.1 CGO/sec, 2.6/1.5 %(u/s)time, 0.0 %gc (0x), 103 KiB/268 KiB (r/w)net
+I210326 21:47:47.998183 261 server/status/runtime.go:498  [n1] runtime stats: 402 MiB RSS, 252 goroutines, 143 MiB/101 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 41.0 CGO/sec, 1.0/2.7 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 21:47:57.998955 261 server/status/runtime.go:498  [n1] runtime stats: 402 MiB RSS, 252 goroutines, 83 MiB/153 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 34.7 CGO/sec, 2.1/1.5 %(u/s)time, 0.0 %gc (1x), 83 KiB/249 KiB (r/w)net
+I210326 21:48:07.998741 261 server/status/runtime.go:498  [n1] runtime stats: 402 MiB RSS, 253 goroutines, 101 MiB/137 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 46.6 CGO/sec, 1.6/2.2 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 21:48:17.998577 261 server/status/runtime.go:498  [n1] runtime stats: 404 MiB RSS, 253 goroutines, 114 MiB/126 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 33.8 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 84 KiB/249 KiB (r/w)net
+I210326 21:48:27.937660 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 12691/3520 sent/received, bytes 1930724B/567548B sent/received)
+  2: roach2:26257 (30m0s)
+  3: roach3:26257 (29m59s)
+I210326 21:48:27.999496 261 server/status/runtime.go:498  [n1] runtime stats: 404 MiB RSS, 253 goroutines, 126 MiB/116 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 53.1 CGO/sec, 2.3/1.6 %(u/s)time, 0.0 %gc (0x), 91 KiB/261 KiB (r/w)net
+I210326 21:48:37.999837 261 server/status/runtime.go:498  [n1] runtime stats: 404 MiB RSS, 252 goroutines, 139 MiB/105 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 68.3 CGO/sec, 2.8/1.5 %(u/s)time, 0.0 %gc (0x), 107 KiB/198 KiB (r/w)net
+I210326 21:48:47.999715 240 storage/store.go:2364  [n1,s1] sstables (read amplification = 1):
+0 [ 440K 1 ]: 440K
+I210326 21:48:47.999785 240 storage/store.go:2365  [n1,s1] 
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      1/0   440.05 KB   0.5      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.8      0.56              0.50         1    0.556       0      0
+ Sum      1/0   440.05 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.8      0.56              0.50         1    0.556       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.8      0.56              0.50         1    0.556       0      0
+Uptime(secs): 1820.3 total, 600.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.6 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+estimated_pending_compaction_bytes: 0 B
+I210326 21:48:48.000243 261 server/status/runtime.go:498  [n1] runtime stats: 406 MiB RSS, 252 goroutines, 152 MiB/93 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 34.3 CGO/sec, 1.9/1.5 %(u/s)time, 0.0 %gc (0x), 83 KiB/248 KiB (r/w)net
+I210326 21:48:58.000350 261 server/status/runtime.go:498  [n1] runtime stats: 406 MiB RSS, 252 goroutines, 92 MiB/145 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 39.6 CGO/sec, 2.6/1.2 %(u/s)time, 0.0 %gc (1x), 86 KiB/252 KiB (r/w)net
+I210326 21:49:08.000858 261 server/status/runtime.go:498  [n1] runtime stats: 406 MiB RSS, 253 goroutines, 105 MiB/134 MiB/185 MiB GO alloc/idle/total, 71 MiB/86 MiB CGO alloc/total, 43.3 CGO/sec, 1.5/2.0 %(u/s)time, 0.0 %gc (0x), 90 KiB/256 KiB (r/w)net
+I210326 21:49:18.001339 261 server/status/runtime.go:498  [n1] runtime stats: 341 MiB RSS, 253 goroutines, 119 MiB/122 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 44.7 CGO/sec, 9.5/0.0 %(u/s)time, 0.0 %gc (0x), 91 KiB/259 KiB (r/w)net
+I210326 21:49:27.937621 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 13109/3636 sent/received, bytes 1985550B/585798B sent/received)
+  2: roach2:26257 (31m0s)
+  3: roach3:26257 (30m59s)
+I210326 21:49:28.001629 261 server/status/runtime.go:498  [n1] runtime stats: 341 MiB RSS, 253 goroutines, 132 MiB/111 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 37.4 CGO/sec, 2.2/1.3 %(u/s)time, 0.0 %gc (0x), 85 KiB/250 KiB (r/w)net
+I210326 21:49:38.002042 261 server/status/runtime.go:498  [n1] runtime stats: 341 MiB RSS, 252 goroutines, 146 MiB/99 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 54.0 CGO/sec, 2.1/1.9 %(u/s)time, 0.0 %gc (0x), 103 KiB/266 KiB (r/w)net
+I210326 21:49:48.002799 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 252 goroutines, 84 MiB/152 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 35.9 CGO/sec, 2.3/1.5 %(u/s)time, 0.0 %gc (1x), 86 KiB/250 KiB (r/w)net
+I210326 21:49:58.002496 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 252 goroutines, 100 MiB/138 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 46.2 CGO/sec, 1.3/2.4 %(u/s)time, 0.0 %gc (0x), 90 KiB/257 KiB (r/w)net
+I210326 21:50:08.002958 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 253 goroutines, 114 MiB/126 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 44.8 CGO/sec, 2.6/1.1 %(u/s)time, 0.0 %gc (0x), 93 KiB/260 KiB (r/w)net
+I210326 21:50:18.003132 261 server/status/runtime.go:498  [n1] runtime stats: 345 MiB RSS, 253 goroutines, 128 MiB/114 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 38.1 CGO/sec, 1.8/1.9 %(u/s)time, 0.0 %gc (0x), 86 KiB/250 KiB (r/w)net
+I210326 21:50:27.938046 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 13526/3751 sent/received, bytes 2040045B/603890B sent/received)
+  2: roach2:26257 (32m0s)
+  3: roach3:26257 (31m59s)
+I210326 21:50:28.003640 261 server/status/runtime.go:498  [n1] runtime stats: 345 MiB RSS, 254 goroutines, 139 MiB/104 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 39.7 CGO/sec, 1.4/2.0 %(u/s)time, 0.0 %gc (0x), 84 KiB/173 KiB (r/w)net
+I210326 21:50:38.003584 261 server/status/runtime.go:498  [n1] runtime stats: 345 MiB RSS, 253 goroutines, 152 MiB/93 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 55.7 CGO/sec, 2.4/1.6 %(u/s)time, 0.0 %gc (0x), 101 KiB/264 KiB (r/w)net
+I210326 21:50:48.004467 261 server/status/runtime.go:498  [n1] runtime stats: 347 MiB RSS, 252 goroutines, 94 MiB/143 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 41.0 CGO/sec, 2.4/1.7 %(u/s)time, 0.0 %gc (1x), 91 KiB/258 KiB (r/w)net
+I210326 21:50:58.004607 261 server/status/runtime.go:498  [n1] runtime stats: 347 MiB RSS, 252 goroutines, 107 MiB/132 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 48.1 CGO/sec, 1.7/1.9 %(u/s)time, 0.0 %gc (0x), 87 KiB/256 KiB (r/w)net
+I210326 21:51:08.005118 261 server/status/runtime.go:498  [n1] runtime stats: 347 MiB RSS, 253 goroutines, 120 MiB/121 MiB/185 MiB GO alloc/idle/total, 16 MiB/28 MiB CGO alloc/total, 44.8 CGO/sec, 2.0/1.7 %(u/s)time, 0.0 %gc (0x), 94 KiB/259 KiB (r/w)net
+I210326 21:51:18.005138 261 server/status/runtime.go:498  [n1] runtime stats: 349 MiB RSS, 253 goroutines, 133 MiB/110 MiB/185 MiB GO alloc/idle/total, 24 MiB/36 MiB CGO alloc/total, 42.2 CGO/sec, 2.4/1.2 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 21:51:27.937780 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 13943/3866 sent/received, bytes 2094540B/621982B sent/received)
+  2: roach2:26257 (33m0s)
+  3: roach3:26257 (32m59s)
+I210326 21:51:28.005887 261 server/status/runtime.go:498  [n1] runtime stats: 349 MiB RSS, 253 goroutines, 147 MiB/97 MiB/185 MiB GO alloc/idle/total, 24 MiB/36 MiB CGO alloc/total, 34.8 CGO/sec, 1.0/2.4 %(u/s)time, 0.0 %gc (0x), 83 KiB/250 KiB (r/w)net
+I210326 21:51:38.006408 261 server/status/runtime.go:498  [n1] runtime stats: 349 MiB RSS, 252 goroutines, 90 MiB/147 MiB/185 MiB GO alloc/idle/total, 24 MiB/36 MiB CGO alloc/total, 60.1 CGO/sec, 2.4/2.0 %(u/s)time, 0.0 %gc (1x), 105 KiB/272 KiB (r/w)net
+I210326 21:51:48.006791 261 server/status/runtime.go:498  [n1] runtime stats: 351 MiB RSS, 252 goroutines, 104 MiB/134 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 41.8 CGO/sec, 1.1/2.5 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 21:51:58.006986 261 server/status/runtime.go:498  [n1] runtime stats: 351 MiB RSS, 252 goroutines, 116 MiB/124 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 36.6 CGO/sec, 1.9/1.6 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 21:52:08.007454 261 server/status/runtime.go:498  [n1] runtime stats: 351 MiB RSS, 253 goroutines, 129 MiB/113 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 43.3 CGO/sec, 1.4/2.4 %(u/s)time, 0.0 %gc (0x), 90 KiB/256 KiB (r/w)net
+I210326 21:52:18.007492 261 server/status/runtime.go:498  [n1] runtime stats: 353 MiB RSS, 253 goroutines, 140 MiB/103 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 44.4 CGO/sec, 2.4/1.3 %(u/s)time, 0.0 %gc (0x), 91 KiB/181 KiB (r/w)net
+I210326 21:52:27.937755 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 14361/3982 sent/received, bytes 2149366B/640232B sent/received)
+  2: roach2:26257 (34m0s)
+  3: roach3:26257 (33m59s)
+I210326 21:52:28.007987 261 server/status/runtime.go:498  [n1] runtime stats: 353 MiB RSS, 253 goroutines, 154 MiB/90 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 39.6 CGO/sec, 1.7/1.9 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 21:52:38.008101 261 server/status/runtime.go:498  [n1] runtime stats: 353 MiB RSS, 252 goroutines, 95 MiB/143 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 56.2 CGO/sec, 3.1/1.2 %(u/s)time, 0.0 %gc (1x), 102 KiB/268 KiB (r/w)net
+I210326 21:52:48.008766 261 server/status/runtime.go:498  [n1] runtime stats: 355 MiB RSS, 252 goroutines, 110 MiB/130 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 36.0 CGO/sec, 1.5/2.0 %(u/s)time, 0.0 %gc (0x), 84 KiB/249 KiB (r/w)net
+I210326 21:52:58.009029 261 server/status/runtime.go:498  [n1] runtime stats: 355 MiB RSS, 252 goroutines, 124 MiB/118 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 44.8 CGO/sec, 1.3/2.3 %(u/s)time, 0.0 %gc (0x), 89 KiB/256 KiB (r/w)net
+I210326 21:53:08.009284 261 server/status/runtime.go:498  [n1] runtime stats: 355 MiB RSS, 253 goroutines, 136 MiB/108 MiB/185 MiB GO alloc/idle/total, 24 MiB/37 MiB CGO alloc/total, 46.5 CGO/sec, 2.3/1.4 %(u/s)time, 0.0 %gc (0x), 94 KiB/261 KiB (r/w)net
+I210326 21:53:18.009920 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 253 goroutines, 149 MiB/96 MiB/185 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 34.9 CGO/sec, 2.1/1.2 %(u/s)time, 0.0 %gc (0x), 85 KiB/249 KiB (r/w)net
+I210326 21:53:27.937833 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 14778/4097 sent/received, bytes 2203861B/658324B sent/received)
+  2: roach2:26257 (35m0s)
+  3: roach3:26257 (34m59s)
+I210326 21:53:28.010237 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 253 goroutines, 92 MiB/146 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 46.0 CGO/sec, 2.2/1.7 %(u/s)time, 0.0 %gc (1x), 87 KiB/255 KiB (r/w)net
+I210326 21:53:38.010144 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 252 goroutines, 108 MiB/132 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 61.6 CGO/sec, 2.1/2.2 %(u/s)time, 0.0 %gc (0x), 106 KiB/270 KiB (r/w)net
+I210326 21:53:48.010445 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 252 goroutines, 121 MiB/121 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 42.6 CGO/sec, 2.2/1.4 %(u/s)time, 0.0 %gc (0x), 89 KiB/257 KiB (r/w)net
+I210326 21:53:58.011042 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 252 goroutines, 135 MiB/109 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 42.2 CGO/sec, 1.4/2.2 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 21:54:08.011404 261 server/status/runtime.go:498  [n1] runtime stats: 359 MiB RSS, 253 goroutines, 146 MiB/99 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 40.9 CGO/sec, 1.3/2.3 %(u/s)time, 0.0 %gc (0x), 90 KiB/178 KiB (r/w)net
+I210326 21:54:18.011867 261 server/status/runtime.go:498  [n1] runtime stats: 361 MiB RSS, 253 goroutines, 86 MiB/150 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 39.4 CGO/sec, 1.9/1.8 %(u/s)time, 0.0 %gc (1x), 88 KiB/251 KiB (r/w)net
+I210326 21:54:27.937753 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 15195/4212 sent/received, bytes 2258356B/676416B sent/received)
+  2: roach2:26257 (36m0s)
+  3: roach3:26257 (35m59s)
+I210326 21:54:28.012241 261 server/status/runtime.go:498  [n1] runtime stats: 361 MiB RSS, 253 goroutines, 103 MiB/134 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 40.2 CGO/sec, 2.1/1.7 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 21:54:38.012417 261 server/status/runtime.go:498  [n1] runtime stats: 361 MiB RSS, 252 goroutines, 119 MiB/122 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 59.5 CGO/sec, 2.6/1.7 %(u/s)time, 0.0 %gc (0x), 106 KiB/271 KiB (r/w)net
+I210326 21:54:48.012993 261 server/status/runtime.go:498  [n1] runtime stats: 363 MiB RSS, 252 goroutines, 131 MiB/111 MiB/184 MiB GO alloc/idle/total, 32 MiB/45 MiB CGO alloc/total, 41.2 CGO/sec, 1.6/1.9 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 21:54:58.013064 261 server/status/runtime.go:498  [n1] runtime stats: 363 MiB RSS, 252 goroutines, 143 MiB/101 MiB/184 MiB GO alloc/idle/total, 31 MiB/45 MiB CGO alloc/total, 36.4 CGO/sec, 1.9/1.6 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 21:55:08.015453 261 server/status/runtime.go:498  [n1] runtime stats: 363 MiB RSS, 254 goroutines, 153 MiB/93 MiB/184 MiB GO alloc/idle/total, 31 MiB/45 MiB CGO alloc/total, 46.8 CGO/sec, 2.5/1.4 %(u/s)time, 0.0 %gc (1x), 95 KiB/260 KiB (r/w)net
+I210326 21:55:18.014965 261 server/status/runtime.go:498  [n1] runtime stats: 365 MiB RSS, 253 goroutines, 100 MiB/138 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 42.4 CGO/sec, 2.3/1.6 %(u/s)time, 0.0 %gc (0x), 89 KiB/255 KiB (r/w)net
+I210326 21:55:27.937688 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 15613/4328 sent/received, bytes 2313182B/694666B sent/received)
+  2: roach2:26257 (37m0s)
+  3: roach3:26257 (36m59s)
+I210326 21:55:28.015228 261 server/status/runtime.go:498  [n1] runtime stats: 365 MiB RSS, 253 goroutines, 113 MiB/126 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 42.9 CGO/sec, 1.4/2.3 %(u/s)time, 0.0 %gc (0x), 88 KiB/256 KiB (r/w)net
+I210326 21:55:38.015579 261 server/status/runtime.go:498  [n1] runtime stats: 365 MiB RSS, 252 goroutines, 127 MiB/115 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 56.1 CGO/sec, 2.3/1.8 %(u/s)time, 0.0 %gc (0x), 102 KiB/268 KiB (r/w)net
+I210326 21:55:48.016000 261 server/status/runtime.go:498  [n1] runtime stats: 367 MiB RSS, 252 goroutines, 141 MiB/103 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 36.5 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 21:55:58.015949 261 server/status/runtime.go:498  [n1] runtime stats: 367 MiB RSS, 252 goroutines, 152 MiB/93 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 48.2 CGO/sec, 2.4/1.3 %(u/s)time, 0.0 %gc (0x), 87 KiB/178 KiB (r/w)net
+I210326 21:56:08.016298 261 server/status/runtime.go:498  [n1] runtime stats: 367 MiB RSS, 253 goroutines, 94 MiB/143 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 47.3 CGO/sec, 2.3/1.7 %(u/s)time, 0.0 %gc (1x), 94 KiB/260 KiB (r/w)net
+I210326 21:56:18.016478 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 253 goroutines, 107 MiB/131 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 38.8 CGO/sec, 2.3/1.3 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 21:56:27.937662 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 16030/4443 sent/received, bytes 2367677B/712758B sent/received)
+  2: roach2:26257 (38m0s)
+  3: roach3:26257 (37m59s)
+I210326 21:56:28.016935 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 253 goroutines, 120 MiB/120 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 40.9 CGO/sec, 1.4/2.2 %(u/s)time, 0.0 %gc (0x), 85 KiB/253 KiB (r/w)net
+I210326 21:56:38.017446 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 252 goroutines, 135 MiB/108 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 56.0 CGO/sec, 2.5/1.4 %(u/s)time, 0.0 %gc (0x), 104 KiB/268 KiB (r/w)net
+I210326 21:56:48.017284 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 252 goroutines, 148 MiB/96 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 43.9 CGO/sec, 2.0/1.7 %(u/s)time, 0.0 %gc (0x), 91 KiB/259 KiB (r/w)net
+I210326 21:56:58.017796 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 252 goroutines, 86 MiB/150 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 39.8 CGO/sec, 2.7/1.1 %(u/s)time, 0.0 %gc (1x), 87 KiB/252 KiB (r/w)net
+I210326 21:57:08.017953 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 253 goroutines, 103 MiB/135 MiB/184 MiB GO alloc/idle/total, 39 MiB/53 MiB CGO alloc/total, 41.2 CGO/sec, 1.7/2.1 %(u/s)time, 0.0 %gc (0x), 93 KiB/258 KiB (r/w)net
+I210326 21:57:18.018358 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 253 goroutines, 116 MiB/124 MiB/184 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 37.7 CGO/sec, 1.6/1.9 %(u/s)time, 0.0 %gc (0x), 85 KiB/249 KiB (r/w)net
+I210326 21:57:27.937764 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 16447/4558 sent/received, bytes 2422172B/730850B sent/received)
+  2: roach2:26257 (39m0s)
+  3: roach3:26257 (38m59s)
+I210326 21:57:28.019089 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 253 goroutines, 128 MiB/114 MiB/184 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 39.9 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 88 KiB/254 KiB (r/w)net
+I210326 21:57:38.019312 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 252 goroutines, 142 MiB/101 MiB/184 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 65.1 CGO/sec, 2.4/2.0 %(u/s)time, 0.0 %gc (0x), 110 KiB/277 KiB (r/w)net
+I210326 21:57:48.019873 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 252 goroutines, 154 MiB/91 MiB/184 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 36.5 CGO/sec, 1.6/2.0 %(u/s)time, 0.0 %gc (0x), 84 KiB/171 KiB (r/w)net
+I210326 21:57:58.019712 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 252 goroutines, 96 MiB/142 MiB/184 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 38.8 CGO/sec, 2.4/1.4 %(u/s)time, 0.0 %gc (1x), 86 KiB/252 KiB (r/w)net
+I210326 21:58:08.020132 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 253 goroutines, 110 MiB/129 MiB/184 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 44.1 CGO/sec, 1.4/2.2 %(u/s)time, 0.0 %gc (0x), 91 KiB/256 KiB (r/w)net
+I210326 21:58:18.020638 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 253 goroutines, 122 MiB/119 MiB/184 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 41.7 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 21:58:27.937782 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 16865/4674 sent/received, bytes 2476948B/749100B sent/received)
+  2: roach2:26257 (40m0s)
+  3: roach3:26257 (39m59s)
+I210326 21:58:28.020824 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 253 goroutines, 135 MiB/108 MiB/183 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 40.3 CGO/sec, 2.0/1.7 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 21:58:38.021323 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 252 goroutines, 150 MiB/95 MiB/183 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 68.9 CGO/sec, 2.9/1.4 %(u/s)time, 0.0 %gc (0x), 108 KiB/274 KiB (r/w)net
+I210326 21:58:48.001276 240 storage/store.go:2364  [n1,s1] sstables (read amplification = 1):
+6 [ 608K 1 ]: 608K
+I210326 21:58:48.001368 240 storage/store.go:2365  [n1,s1] 
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.7      1.14              1.03         2    0.568       0      0
+  L6      1/0   608.06 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.8      6.2      4.8      0.12              0.05         1    0.123     15K   7936
+ Sum      1/0   608.06 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.8      0.6      1.1      1.26              1.08         3    0.420     15K   7936
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   2.7      1.1      1.3      0.70              0.57         2    0.352     15K   7936
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      6.2      4.8      0.12              0.05         1    0.123     15K   7936
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.7      1.14              1.03         2    0.568       0      0
+Uptime(secs): 2420.3 total, 600.0 interval
+Flush(GB): cumulative 0.001, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.3 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.7 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+estimated_pending_compaction_bytes: 0 B
+I210326 21:58:48.021707 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 252 goroutines, 87 MiB/149 MiB/183 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 40.6 CGO/sec, 2.1/1.8 %(u/s)time, 0.0 %gc (1x), 86 KiB/253 KiB (r/w)net
+I210326 21:58:58.021936 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 252 goroutines, 104 MiB/133 MiB/183 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 43.3 CGO/sec, 2.7/0.9 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 21:59:08.022248 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 253 goroutines, 117 MiB/123 MiB/183 MiB GO alloc/idle/total, 47 MiB/61 MiB CGO alloc/total, 46.0 CGO/sec, 2.0/1.8 %(u/s)time, 0.0 %gc (0x), 95 KiB/262 KiB (r/w)net
+I210326 21:59:18.022697 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 253 goroutines, 131 MiB/110 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 37.0 CGO/sec, 2.1/1.5 %(u/s)time, 0.0 %gc (0x), 86 KiB/251 KiB (r/w)net
+I210326 21:59:27.937790 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 17282/4789 sent/received, bytes 2531393B/767192B sent/received)
+  2: roach2:26257 (41m0s)
+  3: roach3:26257 (40m59s)
+I210326 21:59:28.022841 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 253 goroutines, 144 MiB/100 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 39.3 CGO/sec, 1.1/2.4 %(u/s)time, 0.0 %gc (0x), 84 KiB/251 KiB (r/w)net
+I210326 21:59:38.023118 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 252 goroutines, 82 MiB/154 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 54.6 CGO/sec, 2.4/1.7 %(u/s)time, 0.0 %gc (1x), 101 KiB/188 KiB (r/w)net
+I210326 21:59:48.023866 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 252 goroutines, 100 MiB/137 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 44.5 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 90 KiB/259 KiB (r/w)net
+I210326 21:59:58.023899 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 252 goroutines, 112 MiB/127 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 38.8 CGO/sec, 1.8/1.8 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 22:00:08.024141 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 253 goroutines, 126 MiB/116 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 47.2 CGO/sec, 2.4/1.4 %(u/s)time, 0.0 %gc (0x), 92 KiB/258 KiB (r/w)net
+I210326 22:00:18.024758 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 253 goroutines, 138 MiB/105 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 37.8 CGO/sec, 1.6/1.9 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 22:00:27.937726 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 17699/4904 sent/received, bytes 2585838B/785284B sent/received)
+  2: roach2:26257 (42m0s)
+  3: roach3:26257 (41m59s)
+I210326 22:00:28.024935 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 253 goroutines, 153 MiB/92 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 512.4 CGO/sec, 2.1/1.8 %(u/s)time, 0.0 %gc (0x), 89 KiB/278 KiB (r/w)net
+I210326 22:00:38.025246 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 252 goroutines, 94 MiB/143 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 56.0 CGO/sec, 3.8/0.5 %(u/s)time, 0.0 %gc (1x), 103 KiB/269 KiB (r/w)net
+I210326 22:00:48.025981 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 252 goroutines, 109 MiB/130 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 39.9 CGO/sec, 2.5/1.0 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 22:00:58.025862 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 252 goroutines, 121 MiB/120 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 37.9 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 86 KiB/252 KiB (r/w)net
+I210326 22:01:08.026357 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 253 goroutines, 135 MiB/108 MiB/183 MiB GO alloc/idle/total, 55 MiB/69 MiB CGO alloc/total, 52.9 CGO/sec, 2.3/1.6 %(u/s)time, 0.0 %gc (0x), 95 KiB/260 KiB (r/w)net
+I210326 22:01:18.026404 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 253 goroutines, 147 MiB/97 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 41.7 CGO/sec, 1.5/2.2 %(u/s)time, 0.0 %gc (0x), 88 KiB/256 KiB (r/w)net
+I210326 22:01:27.937925 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 18117/5020 sent/received, bytes 2640664B/803534B sent/received)
+  2: roach2:26257 (43m0s)
+  3: roach3:26257 (42m59s)
+I210326 22:01:28.026814 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 253 goroutines, 86 MiB/150 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 37.2 CGO/sec, 1.8/1.9 %(u/s)time, 0.0 %gc (1x), 83 KiB/173 KiB (r/w)net
+I210326 22:01:38.026918 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 252 goroutines, 104 MiB/134 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 59.3 CGO/sec, 2.1/1.9 %(u/s)time, 0.0 %gc (0x), 104 KiB/268 KiB (r/w)net
+I210326 22:01:48.027597 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 252 goroutines, 117 MiB/123 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 37.4 CGO/sec, 0.9/2.6 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 22:01:58.027849 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 252 goroutines, 131 MiB/111 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 42.5 CGO/sec, 1.4/2.2 %(u/s)time, 0.0 %gc (0x), 89 KiB/255 KiB (r/w)net
+I210326 22:02:08.027973 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 253 goroutines, 144 MiB/100 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 46.7 CGO/sec, 3.5/0.2 %(u/s)time, 0.0 %gc (0x), 95 KiB/261 KiB (r/w)net
+I210326 22:02:18.028291 261 server/status/runtime.go:498  [n1] runtime stats: 394 MiB RSS, 253 goroutines, 156 MiB/89 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 38.1 CGO/sec, 1.8/1.7 %(u/s)time, 0.0 %gc (0x), 86 KiB/251 KiB (r/w)net
+I210326 22:02:27.937883 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 18534/5135 sent/received, bytes 2695159B/821626B sent/received)
+  2: roach2:26257 (44m0s)
+  3: roach3:26257 (43m59s)
+I210326 22:02:28.028442 261 server/status/runtime.go:498  [n1] runtime stats: 394 MiB RSS, 253 goroutines, 97 MiB/140 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 37.8 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (1x), 84 KiB/250 KiB (r/w)net
+I210326 22:02:38.028753 261 server/status/runtime.go:498  [n1] runtime stats: 394 MiB RSS, 252 goroutines, 112 MiB/128 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 57.4 CGO/sec, 2.8/1.2 %(u/s)time, 0.0 %gc (0x), 102 KiB/267 KiB (r/w)net
+I210326 22:02:48.029206 261 server/status/runtime.go:498  [n1] runtime stats: 396 MiB RSS, 252 goroutines, 125 MiB/117 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 41.8 CGO/sec, 2.1/1.7 %(u/s)time, 0.0 %gc (0x), 90 KiB/257 KiB (r/w)net
+I210326 22:02:58.029761 261 server/status/runtime.go:498  [n1] runtime stats: 396 MiB RSS, 252 goroutines, 138 MiB/106 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 38.0 CGO/sec, 1.5/2.1 %(u/s)time, 0.0 %gc (0x), 85 KiB/250 KiB (r/w)net
+I210326 22:03:08.029774 261 server/status/runtime.go:498  [n1] runtime stats: 396 MiB RSS, 253 goroutines, 151 MiB/94 MiB/183 MiB GO alloc/idle/total, 63 MiB/77 MiB CGO alloc/total, 45.3 CGO/sec, 2.1/1.5 %(u/s)time, 0.0 %gc (0x), 91 KiB/257 KiB (r/w)net
+I210326 22:03:18.030093 261 server/status/runtime.go:498  [n1] runtime stats: 398 MiB RSS, 253 goroutines, 88 MiB/148 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 34.7 CGO/sec, 1.7/2.0 %(u/s)time, 0.0 %gc (1x), 85 KiB/172 KiB (r/w)net
+I210326 22:03:27.937628 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 18951/5250 sent/received, bytes 2749754B/839718B sent/received)
+  2: roach2:26257 (45m0s)
+  3: roach3:26257 (44m59s)
+I210326 22:03:28.030638 261 server/status/runtime.go:498  [n1] runtime stats: 398 MiB RSS, 253 goroutines, 103 MiB/134 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 43.1 CGO/sec, 2.0/1.7 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 22:03:38.031209 261 server/status/runtime.go:498  [n1] runtime stats: 398 MiB RSS, 252 goroutines, 120 MiB/121 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 62.0 CGO/sec, 2.9/1.3 %(u/s)time, 0.0 %gc (0x), 106 KiB/272 KiB (r/w)net
+I210326 22:03:48.030756 261 server/status/runtime.go:498  [n1] runtime stats: 400 MiB RSS, 252 goroutines, 133 MiB/110 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 44.7 CGO/sec, 1.7/1.9 %(u/s)time, 0.0 %gc (0x), 89 KiB/256 KiB (r/w)net
+I210326 22:03:58.030814 261 server/status/runtime.go:498  [n1] runtime stats: 400 MiB RSS, 252 goroutines, 145 MiB/99 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 37.9 CGO/sec, 2.1/1.3 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 22:04:08.031205 261 server/status/runtime.go:498  [n1] runtime stats: 400 MiB RSS, 253 goroutines, 86 MiB/151 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 44.8 CGO/sec, 3.1/0.8 %(u/s)time, 0.0 %gc (1x), 91 KiB/257 KiB (r/w)net
+I210326 22:04:18.031567 261 server/status/runtime.go:498  [n1] runtime stats: 402 MiB RSS, 253 goroutines, 102 MiB/135 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 40.4 CGO/sec, 2.0/1.8 %(u/s)time, 0.0 %gc (0x), 90 KiB/256 KiB (r/w)net
+I210326 22:04:27.937612 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 19369/5366 sent/received, bytes 2804680B/857968B sent/received)
+  2: roach2:26257 (46m0s)
+  3: roach3:26257 (45m59s)
+I210326 22:04:28.031896 261 server/status/runtime.go:498  [n1] runtime stats: 402 MiB RSS, 253 goroutines, 116 MiB/124 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 39.6 CGO/sec, 2.1/1.5 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 22:04:38.032159 261 server/status/runtime.go:498  [n1] runtime stats: 402 MiB RSS, 252 goroutines, 130 MiB/112 MiB/183 MiB GO alloc/idle/total, 71 MiB/85 MiB CGO alloc/total, 52.1 CGO/sec, 2.7/1.3 %(u/s)time, 0.0 %gc (0x), 100 KiB/264 KiB (r/w)net
+I210326 22:04:48.032557 261 server/status/runtime.go:498  [n1] runtime stats: 341 MiB RSS, 252 goroutines, 142 MiB/102 MiB/183 MiB GO alloc/idle/total, 16 MiB/29 MiB CGO alloc/total, 40.3 CGO/sec, 7.7/0.0 %(u/s)time, 0.0 %gc (0x), 87 KiB/252 KiB (r/w)net
+I210326 22:04:58.032658 261 server/status/runtime.go:498  [n1] runtime stats: 341 MiB RSS, 252 goroutines, 81 MiB/155 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 41.0 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (1x), 86 KiB/253 KiB (r/w)net
+I210326 22:05:08.033038 261 server/status/runtime.go:498  [n1] runtime stats: 341 MiB RSS, 253 goroutines, 97 MiB/140 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 47.1 CGO/sec, 1.5/2.4 %(u/s)time, 0.0 %gc (0x), 92 KiB/182 KiB (r/w)net
+I210326 22:05:18.033358 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 253 goroutines, 111 MiB/129 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 38.5 CGO/sec, 2.4/1.1 %(u/s)time, 0.0 %gc (0x), 88 KiB/253 KiB (r/w)net
+I210326 22:05:27.938156 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 19786/5481 sent/received, bytes 2859175B/876060B sent/received)
+  2: roach2:26257 (47m0s)
+  3: roach3:26257 (46m59s)
+I210326 22:05:28.033860 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 253 goroutines, 124 MiB/117 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 38.9 CGO/sec, 2.8/0.7 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 22:05:38.034289 261 server/status/runtime.go:498  [n1] runtime stats: 343 MiB RSS, 252 goroutines, 139 MiB/105 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 60.1 CGO/sec, 2.4/1.5 %(u/s)time, 0.0 %gc (0x), 104 KiB/268 KiB (r/w)net
+I210326 22:05:48.034313 261 server/status/runtime.go:498  [n1] runtime stats: 345 MiB RSS, 252 goroutines, 151 MiB/94 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 42.6 CGO/sec, 1.1/2.6 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 22:05:58.034809 261 server/status/runtime.go:498  [n1] runtime stats: 345 MiB RSS, 252 goroutines, 92 MiB/144 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 37.7 CGO/sec, 2.3/1.3 %(u/s)time, 0.0 %gc (1x), 85 KiB/251 KiB (r/w)net
+I210326 22:06:08.034791 261 server/status/runtime.go:498  [n1] runtime stats: 345 MiB RSS, 253 goroutines, 108 MiB/131 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 54.6 CGO/sec, 1.9/2.1 %(u/s)time, 0.0 %gc (0x), 97 KiB/265 KiB (r/w)net
+I210326 22:06:18.036573 261 server/status/runtime.go:498  [n1] runtime stats: 347 MiB RSS, 253 goroutines, 122 MiB/120 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 43.0 CGO/sec, 1.2/2.4 %(u/s)time, 0.0 %gc (0x), 87 KiB/252 KiB (r/w)net
+I210326 22:06:27.937647 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 20203/5596 sent/received, bytes 2913570B/894152B sent/received)
+  2: roach2:26257 (48m0s)
+  3: roach3:26257 (47m59s)
+I210326 22:06:28.035601 261 server/status/runtime.go:498  [n1] runtime stats: 348 MiB RSS, 253 goroutines, 134 MiB/109 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 42.7 CGO/sec, 1.7/2.0 %(u/s)time, 0.0 %gc (0x), 87 KiB/255 KiB (r/w)net
+I210326 22:06:38.035739 261 server/status/runtime.go:498  [n1] runtime stats: 348 MiB RSS, 252 goroutines, 149 MiB/95 MiB/183 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 57.8 CGO/sec, 2.4/1.6 %(u/s)time, 0.0 %gc (0x), 103 KiB/269 KiB (r/w)net
+I210326 22:06:48.036114 261 server/status/runtime.go:498  [n1] runtime stats: 350 MiB RSS, 252 goroutines, 90 MiB/147 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 41.0 CGO/sec, 2.4/1.3 %(u/s)time, 0.0 %gc (1x), 86 KiB/252 KiB (r/w)net
+I210326 22:06:58.036567 261 server/status/runtime.go:498  [n1] runtime stats: 350 MiB RSS, 252 goroutines, 103 MiB/135 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 38.0 CGO/sec, 2.3/1.1 %(u/s)time, 0.0 %gc (0x), 83 KiB/171 KiB (r/w)net
+I210326 22:07:08.036593 261 server/status/runtime.go:498  [n1] runtime stats: 350 MiB RSS, 253 goroutines, 117 MiB/123 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 47.2 CGO/sec, 1.6/2.1 %(u/s)time, 0.0 %gc (0x), 95 KiB/260 KiB (r/w)net
+I210326 22:07:18.036955 261 server/status/runtime.go:498  [n1] runtime stats: 352 MiB RSS, 253 goroutines, 130 MiB/112 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 42.0 CGO/sec, 1.5/2.2 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 22:07:27.937650 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 20621/5712 sent/received, bytes 2968346B/912402B sent/received)
+  2: roach2:26257 (49m0s)
+  3: roach3:26257 (48m59s)
+I210326 22:07:28.037256 261 server/status/runtime.go:498  [n1] runtime stats: 352 MiB RSS, 253 goroutines, 142 MiB/101 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 37.2 CGO/sec, 2.1/1.1 %(u/s)time, 0.0 %gc (0x), 86 KiB/252 KiB (r/w)net
+I210326 22:07:38.037381 261 server/status/runtime.go:498  [n1] runtime stats: 352 MiB RSS, 252 goroutines, 81 MiB/155 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 57.6 CGO/sec, 2.3/1.9 %(u/s)time, 0.0 %gc (1x), 102 KiB/269 KiB (r/w)net
+I210326 22:07:48.037517 261 server/status/runtime.go:498  [n1] runtime stats: 354 MiB RSS, 252 goroutines, 97 MiB/140 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 39.2 CGO/sec, 1.6/1.8 %(u/s)time, 0.0 %gc (0x), 86 KiB/251 KiB (r/w)net
+I210326 22:07:58.038087 261 server/status/runtime.go:498  [n1] runtime stats: 354 MiB RSS, 253 goroutines, 113 MiB/127 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 41.1 CGO/sec, 2.2/1.3 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 22:08:08.039075 261 server/status/runtime.go:498  [n1] runtime stats: 354 MiB RSS, 253 goroutines, 126 MiB/116 MiB/183 MiB GO alloc/idle/total, 24 MiB/38 MiB CGO alloc/total, 45.7 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 93 KiB/261 KiB (r/w)net
+I210326 22:08:18.038826 261 server/status/runtime.go:498  [n1] runtime stats: 356 MiB RSS, 253 goroutines, 138 MiB/105 MiB/183 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 37.2 CGO/sec, 1.8/1.5 %(u/s)time, 0.0 %gc (0x), 84 KiB/248 KiB (r/w)net
+I210326 22:08:27.937879 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 21038/5827 sent/received, bytes 3022841B/930494B sent/received)
+  2: roach2:26257 (50m0s)
+  3: roach3:26257 (49m59s)
+I210326 22:08:28.039050 261 server/status/runtime.go:498  [n1] runtime stats: 356 MiB RSS, 252 goroutines, 150 MiB/94 MiB/182 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 36.2 CGO/sec, 2.1/1.4 %(u/s)time, 0.0 %gc (0x), 84 KiB/251 KiB (r/w)net
+I210326 22:08:38.039109 261 server/status/runtime.go:498  [n1] runtime stats: 356 MiB RSS, 252 goroutines, 95 MiB/143 MiB/182 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 60.4 CGO/sec, 2.8/1.5 %(u/s)time, 0.0 %gc (1x), 100 KiB/266 KiB (r/w)net
+I210326 22:08:47.999581 240 storage/store.go:2364  [n1,s1] sstables (read amplification = 2):
+0 [ 405K 1 ]: 405K
+6 [ 608K 1 ]: 608K
+I210326 22:08:47.999701 240 storage/store.go:2365  [n1,s1] 
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      1/0   405.03 KB   0.5      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.7      1.62              1.47         3    0.541       0      0
+  L6      1/0   608.06 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.8      6.2      4.8      0.12              0.05         1    0.123     15K   7936
+ Sum      2/0   1013.09 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.5      0.4      1.0      1.75              1.52         4    0.436     15K   7936
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.8      0.49              0.44         1    0.486       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      6.2      4.8      0.12              0.05         1    0.123     15K   7936
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.7      1.62              1.47         3    0.541       0      0
+Uptime(secs): 3020.3 total, 600.0 interval
+Flush(GB): cumulative 0.001, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.7 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.5 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+estimated_pending_compaction_bytes: 0 B
+I210326 22:08:48.039727 261 server/status/runtime.go:498  [n1] runtime stats: 358 MiB RSS, 252 goroutines, 108 MiB/131 MiB/182 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 54.0 CGO/sec, 1.7/2.2 %(u/s)time, 0.0 %gc (0x), 93 KiB/186 KiB (r/w)net
+I210326 22:08:58.040000 261 server/status/runtime.go:498  [n1] runtime stats: 358 MiB RSS, 253 goroutines, 121 MiB/120 MiB/182 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 42.4 CGO/sec, 1.9/1.8 %(u/s)time, 0.0 %gc (0x), 90 KiB/255 KiB (r/w)net
+I210326 22:09:08.040755 261 server/status/runtime.go:498  [n1] runtime stats: 358 MiB RSS, 253 goroutines, 134 MiB/109 MiB/182 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 43.9 CGO/sec, 1.6/2.1 %(u/s)time, 0.0 %gc (0x), 89 KiB/255 KiB (r/w)net
+I210326 22:09:18.040724 261 server/status/runtime.go:498  [n1] runtime stats: 360 MiB RSS, 253 goroutines, 147 MiB/98 MiB/182 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 36.2 CGO/sec, 2.1/1.5 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
+I210326 22:09:27.937647 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 21455/5942 sent/received, bytes 3077236B/948586B sent/received)
+  2: roach2:26257 (51m0s)
+  3: roach3:26257 (50m59s)
+I210326 22:09:28.040787 261 server/status/runtime.go:498  [n1] runtime stats: 360 MiB RSS, 252 goroutines, 86 MiB/150 MiB/183 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 42.4 CGO/sec, 2.3/1.7 %(u/s)time, 0.0 %gc (1x), 87 KiB/254 KiB (r/w)net
+I210326 22:09:38.041057 261 server/status/runtime.go:498  [n1] runtime stats: 360 MiB RSS, 252 goroutines, 104 MiB/135 MiB/183 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 63.1 CGO/sec, 1.8/2.4 %(u/s)time, 0.0 %gc (0x), 105 KiB/274 KiB (r/w)net
+I210326 22:09:48.041676 261 server/status/runtime.go:498  [n1] runtime stats: 362 MiB RSS, 252 goroutines, 118 MiB/123 MiB/183 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 37.1 CGO/sec, 1.6/2.1 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 22:09:58.041445 261 server/status/runtime.go:498  [n1] runtime stats: 362 MiB RSS, 253 goroutines, 130 MiB/112 MiB/183 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 39.3 CGO/sec, 1.7/1.8 %(u/s)time, 0.0 %gc (0x), 86 KiB/252 KiB (r/w)net
+I210326 22:10:08.042214 261 server/status/runtime.go:498  [n1] runtime stats: 362 MiB RSS, 253 goroutines, 142 MiB/102 MiB/183 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 46.8 CGO/sec, 2.0/1.7 %(u/s)time, 0.0 %gc (0x), 91 KiB/257 KiB (r/w)net
+I210326 22:10:18.042131 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 253 goroutines, 154 MiB/91 MiB/183 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 41.8 CGO/sec, 1.6/1.9 %(u/s)time, 0.0 %gc (0x), 89 KiB/257 KiB (r/w)net
+I210326 22:10:27.937932 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 21873/6058 sent/received, bytes 3132062B/966836B sent/received)
+  2: roach2:26257 (52m0s)
+  3: roach3:26257 (51m59s)
+I210326 22:10:28.042253 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 252 goroutines, 93 MiB/144 MiB/184 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 41.4 CGO/sec, 1.4/2.3 %(u/s)time, 0.0 %gc (1x), 87 KiB/253 KiB (r/w)net
+I210326 22:10:38.042883 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 252 goroutines, 107 MiB/132 MiB/184 MiB GO alloc/idle/total, 32 MiB/47 MiB CGO alloc/total, 56.3 CGO/sec, 1.6/2.3 %(u/s)time, 0.0 %gc (0x), 99 KiB/187 KiB (r/w)net
+I210326 22:10:48.043059 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 252 goroutines, 120 MiB/122 MiB/184 MiB GO alloc/idle/total, 40 MiB/55 MiB CGO alloc/total, 35.6 CGO/sec, 2.1/1.6 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 22:10:58.043300 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 253 goroutines, 133 MiB/110 MiB/184 MiB GO alloc/idle/total, 40 MiB/55 MiB CGO alloc/total, 40.4 CGO/sec, 1.8/1.7 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 22:11:08.043741 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 253 goroutines, 146 MiB/98 MiB/184 MiB GO alloc/idle/total, 40 MiB/55 MiB CGO alloc/total, 52.0 CGO/sec, 2.6/1.0 %(u/s)time, 0.0 %gc (0x), 94 KiB/262 KiB (r/w)net
+I210326 22:11:18.044204 261 server/status/runtime.go:498  [n1] runtime stats: 368 MiB RSS, 254 goroutines, 86 MiB/151 MiB/184 MiB GO alloc/idle/total, 40 MiB/55 MiB CGO alloc/total, 43.2 CGO/sec, 2.6/1.6 %(u/s)time, 0.0 %gc (1x), 87 KiB/254 KiB (r/w)net
+I210326 22:11:27.938176 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 22290/6173 sent/received, bytes 3186657B/984928B sent/received)
+  2: roach2:26257 (53m0s)
+  3: roach3:26257 (52m59s)
+I210326 22:11:28.044579 261 server/status/runtime.go:498  [n1] runtime stats: 368 MiB RSS, 252 goroutines, 102 MiB/135 MiB/184 MiB GO alloc/idle/total, 40 MiB/55 MiB CGO alloc/total, 41.7 CGO/sec, 1.8/2.0 %(u/s)time, 0.0 %gc (0x), 86 KiB/253 KiB (r/w)net
+I210326 22:11:38.044450 261 server/status/runtime.go:498  [n1] runtime stats: 368 MiB RSS, 252 goroutines, 118 MiB/123 MiB/184 MiB GO alloc/idle/total, 40 MiB/55 MiB CGO alloc/total, 54.9 CGO/sec, 2.7/1.4 %(u/s)time, 0.0 %gc (0x), 100 KiB/265 KiB (r/w)net
+I210326 22:11:48.044917 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 252 goroutines, 130 MiB/112 MiB/184 MiB GO alloc/idle/total, 40 MiB/55 MiB CGO alloc/total, 40.8 CGO/sec, 1.6/1.9 %(u/s)time, 0.0 %gc (0x), 89 KiB/257 KiB (r/w)net
+I210326 22:11:58.044974 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 253 goroutines, 142 MiB/101 MiB/184 MiB GO alloc/idle/total, 39 MiB/55 MiB CGO alloc/total, 40.2 CGO/sec, 2.6/1.0 %(u/s)time, 0.0 %gc (0x), 87 KiB/253 KiB (r/w)net
+I210326 22:12:08.045389 261 server/status/runtime.go:498  [n1] runtime stats: 370 MiB RSS, 253 goroutines, 155 MiB/90 MiB/184 MiB GO alloc/idle/total, 39 MiB/55 MiB CGO alloc/total, 45.0 CGO/sec, 2.3/1.3 %(u/s)time, 0.0 %gc (0x), 90 KiB/256 KiB (r/w)net
+I210326 22:12:18.045388 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 253 goroutines, 96 MiB/141 MiB/184 MiB GO alloc/idle/total, 39 MiB/55 MiB CGO alloc/total, 36.6 CGO/sec, 3.0/0.7 %(u/s)time, 0.0 %gc (1x), 87 KiB/251 KiB (r/w)net
+I210326 22:12:27.937799 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 22707/6288 sent/received, bytes 3241152B/1003020B sent/received)
+  2: roach2:26257 (54m0s)
+  3: roach3:26257 (53m59s)
+I210326 22:12:28.045733 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 252 goroutines, 109 MiB/129 MiB/184 MiB GO alloc/idle/total, 39 MiB/55 MiB CGO alloc/total, 43.4 CGO/sec, 2.4/1.2 %(u/s)time, 0.0 %gc (0x), 86 KiB/175 KiB (r/w)net
+I210326 22:12:38.046080 261 server/status/runtime.go:498  [n1] runtime stats: 372 MiB RSS, 252 goroutines, 124 MiB/117 MiB/184 MiB GO alloc/idle/total, 39 MiB/55 MiB CGO alloc/total, 62.8 CGO/sec, 1.9/2.5 %(u/s)time, 0.0 %gc (0x), 107 KiB/273 KiB (r/w)net
+I210326 22:12:48.046300 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 252 goroutines, 136 MiB/107 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 36.8 CGO/sec, 1.5/1.9 %(u/s)time, 0.0 %gc (0x), 85 KiB/250 KiB (r/w)net
+I210326 22:12:58.046403 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 253 goroutines, 148 MiB/96 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 37.2 CGO/sec, 1.5/2.0 %(u/s)time, 0.0 %gc (0x), 85 KiB/250 KiB (r/w)net
+I210326 22:13:08.046828 261 server/status/runtime.go:498  [n1] runtime stats: 374 MiB RSS, 253 goroutines, 88 MiB/148 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 42.5 CGO/sec, 1.7/2.1 %(u/s)time, 0.0 %gc (1x), 91 KiB/256 KiB (r/w)net
+I210326 22:13:18.047617 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 253 goroutines, 105 MiB/133 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 43.3 CGO/sec, 1.9/1.9 %(u/s)time, 0.0 %gc (0x), 91 KiB/259 KiB (r/w)net
+I210326 22:13:27.937598 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 23125/6404 sent/received, bytes 3295978B/1021270B sent/received)
+  2: roach2:26257 (55m0s)
+  3: roach3:26257 (54m59s)
+I210326 22:13:28.047399 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 252 goroutines, 119 MiB/120 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 44.2 CGO/sec, 1.7/2.1 %(u/s)time, 0.0 %gc (0x), 90 KiB/258 KiB (r/w)net
+I210326 22:13:38.047743 261 server/status/runtime.go:498  [n1] runtime stats: 376 MiB RSS, 252 goroutines, 133 MiB/110 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 56.6 CGO/sec, 2.1/2.1 %(u/s)time, 0.0 %gc (0x), 102 KiB/267 KiB (r/w)net
+I210326 22:13:48.048659 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 252 goroutines, 145 MiB/99 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 32.9 CGO/sec, 1.3/2.2 %(u/s)time, 0.0 %gc (0x), 85 KiB/249 KiB (r/w)net
+I210326 22:13:58.048312 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 253 goroutines, 81 MiB/156 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 51.1 CGO/sec, 1.9/2.0 %(u/s)time, 0.0 %gc (1x), 90 KiB/257 KiB (r/w)net
+I210326 22:14:08.048914 261 server/status/runtime.go:498  [n1] runtime stats: 378 MiB RSS, 253 goroutines, 99 MiB/139 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 50.5 CGO/sec, 2.0/1.9 %(u/s)time, 0.0 %gc (0x), 95 KiB/261 KiB (r/w)net
+I210326 22:14:18.049224 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 251 goroutines, 111 MiB/129 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 33.2 CGO/sec, 1.7/1.5 %(u/s)time, 0.0 %gc (0x), 84 KiB/169 KiB (r/w)net
+I210326 22:14:27.937970 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 23542/6519 sent/received, bytes 3350373B/1039362B sent/received)
+  2: roach2:26257 (56m0s)
+  3: roach3:26257 (55m59s)
+I210326 22:14:28.049136 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 250 goroutines, 124 MiB/118 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 45.7 CGO/sec, 2.5/1.3 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 22:14:38.049720 261 server/status/runtime.go:498  [n1] runtime stats: 380 MiB RSS, 250 goroutines, 137 MiB/107 MiB/184 MiB GO alloc/idle/total, 47 MiB/63 MiB CGO alloc/total, 57.5 CGO/sec, 2.2/1.9 %(u/s)time, 0.0 %gc (0x), 101 KiB/266 KiB (r/w)net
+I210326 22:14:48.050006 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 250 goroutines, 150 MiB/95 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 42.6 CGO/sec, 1.6/2.0 %(u/s)time, 0.0 %gc (0x), 91 KiB/257 KiB (r/w)net
+I210326 22:14:58.050178 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 251 goroutines, 93 MiB/144 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 41.2 CGO/sec, 2.3/1.7 %(u/s)time, 0.0 %gc (1x), 88 KiB/256 KiB (r/w)net
+I210326 22:15:08.050308 261 server/status/runtime.go:498  [n1] runtime stats: 382 MiB RSS, 251 goroutines, 107 MiB/131 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 44.3 CGO/sec, 2.4/1.3 %(u/s)time, 0.0 %gc (0x), 91 KiB/258 KiB (r/w)net
+I210326 22:15:18.050728 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 251 goroutines, 121 MiB/119 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 39.7 CGO/sec, 0.6/2.8 %(u/s)time, 0.0 %gc (0x), 88 KiB/252 KiB (r/w)net
+I210326 22:15:27.937834 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 23959/6634 sent/received, bytes 3404868B/1057454B sent/received)
+  2: roach2:26257 (57m0s)
+  3: roach3:26257 (56m59s)
+I210326 22:15:28.050973 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 250 goroutines, 134 MiB/109 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 43.3 CGO/sec, 2.1/1.6 %(u/s)time, 0.0 %gc (0x), 88 KiB/256 KiB (r/w)net
+I210326 22:15:38.051213 261 server/status/runtime.go:498  [n1] runtime stats: 384 MiB RSS, 250 goroutines, 147 MiB/97 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 58.8 CGO/sec, 2.8/1.2 %(u/s)time, 0.0 %gc (0x), 103 KiB/269 KiB (r/w)net
+I210326 22:15:48.051453 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 250 goroutines, 82 MiB/154 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 39.3 CGO/sec, 2.7/1.0 %(u/s)time, 0.0 %gc (1x), 87 KiB/253 KiB (r/w)net
+I210326 22:15:58.051792 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 251 goroutines, 101 MiB/136 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 39.6 CGO/sec, 2.1/1.5 %(u/s)time, 0.0 %gc (0x), 87 KiB/252 KiB (r/w)net
+I210326 22:16:08.052478 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 251 goroutines, 113 MiB/126 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 45.8 CGO/sec, 1.6/2.1 %(u/s)time, 0.0 %gc (0x), 90 KiB/178 KiB (r/w)net
+I210326 22:16:18.052574 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 251 goroutines, 126 MiB/115 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 51.3 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 93 KiB/262 KiB (r/w)net
