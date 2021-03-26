@@ -15,8 +15,8 @@ public class RoomService {
     @Autowired
     UserRepository userRepository;
     public Room createRoom(Room room, Long hostId){
-        room.setHost(userRepository.findById(hostId).get());
-        return roomRepository.save(room);
-
+        //room.setHost(userRepository.findById(hostId).get());
+        //return roomRepository.save(room);
+          return null;
     }
 }
