@@ -1209,3 +1209,150 @@ I210326 22:15:48.051453 261 server/status/runtime.go:498  [n1] runtime stats: 38
 I210326 22:15:58.051792 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 251 goroutines, 101 MiB/136 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 39.6 CGO/sec, 2.1/1.5 %(u/s)time, 0.0 %gc (0x), 87 KiB/252 KiB (r/w)net
 I210326 22:16:08.052478 261 server/status/runtime.go:498  [n1] runtime stats: 386 MiB RSS, 251 goroutines, 113 MiB/126 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 45.8 CGO/sec, 1.6/2.1 %(u/s)time, 0.0 %gc (0x), 90 KiB/178 KiB (r/w)net
 I210326 22:16:18.052574 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 251 goroutines, 126 MiB/115 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 51.3 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 93 KiB/262 KiB (r/w)net
+I210326 22:16:27.938380 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 24377/6750 sent/received, bytes 3459694B/1075704B sent/received)
+  2: roach2:26257 (58m0s)
+  3: roach3:26257 (57m59s)
+I210326 22:16:28.052498 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 250 goroutines, 138 MiB/105 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 40.3 CGO/sec, 1.5/2.1 %(u/s)time, 0.0 %gc (0x), 87 KiB/254 KiB (r/w)net
+I210326 22:16:38.053071 261 server/status/runtime.go:498  [n1] runtime stats: 388 MiB RSS, 250 goroutines, 152 MiB/93 MiB/184 MiB GO alloc/idle/total, 55 MiB/71 MiB CGO alloc/total, 55.0 CGO/sec, 2.5/1.3 %(u/s)time, 0.0 %gc (0x), 102 KiB/268 KiB (r/w)net
+I210326 22:16:48.053360 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 250 goroutines, 92 MiB/144 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 39.3 CGO/sec, 2.6/1.1 %(u/s)time, 0.0 %gc (1x), 86 KiB/251 KiB (r/w)net
+I210326 22:16:58.053601 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 251 goroutines, 107 MiB/131 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 37.9 CGO/sec, 1.5/2.0 %(u/s)time, 0.0 %gc (0x), 86 KiB/251 KiB (r/w)net
+I210326 22:17:08.054539 261 server/status/runtime.go:498  [n1] runtime stats: 390 MiB RSS, 251 goroutines, 121 MiB/120 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 49.6 CGO/sec, 1.8/1.9 %(u/s)time, 0.0 %gc (0x), 96 KiB/264 KiB (r/w)net
+I210326 22:17:18.054394 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 251 goroutines, 133 MiB/109 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 34.2 CGO/sec, 2.3/1.1 %(u/s)time, 0.0 %gc (0x), 84 KiB/266 KiB (r/w)net
+I210326 22:17:27.937645 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 24794/6865 sent/received, bytes 3514189B/1093796B sent/received)
+  2: roach2:26257 (59m0s)
+  3: roach3:26257 (58m59s)
+I210326 22:17:28.054807 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 250 goroutines, 145 MiB/99 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 40.7 CGO/sec, 1.7/1.8 %(u/s)time, 0.0 %gc (0x), 86 KiB/236 KiB (r/w)net
+I210326 22:17:38.054959 261 server/status/runtime.go:498  [n1] runtime stats: 392 MiB RSS, 250 goroutines, 85 MiB/151 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 55.7 CGO/sec, 2.4/1.7 %(u/s)time, 0.0 %gc (1x), 101 KiB/265 KiB (r/w)net
+I210326 22:17:48.055332 261 server/status/runtime.go:498  [n1] runtime stats: 395 MiB RSS, 250 goroutines, 101 MiB/136 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 44.5 CGO/sec, 1.8/1.9 %(u/s)time, 0.0 %gc (0x), 90 KiB/257 KiB (r/w)net
+I210326 22:17:58.055526 261 server/status/runtime.go:498  [n1] runtime stats: 395 MiB RSS, 251 goroutines, 114 MiB/125 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 40.0 CGO/sec, 2.1/1.4 %(u/s)time, 0.0 %gc (0x), 87 KiB/174 KiB (r/w)net
+I210326 22:18:08.056030 261 server/status/runtime.go:498  [n1] runtime stats: 395 MiB RSS, 251 goroutines, 128 MiB/114 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 44.1 CGO/sec, 2.3/1.3 %(u/s)time, 0.0 %gc (0x), 90 KiB/256 KiB (r/w)net
+I210326 22:18:18.055840 261 server/status/runtime.go:498  [n1] runtime stats: 397 MiB RSS, 251 goroutines, 141 MiB/102 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 41.7 CGO/sec, 1.6/2.0 %(u/s)time, 0.0 %gc (0x), 87 KiB/268 KiB (r/w)net
+I210326 22:18:27.937617 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 25211/6980 sent/received, bytes 3568684B/1111888B sent/received)
+  2: roach2:26257 (1h0m0s)
+  3: roach3:26257 (59m59s)
+I210326 22:18:27.937663 241 gossip/gossip.go:394  [n1] NodeDescriptor set to node_id:1 address:<network_field:"tcp" address_field:"roach1:26257" > attrs:<> locality:<> ServerVersion:<major_val:19 minor_val:2 patch:0 unstable:0 > build_tag:"v19.2.5" started_at:1616793507860525700 cluster_name:"" sql_address:<network_field:"tcp" address_field:"roach1:26257" > 
+I210326 22:18:28.056565 261 server/status/runtime.go:498  [n1] runtime stats: 397 MiB RSS, 250 goroutines, 153 MiB/92 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 40.9 CGO/sec, 2.2/1.4 %(u/s)time, 0.0 %gc (0x), 87 KiB/237 KiB (r/w)net
+I210326 22:18:38.056933 261 server/status/runtime.go:498  [n1] runtime stats: 397 MiB RSS, 266 goroutines, 98 MiB/140 MiB/184 MiB GO alloc/idle/total, 63 MiB/79 MiB CGO alloc/total, 65.0 CGO/sec, 3.6/1.4 %(u/s)time, 0.0 %gc (1x), 113 KiB/281 KiB (r/w)net
+I210326 22:18:47.991582 240 storage/store.go:2364  [n1,s1] sstables (read amplification = 2):
+0 [ 405K 1 ]: 405K
+6 [ 608K 1 ]: 608K
+I210326 22:18:47.991662 240 storage/store.go:2365  [n1,s1] 
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      1/0   405.03 KB   0.5      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      0.7      1.62              1.47         3    0.541       0      0
+  L6      1/0   608.06 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.8      6.2      4.8      0.12              0.05         1    0.123     15K   7936
+ Sum      2/0   1013.09 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.5      0.4      1.0      1.75              1.52         4    0.436     15K   7936
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      6.2      4.8      0.12              0.05         1    0.123     15K   7936
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.7      1.62              1.47         3    0.541       0      0
+Uptime(secs): 3620.3 total, 600.0 interval
+Flush(GB): cumulative 0.001, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.7 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+estimated_pending_compaction_bytes: 0 B
+I210326 22:18:48.056597 261 server/status/runtime.go:498  [n1] runtime stats: 399 MiB RSS, 250 goroutines, 113 MiB/128 MiB/184 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 47.5 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 89 KiB/255 KiB (r/w)net
+I210326 22:18:58.057397 261 server/status/runtime.go:498  [n1] runtime stats: 399 MiB RSS, 251 goroutines, 126 MiB/117 MiB/184 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 36.6 CGO/sec, 2.0/1.4 %(u/s)time, 0.0 %gc (0x), 84 KiB/251 KiB (r/w)net
+I210326 22:19:08.057399 261 server/status/runtime.go:498  [n1] runtime stats: 399 MiB RSS, 251 goroutines, 139 MiB/105 MiB/185 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 44.1 CGO/sec, 2.0/1.6 %(u/s)time, 0.0 %gc (0x), 90 KiB/256 KiB (r/w)net
+I210326 22:19:18.057798 261 server/status/runtime.go:498  [n1] runtime stats: 401 MiB RSS, 251 goroutines, 151 MiB/95 MiB/185 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 42.1 CGO/sec, 1.3/2.3 %(u/s)time, 0.0 %gc (0x), 91 KiB/259 KiB (r/w)net
+I210326 22:19:27.937733 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 25637/7100 sent/received, bytes 3624428B/1130540B sent/received)
+  2: roach2:26257 (1h1m0s)
+  3: roach3:26257 (1h0m59s)
+I210326 22:19:28.058086 261 server/status/runtime.go:498  [n1] runtime stats: 401 MiB RSS, 250 goroutines, 93 MiB/145 MiB/185 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 38.8 CGO/sec, 1.3/2.4 %(u/s)time, 0.0 %gc (1x), 85 KiB/251 KiB (r/w)net
+I210326 22:19:38.058561 261 server/status/runtime.go:498  [n1] runtime stats: 401 MiB RSS, 250 goroutines, 109 MiB/131 MiB/185 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 58.4 CGO/sec, 2.5/1.7 %(u/s)time, 0.0 %gc (0x), 104 KiB/268 KiB (r/w)net
+I210326 22:19:48.058610 261 server/status/runtime.go:498  [n1] runtime stats: 403 MiB RSS, 250 goroutines, 121 MiB/121 MiB/185 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 45.0 CGO/sec, 1.8/2.0 %(u/s)time, 0.0 %gc (0x), 92 KiB/184 KiB (r/w)net
+I210326 22:19:58.058998 261 server/status/runtime.go:498  [n1] runtime stats: 403 MiB RSS, 251 goroutines, 134 MiB/109 MiB/185 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 41.9 CGO/sec, 2.8/0.9 %(u/s)time, 0.0 %gc (0x), 88 KiB/254 KiB (r/w)net
+I210326 22:20:08.059175 261 server/status/runtime.go:498  [n1] runtime stats: 403 MiB RSS, 251 goroutines, 147 MiB/98 MiB/185 MiB GO alloc/idle/total, 71 MiB/87 MiB CGO alloc/total, 45.9 CGO/sec, 1.5/2.1 %(u/s)time, 0.0 %gc (0x), 93 KiB/260 KiB (r/w)net
+I210326 22:20:18.059395 261 server/status/runtime.go:498  [n1] runtime stats: 407 MiB RSS, 251 goroutines, 88 MiB/150 MiB/185 MiB GO alloc/idle/total, 80 MiB/96 MiB CGO alloc/total, 39.5 CGO/sec, 3.9/0.8 %(u/s)time, 0.0 %gc (1x), 86 KiB/248 KiB (r/w)net
+I210326 22:20:27.938156 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 26054/7215 sent/received, bytes 3678923B/1148632B sent/received)
+  2: roach2:26257 (1h2m0s)
+  3: roach3:26257 (1h1m59s)
+I210326 22:20:28.059778 261 server/status/runtime.go:498  [n1] runtime stats: 340 MiB RSS, 250 goroutines, 104 MiB/134 MiB/185 MiB GO alloc/idle/total, 16 MiB/30 MiB CGO alloc/total, 40.3 CGO/sec, 10.3/0.0 %(u/s)time, 0.0 %gc (0x), 92 KiB/280 KiB (r/w)net
+I210326 22:20:38.060112 261 server/status/runtime.go:498  [n1] runtime stats: 340 MiB RSS, 250 goroutines, 119 MiB/123 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 55.2 CGO/sec, 2.9/0.9 %(u/s)time, 0.0 %gc (0x), 99 KiB/263 KiB (r/w)net
+I210326 22:20:48.060245 261 server/status/runtime.go:498  [n1] runtime stats: 342 MiB RSS, 250 goroutines, 132 MiB/112 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 42.6 CGO/sec, 1.6/2.0 %(u/s)time, 0.0 %gc (0x), 91 KiB/240 KiB (r/w)net
+I210326 22:20:58.060458 261 server/status/runtime.go:498  [n1] runtime stats: 342 MiB RSS, 251 goroutines, 144 MiB/101 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 39.7 CGO/sec, 1.8/1.6 %(u/s)time, 0.0 %gc (0x), 88 KiB/271 KiB (r/w)net
+I210326 22:21:08.061006 261 server/status/runtime.go:498  [n1] runtime stats: 342 MiB RSS, 251 goroutines, 85 MiB/152 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 47.0 CGO/sec, 1.9/2.1 %(u/s)time, 0.0 %gc (1x), 92 KiB/242 KiB (r/w)net
+I210326 22:21:18.061331 261 server/status/runtime.go:498  [n1] runtime stats: 344 MiB RSS, 251 goroutines, 102 MiB/136 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 45.9 CGO/sec, 2.6/0.9 %(u/s)time, 0.0 %gc (0x), 88 KiB/272 KiB (r/w)net
+I210326 22:21:27.937897 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 26471/7330 sent/received, bytes 3733518B/1166724B sent/received)
+  2: roach2:26257 (1h3m0s)
+  3: roach3:26257 (1h2m59s)
+I210326 22:21:28.061359 261 server/status/runtime.go:498  [n1] runtime stats: 344 MiB RSS, 250 goroutines, 115 MiB/125 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 38.8 CGO/sec, 2.0/1.4 %(u/s)time, 0.0 %gc (0x), 86 KiB/235 KiB (r/w)net
+I210326 22:21:38.061888 261 server/status/runtime.go:498  [n1] runtime stats: 344 MiB RSS, 250 goroutines, 129 MiB/114 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 63.0 CGO/sec, 2.0/2.1 %(u/s)time, 0.0 %gc (0x), 104 KiB/212 KiB (r/w)net
+I210326 22:21:48.061599 261 server/status/runtime.go:498  [n1] runtime stats: 346 MiB RSS, 250 goroutines, 142 MiB/102 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 39.0 CGO/sec, 2.0/1.5 %(u/s)time, 0.0 %gc (0x), 88 KiB/254 KiB (r/w)net
+I210326 22:21:58.061881 261 server/status/runtime.go:498  [n1] runtime stats: 346 MiB RSS, 251 goroutines, 154 MiB/91 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 37.2 CGO/sec, 1.4/2.0 %(u/s)time, 0.0 %gc (0x), 83 KiB/232 KiB (r/w)net
+I210326 22:22:08.062276 261 server/status/runtime.go:498  [n1] runtime stats: 346 MiB RSS, 251 goroutines, 95 MiB/143 MiB/185 MiB GO alloc/idle/total, 16 MiB/31 MiB CGO alloc/total, 39.3 CGO/sec, 3.3/0.5 %(u/s)time, 0.0 %gc (1x), 89 KiB/254 KiB (r/w)net
+I210326 22:22:18.062801 261 server/status/runtime.go:498  [n1] runtime stats: 348 MiB RSS, 251 goroutines, 110 MiB/130 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 42.7 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 91 KiB/259 KiB (r/w)net
+I210326 22:22:27.938147 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 26889/7446 sent/received, bytes 3788344B/1184974B sent/received)
+  2: roach2:26257 (1h4m0s)
+  3: roach3:26257 (1h3m59s)
+I210326 22:22:28.063402 261 server/status/runtime.go:498  [n1] runtime stats: 348 MiB RSS, 250 goroutines, 123 MiB/118 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 39.8 CGO/sec, 1.4/2.1 %(u/s)time, 0.0 %gc (0x), 86 KiB/270 KiB (r/w)net
+I210326 22:22:38.063030 261 server/status/runtime.go:498  [n1] runtime stats: 348 MiB RSS, 250 goroutines, 138 MiB/106 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 58.0 CGO/sec, 2.6/1.4 %(u/s)time, 0.0 %gc (0x), 103 KiB/271 KiB (r/w)net
+I210326 22:22:48.063594 261 server/status/runtime.go:498  [n1] runtime stats: 350 MiB RSS, 250 goroutines, 149 MiB/96 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 38.2 CGO/sec, 2.1/1.3 %(u/s)time, 0.0 %gc (0x), 86 KiB/234 KiB (r/w)net
+I210326 22:22:58.064013 261 server/status/runtime.go:498  [n1] runtime stats: 350 MiB RSS, 252 goroutines, 88 MiB/149 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 40.9 CGO/sec, 1.8/1.9 %(u/s)time, 0.0 %gc (1x), 87 KiB/254 KiB (r/w)net
+I210326 22:23:08.064422 261 server/status/runtime.go:498  [n1] runtime stats: 350 MiB RSS, 251 goroutines, 104 MiB/135 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 45.8 CGO/sec, 2.2/1.6 %(u/s)time, 0.0 %gc (0x), 95 KiB/261 KiB (r/w)net
+I210326 22:23:18.064545 261 server/status/runtime.go:498  [n1] runtime stats: 352 MiB RSS, 251 goroutines, 118 MiB/123 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 36.7 CGO/sec, 1.6/1.8 %(u/s)time, 0.0 %gc (0x), 85 KiB/267 KiB (r/w)net
+I210326 22:23:27.937689 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 27306/7561 sent/received, bytes 3842839B/1203066B sent/received)
+  2: roach2:26257 (1h5m0s)
+  3: roach3:26257 (1h4m59s)
+I210326 22:23:28.065012 261 server/status/runtime.go:498  [n1] runtime stats: 352 MiB RSS, 250 goroutines, 129 MiB/113 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 36.2 CGO/sec, 1.5/1.8 %(u/s)time, 0.0 %gc (0x), 83 KiB/172 KiB (r/w)net
+I210326 22:23:38.065129 261 server/status/runtime.go:498  [n1] runtime stats: 352 MiB RSS, 250 goroutines, 143 MiB/102 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 56.9 CGO/sec, 1.8/1.9 %(u/s)time, 0.0 %gc (0x), 100 KiB/265 KiB (r/w)net
+I210326 22:23:48.064971 261 server/status/runtime.go:498  [n1] runtime stats: 354 MiB RSS, 250 goroutines, 156 MiB/90 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 53.0 CGO/sec, 1.7/2.0 %(u/s)time, 0.0 %gc (0x), 95 KiB/264 KiB (r/w)net
+I210326 22:23:58.065307 261 server/status/runtime.go:498  [n1] runtime stats: 354 MiB RSS, 251 goroutines, 96 MiB/141 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 36.8 CGO/sec, 2.3/1.3 %(u/s)time, 0.0 %gc (1x), 84 KiB/250 KiB (r/w)net
+I210326 22:24:08.066109 261 server/status/runtime.go:498  [n1] runtime stats: 354 MiB RSS, 251 goroutines, 110 MiB/130 MiB/185 MiB GO alloc/idle/total, 24 MiB/39 MiB CGO alloc/total, 46.5 CGO/sec, 1.5/2.1 %(u/s)time, 0.0 %gc (0x), 93 KiB/261 KiB (r/w)net
+I210326 22:24:18.065772 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 251 goroutines, 122 MiB/119 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 35.8 CGO/sec, 2.3/1.1 %(u/s)time, 0.0 %gc (0x), 86 KiB/250 KiB (r/w)net
+I210326 22:24:27.937595 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 27723/7676 sent/received, bytes 3897234B/1221075B sent/received)
+  2: roach2:26257 (1h6m0s)
+  3: roach3:26257 (1h5m59s)
+I210326 22:24:28.066690 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 251 goroutines, 135 MiB/109 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 43.5 CGO/sec, 1.2/2.0 %(u/s)time, 0.0 %gc (0x), 88 KiB/236 KiB (r/w)net
+I210326 22:24:38.066895 261 server/status/runtime.go:498  [n1] runtime stats: 357 MiB RSS, 250 goroutines, 149 MiB/96 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 59.8 CGO/sec, 2.1/2.1 %(u/s)time, 0.0 %gc (0x), 106 KiB/290 KiB (r/w)net
+I210326 22:24:48.067087 261 server/status/runtime.go:498  [n1] runtime stats: 360 MiB RSS, 250 goroutines, 90 MiB/148 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 39.7 CGO/sec, 2.6/0.9 %(u/s)time, 0.0 %gc (1x), 87 KiB/251 KiB (r/w)net
+I210326 22:24:58.067370 261 server/status/runtime.go:498  [n1] runtime stats: 360 MiB RSS, 251 goroutines, 105 MiB/134 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 38.6 CGO/sec, 1.8/1.6 %(u/s)time, 0.0 %gc (0x), 85 KiB/251 KiB (r/w)net
+I210326 22:25:08.067347 261 server/status/runtime.go:498  [n1] runtime stats: 360 MiB RSS, 251 goroutines, 118 MiB/123 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 45.3 CGO/sec, 1.9/1.7 %(u/s)time, 0.0 %gc (0x), 92 KiB/240 KiB (r/w)net
+I210326 22:25:18.067850 261 server/status/runtime.go:498  [n1] runtime stats: 362 MiB RSS, 251 goroutines, 130 MiB/113 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 41.2 CGO/sec, 1.5/2.1 %(u/s)time, 0.0 %gc (0x), 87 KiB/196 KiB (r/w)net
+I210326 22:25:27.938045 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 28141/7792 sent/received, bytes 3952060B/1239325B sent/received)
+  2: roach2:26257 (1h7m0s)
+  3: roach3:26257 (1h6m59s)
+I210326 22:25:28.068309 261 server/status/runtime.go:498  [n1] runtime stats: 362 MiB RSS, 250 goroutines, 144 MiB/100 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 42.5 CGO/sec, 1.6/2.1 %(u/s)time, 0.0 %gc (0x), 90 KiB/258 KiB (r/w)net
+I210326 22:25:38.068658 261 server/status/runtime.go:498  [n1] runtime stats: 362 MiB RSS, 250 goroutines, 86 MiB/151 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 53.7 CGO/sec, 3.0/1.2 %(u/s)time, 0.0 %gc (1x), 100 KiB/266 KiB (r/w)net
+I210326 22:25:48.068848 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 250 goroutines, 102 MiB/136 MiB/185 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 36.0 CGO/sec, 2.0/1.4 %(u/s)time, 0.0 %gc (0x), 84 KiB/248 KiB (r/w)net
+I210326 22:25:58.069303 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 252 goroutines, 115 MiB/125 MiB/182 MiB GO alloc/idle/total, 32 MiB/48 MiB CGO alloc/total, 38.1 CGO/sec, 1.9/1.3 %(u/s)time, 0.0 %gc (0x), 86 KiB/252 KiB (r/w)net
+I210326 22:26:08.069353 261 server/status/runtime.go:498  [n1] runtime stats: 364 MiB RSS, 251 goroutines, 129 MiB/114 MiB/182 MiB GO alloc/idle/total, 33 MiB/48 MiB CGO alloc/total, 45.6 CGO/sec, 1.0/2.7 %(u/s)time, 0.0 %gc (0x), 94 KiB/261 KiB (r/w)net
+I210326 22:26:18.069582 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 251 goroutines, 141 MiB/103 MiB/182 MiB GO alloc/idle/total, 41 MiB/56 MiB CGO alloc/total, 46.4 CGO/sec, 1.7/2.0 %(u/s)time, 0.0 %gc (0x), 88 KiB/256 KiB (r/w)net
+I210326 22:26:27.937641 241 gossip/gossip.go:566  [n1] gossip status (ok, 3 nodes)
+gossip client (0/3 cur/max conns)
+gossip server (2/3 cur/max conns, infos 28558/7907 sent/received, bytes 4006705B/1257417B sent/received)
+  2: roach2:26257 (1h8m0s)
+  3: roach3:26257 (1h7m59s)
+I210326 22:26:28.069489 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 250 goroutines, 154 MiB/92 MiB/182 MiB GO alloc/idle/total, 41 MiB/56 MiB CGO alloc/total, 42.0 CGO/sec, 2.6/0.9 %(u/s)time, 0.0 %gc (0x), 86 KiB/254 KiB (r/w)net
+I210326 22:26:38.070222 261 server/status/runtime.go:498  [n1] runtime stats: 366 MiB RSS, 250 goroutines, 96 MiB/143 MiB/182 MiB GO alloc/idle/total, 41 MiB/56 MiB CGO alloc/total, 57.2 CGO/sec, 2.4/1.9 %(u/s)time, 0.0 %gc (1x), 102 KiB/268 KiB (r/w)net
+I210326 22:26:48.070268 261 server/status/runtime.go:498  [n1] runtime stats: 368 MiB RSS, 250 goroutines, 109 MiB/131 MiB/182 MiB GO alloc/idle/total, 41 MiB/56 MiB CGO alloc/total, 43.1 CGO/sec, 1.7/1.9 %(u/s)time, 0.0 %gc (0x), 92 KiB/259 KiB (r/w)net
+I210326 22:26:58.070817 261 server/status/runtime.go:498  [n1] runtime stats: 368 MiB RSS, 251 goroutines, 122 MiB/121 MiB/182 MiB GO alloc/idle/total, 41 MiB/56 MiB CGO alloc/total, 37.0 CGO/sec, 1.0/2.4 %(u/s)time, 0.0 %gc (0x), 84 KiB/250 KiB (r/w)net
