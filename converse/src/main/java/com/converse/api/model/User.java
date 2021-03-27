@@ -21,8 +21,6 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    @Embedded
-    private Schedule schedule;
     private File profilePicture;
     private String password;
 }

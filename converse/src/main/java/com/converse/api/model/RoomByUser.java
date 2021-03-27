@@ -7,5 +7,4 @@ import lombok.*;
 public class RoomByUser {
     private Room room;
     private Long hostId;
-
 }
