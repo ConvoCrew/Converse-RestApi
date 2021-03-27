@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d73f91a8-4627-470e-ab63-4a9a3ac07ef3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/model/Id.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/ConverseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/ConverseApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/controller/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/model/RoomByUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/model/RoomByUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/service/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converse/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/converse/src/main/java/com/converse/api/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +38,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1qJuqGu1mHr43VV9pxBc0mKeSTk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,11 +52,12 @@
   </component>
   <component name="RunManager">
     <configuration name="ConverseApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11 (2)" />
       <option name="MAIN_CLASS_NAME" value="com.converse.api.ConverseApplication" />
       <module name="converse" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.converse.api.*" />
+          <option name="PATTERN" value="com.converse.api.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

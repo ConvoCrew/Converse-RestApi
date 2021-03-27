@@ -1,29 +1,22 @@
 package com.converse.api.model;
-
-
 import lombok.*;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import javax.persistence.*;
+import javax.persistence.Id;
 import java.util.Date;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 @Entity
 @Table(name="rooms")
-
 @ToString
 public class Room {
-
     @Id
-
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id", updatable = false)
-
     private Long roomId;
     @Column(name="status")
     private Status status;

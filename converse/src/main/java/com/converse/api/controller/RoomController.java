@@ -1,5 +1,4 @@
 package com.converse.api.controller;
-
 import com.converse.api.model.RoomByUser;
 import com.converse.api.model.Room;
 import com.converse.api.model.User;
@@ -15,7 +14,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/room")
 @Log4j2
 public class RoomController {
     @Autowired

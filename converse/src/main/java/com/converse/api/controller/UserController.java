@@ -1,5 +1,6 @@
 package com.converse.api.controller;
 
+import com.converse.api.model.Id;
 import com.converse.api.model.Test;
 import com.converse.api.model.User;
 import com.converse.api.repository.Tests;
@@ -25,8 +26,10 @@ public class UserController {
     @Autowired
     Tests testRepository;
 
-    @PostMapping("/test")
-    public Test createTest(@RequestBody Test test) {
+    @ResponseBody
+    @GetMapping("/test/{test}")
+    public Test createTest(@PathVariable(name="test") Integer test) {
+        log.info(test);
         return null;
     }
 
@@ -55,6 +58,15 @@ public class UserController {
     @PostMapping("/users")
     public List<User> getUsers() {
         return null;
+    }
+    @PostMapping("/get-user-by-email")
+    public User getUserByEmail(@Param("email")String email){
+        return userService.getUserByEmail(email);
+    }
+    @PostMapping("/get-user")
+    public User getUser(@RequestBody Id userId) {
+        log.info(userId);
+        return userService.getUser(Long.valueOf(userId.getId()));
     }
 }
 

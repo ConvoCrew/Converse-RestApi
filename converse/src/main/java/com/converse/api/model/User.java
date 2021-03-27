@@ -4,11 +4,10 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import javax.persistence.Id;
 import java.io.File;
 import java.util.UUID;
-
 @Data
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -17,12 +16,8 @@ import java.util.UUID;
 
 public class User {
     @Id
-
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
-    //private Long userId;
     private Long userId=UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;
     @Column(name="firstName")
-
     private String firstName;
     @Column(name="lastName")
     private String lastName;
@@ -30,6 +25,4 @@ public class User {
     private String email;
     @Column(name="password")
     private String password;
-    //@ManyToOne(fetch=FetchType.EAGER)
-    //private Room room;
 }
