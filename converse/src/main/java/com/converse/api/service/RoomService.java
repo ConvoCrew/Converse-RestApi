@@ -21,15 +21,17 @@ public class RoomService {
     UserRepository userRepository;
 
     public Room createRoom(Room room, Long hostId) {
+
         room.setHost(userRepository.findById(hostId).get());
         room.setLiveDate(LocalDateTime.now());
         return roomRepository.save(room);
     }
 
     public Room createPrivateRoom(Room room, Long hostId, List<User> userList) {
+
         room.setHost(userRepository.findById(hostId).get());
         room.setLiveDate(LocalDateTime.now());
-        room.setAccessible(false);
+       // room.setAccessible(false);
         room.setParticipants(userList);
         return roomRepository.save(room);
     }
@@ -40,13 +42,16 @@ public class RoomService {
         return roomRepository.save(room);
     }
 
+
     public Room createScheduledPrivateRoom(Room room, Long hostId, LocalDateTime dateTime, List<User> userList) {
+
         room.setHost(userRepository.findById(hostId).get());
         room.setLiveDate(dateTime);
-        room.setAccessible(false);
+        //room.setAccessible(false);
         room.setParticipants(userList);
         return roomRepository.save(room);
     }
+
 
     public Boolean joinRoom(Long roomId, Long userId) {
         Boolean success = false;
@@ -67,6 +72,7 @@ public class RoomService {
             success = true;
         }
         return success;
+
     }
 
     public List<Room> liveRooms() {
@@ -94,11 +100,14 @@ public class RoomService {
         List<Room> hostedRooms = new ArrayList<>();
         for (Room room : rooms) {
             if (room.getHost().getUserId().equals(hostId)) {
+
                 hostedRooms.add(room);
             }
         }
         return hostedRooms;
+
     }
+
 
     public List<Room> getAttending(Long hostId) {
         List<Room> rooms = upcomingRooms();
@@ -106,10 +115,15 @@ public class RoomService {
         for (Room room : rooms) {
             if (room.getParticipants().contains(userRepository.findById(hostId).get())) {
                 attendingRooms.add(room);
+
             }
         }
         return attendingRooms;
+
     }
+
+
+
 
 //    public Boolean deleteScheduledRoom(Long roomId){
 //        Boolean success=false;
@@ -121,7 +135,7 @@ public class RoomService {
 //        return success;
 //    }
 
-    public Boolean leaveRoom(Long roomId, Long userId) {
+    public Boolean leaveRoom (Long roomId, Long userId){
         Boolean success = false;
         if (roomRepository.findById(roomId).get().getParticipants().contains(userRepository.findById(userId))) {
             roomRepository.findById(roomId).get().getParticipants().remove(userRepository.findById(userId).get());
@@ -130,19 +144,14 @@ public class RoomService {
         return success;
     }
 
-    public Room getRoom(Long roomId) {
+    public Room getRoom (Long roomId){
         return roomRepository.findById(roomId).get();
     }
 
-    public List<Room> getRoomsByCategory(Room.Category category) {
-//        List<Room> rooms=roomRepository.findAll();
-//        List<Room> roomsofCategory = new ArrayList<>();
-//        for(Room room:rooms){
-//            if (room.getCategory().equals(category)){
-//                roomsofCategory.add(room);
-//            }
-//        }
-//        return roomsofCategory;
+
+    public List<Room> getRoomsByCategory (Room.Category category){
         return roomRepository.findByCategory(category);
     }
 }
+
+
