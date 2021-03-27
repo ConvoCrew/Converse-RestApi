@@ -17,9 +17,9 @@ public class UserDetailsService {
     @Autowired
     UserRepository userRepository;
 
-    public List<User> getUsersInRoom(Long roomId){
-        Room room=roomRepository.findById(roomId).get();
-        List<User> users=room.getParticipants();
+    public List<User> getUsersInRoom(Long roomId) {
+        Room room = roomRepository.findById(roomId).get();
+        List<User> users = room.getParticipants();
         return users;
     }
 }

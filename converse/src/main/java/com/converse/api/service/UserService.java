@@ -16,16 +16,24 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public User createUser(User user){
+    public User createUser(User user) {
         return userRepository.save(user);
     }
-    public void deleteUser(Long userId){
-        try{
-            userRepository.deleteById(userId);
 
-        }catch(Exception e){
+    public Boolean deleteUser(Long userId) {
+        Boolean success = false;
+        try {
+            if (userRepository.findById(userId).isPresent()) {
+                userRepository.deleteById(userId);
+                success = true;
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
+        return success;
     }
-    public User updateUser(User user){return userRepository.save(user);}
+
+    public User updateUser(User user) {
+        return userRepository.save(user);
+    }
 }

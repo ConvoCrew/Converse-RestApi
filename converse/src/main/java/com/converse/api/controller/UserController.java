@@ -1,4 +1,5 @@
 package com.converse.api.controller;
+
 import com.converse.api.model.Test;
 import com.converse.api.model.User;
 import com.converse.api.repository.Tests;
@@ -10,6 +11,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -24,13 +26,20 @@ public class UserController {
     Tests testRepository;
 
     @PostMapping("/test")
-    public Test createTest(@RequestBody Test test){
+    public Test createTest(@RequestBody Test test) {
         return null;
     }
+
     @PostMapping("/create-user")
-    public User createUser(@RequestBody User user){
+    public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
+
+    @PostMapping("/update-user")
+    public User updateUser(@RequestBody User user) {
+        return userService.updateUser(user);
+    }
+
     @DeleteMapping("/delete-user")
     public ResponseEntity<String> deleteUser(@Param("userId") Long userId) {
         try {
@@ -42,9 +51,10 @@ public class UserController {
                     .body("deletion unsuccessful");
         }
     }
-        @PostMapping("/users")
-        public List<User> getUsers(){
-            return null;
-        }
+
+    @PostMapping("/users")
+    public List<User> getUsers() {
+        return null;
     }
+}
 
