@@ -13,7 +13,8 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name="ROOMS")
+@Entity(name="room")
+@Table(name="rooms")
 @ToString
 @Embeddable
 public class Room {
@@ -32,7 +33,8 @@ public class Room {
             orphanRemoval = true
     )
     private List<User> participants;
-    @OneToOne
+    @OneToOne(fetch=FetchType.EAGER)
+    @MapsId
     private User host;
     private LocalDateTime liveDate;
     private Category category;

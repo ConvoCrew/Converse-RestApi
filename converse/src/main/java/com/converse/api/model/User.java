@@ -8,9 +8,8 @@ import java.io.File;
 import java.util.UUID;
 
 @Data
-@Getter
-@Setter
 @AllArgsConstructor
+//@Embeddable
 @NoArgsConstructor
 @Entity
 @Table(name="users")
