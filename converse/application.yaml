@@ -1,7 +1,10 @@
-server:
-  port: 8080
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:26258/nahara
-    username: nahara
-    password:
+#server:
+ # port: 8080
+##
+#datasource:
+ #   url: jdbc:postgresql://localhost:26258/converse
+  #  username: nahara
+   # password:root
+#spring.jpa:
+ #       hibernate.ddl-auto: auto-update
+  #      show-sql: true

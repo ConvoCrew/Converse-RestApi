@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Entity(name="ROOMS")
 @ToString
 @Embeddable
 public class Room {
@@ -27,13 +27,18 @@ public class Room {
     private int maxNumOfParticipants;
     //true if public false is private
     boolean Accessible=true;
-    @ManyToMany
+    @OneToMany(
+            cascade=CascadeType.ALL,
+            orphanRemoval = true
+    )
     private List<User> participants;
     @OneToOne
     private User host;
     private LocalDateTime liveDate;
+    private Category category;
+    private Tag tag;
 
     private enum Status{LIVE, UPCOMING}
-    private enum Category{MATHEMATICS, }
-
+    private enum Category{MATHEMATICS,SCIENCE,MUSIC,FOREIGN_LANGUAGE,DRAMATIC_ARTS}
+    private enum Tag{STUDY_ROOM,DISCUSSION}
 }

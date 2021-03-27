@@ -1,8 +1,7 @@
-package com.converse.api.controller;
-
-
+/*package com.converse.api.controller;
 import com.converse.api.model.RoomByUser;
 import com.converse.api.model.Room;
+import com.converse.api.model.User;
 import com.converse.api.service.RoomService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,4 +71,9 @@ public class RoomController {
     public void leaveRoom(@Param("roomId")Long roomId, @Param("roomId") Long hostId){
         roomService.leaveRoom(roomId, hostId);
     }
-}
+    @PostMapping("get-participants")
+    public List<User> getParticipants(@Param("roomId")Long roomId){
+        return roomService.getRoom(roomId).getParticipants();
+    }
+
+}*/

@@ -13,9 +13,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name="users")
 public class User {
     @Id
-    //UUid ?
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long userId;
     private String firstName;

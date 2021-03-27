@@ -1,2 +1,50 @@
-package com.converse.api.controller;public class UserController {
-}
+package com.converse.api.controller;
+import com.converse.api.model.Test;
+import com.converse.api.model.User;
+import com.converse.api.repository.Tests;
+import com.converse.api.service.UserDetailsService;
+import com.converse.api.service.UserService;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping("/api")
+@Log4j2
+public class UserController {
+    //@Autowired
+    //UserDetailsService userDetailsService;
+    @Autowired
+    UserService userService;
+    @Autowired
+    Tests testRepository;
+
+    @PostMapping("/test")
+    public Test createTest(@RequestBody Test test){
+        return null;
+    }
+    @PostMapping("/create-user")
+    public User createUser(@RequestBody User user){
+        return userService.createUser(user);
+    }
+    @DeleteMapping("/delete-user")
+    public ResponseEntity<String> deleteUser(@Param("userId") Long userId) {
+        try {
+            userService.deleteUser(userId);
+            return ResponseEntity.status(200).body("deletion successful");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body("deletion unsuccessful");
+        }
+    }
+        @PostMapping("/users")
+        public List<User> getUsers(){
+            return null;
+        }
+    }
+

@@ -1,13 +1,10 @@
-package com.converse.api.service;
-
-
+/*package com.converse.api.service;
 import com.converse.api.model.Room;
 import com.converse.api.model.RoomByUser;
 import com.converse.api.repository.RoomRepository;
 import com.converse.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -90,4 +87,7 @@ public class RoomService {
     public void leaveRoom(Long roomId, Long hostId){
         roomRepository.findById(roomId).get().getParticipants().remove(userRepository.findById(hostId).get());
     }
-}
+    public Room getRoom(Long roomId){
+        return roomRepository.findById(roomId).get();
+    }
+}*/
