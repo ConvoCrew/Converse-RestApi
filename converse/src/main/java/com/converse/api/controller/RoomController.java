@@ -1,4 +1,4 @@
-/*package com.converse.api.controller;
+package com.converse.api.controller;
 import com.converse.api.model.RoomByUser;
 import com.converse.api.model.Room;
 import com.converse.api.model.User;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -76,4 +75,4 @@ public class RoomController {
         return roomService.getRoom(roomId).getParticipants();
     }
 
-}*/
+}
