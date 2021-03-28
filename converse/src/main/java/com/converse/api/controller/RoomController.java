@@ -53,7 +53,7 @@ public class RoomController {
     }
 
     //same endpoint can be hit for deleting a scheduled room
-    @PostMapping("delete-room")
+    @DeleteMapping("delete-room")
     public Boolean deleteRoom(@Param("roomId") Long roomId) {
         return roomService.deleteRoom(roomId);
     }
@@ -68,7 +68,7 @@ public class RoomController {
         return roomService.upcomingRooms();
     }
 
-    @PostMapping("/get-rooms-by-category")
+    @GetMapping("/get-rooms-by-category")
     public List<Room> roomsByCategory(@Param("category") Room.Category category) {
         return roomService.getRoomsByCategory(category);
     }
@@ -83,7 +83,7 @@ public class RoomController {
         return roomService.getAttending(hostId);
     }
 
-    @PostMapping("leave-room")
+    @PutMapping("leave-room")
     public Boolean leaveRoom(@Param("roomId") Long roomId, @Param("roomId") Long hostId) {
         return roomService.leaveRoom(roomId, hostId);
     }
