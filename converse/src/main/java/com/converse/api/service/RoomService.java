@@ -59,11 +59,18 @@ public class RoomService {
         if (roomRepository.findById(roomId).isPresent()) {
             Room room = roomRepository.findById(roomId).get();
             if (room.getParticipants().size() < room.getMaxNumOfParticipants()) {
-                room.getParticipants().add(userRepository.findById(userId).get());
-                success = true;
+                try {
+                    room.getParticipants().add(userRepository.findById(userId).get());
+                    roomRepository.save(room);
+                    success = true;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return false;
+                }
             }
         }
-        return success;
+            return success;
+
     }
 
     public Boolean deleteRoom(Long roomId) {
@@ -87,7 +94,7 @@ public class RoomService {
             }
         }
         return liveRooms;
-        //return null;
+
     }
 
     public List<Room> upcomingRooms() {

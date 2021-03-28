@@ -38,7 +38,7 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    @PostMapping("/update-user")
+    @PutMapping("/update-user")
     public User updateUser(@RequestBody User user) {
         return userService.updateUser(user);
     }
@@ -55,14 +55,14 @@ public class UserController {
         }
     }
 
-    @PostMapping("/get-user-by-email")
+    @GetMapping("/get-user-by-email")
     public User getUserByEmail(@Param("email")String email){
         return userService.getUserByEmail(email);
     }
-    @PostMapping("/get-user")
-    public User getUser(@RequestBody Id userId) {
+    @GetMapping("/get-user")
+    public User getUser(@Param("userId") String userId) {
         log.info(userId);
-        return userService.getUser(Long.valueOf(userId.getId()));
+        return userService.getUser(Long.valueOf(userId));
     }
 }
 

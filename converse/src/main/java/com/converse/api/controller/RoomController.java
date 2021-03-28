@@ -47,7 +47,7 @@ public class RoomController {
         return roomService.createScheduledPrivateRoom(createRoom.getRoom(), createRoom.getHostId(), dateTime, createRoom.getRoom().getParticipants());
     }
 
-    @PostMapping("/join-room")
+    @PutMapping("/join-room")
     public Boolean joinRoom(@Param("roomId") Long roomId, @Param("userId") Long userId) {
         return roomService.joinRoom(roomId, userId);
     }
@@ -88,7 +88,7 @@ public class RoomController {
         return roomService.leaveRoom(roomId, hostId);
     }
 
-    @PostMapping("get-participants")
+    @GetMapping("get-participants")
     public List<User> getParticipants(@Param("roomId") Long roomId) {
         return roomService.getRoom(roomId).getParticipants();
     }

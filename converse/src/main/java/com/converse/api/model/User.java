@@ -16,8 +16,9 @@ import java.util.UUID;
 
 public class User {
 
-    @Column(name="id", updatable = false)
+    //@Column(name="id", updatable = false)
     @Id
+    //@GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long userId=UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;
     @Column(name="firstName")
     private String firstName;

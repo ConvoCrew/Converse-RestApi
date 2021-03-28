@@ -1,5 +1,4 @@
 package com.converse.api.service;
-
 import com.converse.api.model.Room;
 import com.converse.api.model.User;
 import com.converse.api.repository.UserRepository;
@@ -8,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseStatus;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
