@@ -1,9 +1,11 @@
 package com.converse.api.model;
 import lombok.*;
+import org.springframework.context.annotation.Primary;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import javax.persistence.*;
 import javax.persistence.Id;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -32,14 +34,21 @@ public class Room {
     //private int Accessible=1;
 
     @OneToMany(
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+            //cascade = CascadeType.ALL,
+            //orphanRemoval = true
+            fetch=FetchType.EAGER
+
     )
-   @Column(name="participants")
-    private List<User> participants;
-    @OneToOne(fetch = FetchType.EAGER)
-    @MapsId
-    private User host;
+    @ElementCollection
+    @Column(name="participants")
+    private List<User> participants= Collections.emptyList();
+    //@OneToOne(fetch = FetchType.EAGER,
+    //mappedBy = "rooms")
+   // @MapsId
+    //@OneToOne(cascade = CascadeType.ALL)
+    //@JoinColumn(name = "host_id", referencedColumnName = "userId")
+    @Column(name="host")
+    private Long host;
     @Column(name="livedate")
     private LocalDateTime liveDate;
     @Column(name="category")

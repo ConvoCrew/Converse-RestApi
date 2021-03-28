@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class UserService {
@@ -42,4 +43,5 @@ public class UserService {
     public User getUser(Long userId){
         return userRepository.findById(userId).get();
     }
+
 }

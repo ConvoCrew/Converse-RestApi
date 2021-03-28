@@ -15,6 +15,8 @@ import java.util.UUID;
 @Table(name="users")
 
 public class User {
+
+    @Column(name="id", updatable = false)
     @Id
     private Long userId=UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;
     @Column(name="firstName")

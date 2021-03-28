@@ -19,8 +19,8 @@ import java.util.List;
 @RequestMapping("/api")
 @Log4j2
 public class UserController {
-    //@Autowired
-    //UserDetailsService userDetailsService;
+    @Autowired
+    UserDetailsService userDetailsService;
     @Autowired
     UserService userService;
     @Autowired
@@ -55,10 +55,6 @@ public class UserController {
         }
     }
 
-    @PostMapping("/users")
-    public List<User> getUsers() {
-        return null;
-    }
     @PostMapping("/get-user-by-email")
     public User getUserByEmail(@Param("email")String email){
         return userService.getUserByEmail(email);

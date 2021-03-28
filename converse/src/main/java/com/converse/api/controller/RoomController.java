@@ -6,11 +6,11 @@ import com.converse.api.service.RoomService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.bind.annotation.*;
+
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RestController
@@ -31,13 +31,20 @@ public class RoomController {
     }
 
     @PostMapping("/schedule-room")
-    public Room scheduleRoom(@RequestBody RoomByUser createRoom, @Param("date") LocalDateTime date) {
-        return roomService.scheduleRoom(createRoom.getRoom(), createRoom.getHostId(), date);
+    //public Room scheduleRoom(@RequestBody RoomByUser createRoom, @Param ("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime date) {
+    public Room scheduleRoom(@RequestBody RoomByUser createRoom, @Param ("dateStr") String dateStr) {
+        log.info(dateStr);
+        DateTimeFormatter formatter=DateTimeFormatter.ISO_DATE_TIME;
+        LocalDateTime dateTime=LocalDateTime.parse(dateStr,formatter);
+        return roomService.scheduleRoom(createRoom.getRoom(), createRoom.getHostId(), dateTime);
     }
 
     @PostMapping("/create-scheduled-private-room")
-    public Room createScheduledPrivateRoom(@RequestBody RoomByUser createRoom, @Param("date") LocalDateTime date, @Param("participants") List<User> participants) {
-        return roomService.createScheduledPrivateRoom(createRoom.getRoom(), createRoom.getHostId(), date, participants);
+    public Room createScheduledPrivateRoom(@RequestBody RoomByUser createRoom, @Param("dateStr") String dateStr) {
+        log.info(dateStr);
+        DateTimeFormatter formatter=DateTimeFormatter.ISO_DATE_TIME;
+        LocalDateTime dateTime=LocalDateTime.parse(dateStr,formatter);
+        return roomService.createScheduledPrivateRoom(createRoom.getRoom(), createRoom.getHostId(), dateTime, createRoom.getRoom().getParticipants());
     }
 
     @PostMapping("/join-room")

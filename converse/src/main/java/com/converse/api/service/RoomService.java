@@ -1,18 +1,19 @@
 package com.converse.api.service;
-
 import com.converse.api.model.Room;
 import com.converse.api.model.RoomByUser;
 import com.converse.api.model.User;
 import com.converse.api.repository.RoomRepository;
 import com.converse.api.repository.UserRepository;
+import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Log4j2
 public class RoomService {
 
     @Autowired
@@ -22,14 +23,14 @@ public class RoomService {
 
     public Room createRoom(Room room, Long hostId) {
 
-        room.setHost(userRepository.findById(hostId).get());
+        room.setHost(userRepository.findById(hostId).get().getUserId());
         room.setLiveDate(LocalDateTime.now());
         return roomRepository.save(room);
     }
 
     public Room createPrivateRoom(Room room, Long hostId, List<User> userList) {
 
-        room.setHost(userRepository.findById(hostId).get());
+        room.setHost(userRepository.findById(hostId).get().getUserId());
         room.setLiveDate(LocalDateTime.now());
        // room.setAccessible(false);
         room.setParticipants(userList);
@@ -37,7 +38,7 @@ public class RoomService {
     }
 
     public Room scheduleRoom(Room room, Long hostId, LocalDateTime dateTime) {
-        room.setHost(userRepository.findById(hostId).get());
+        room.setHost(userRepository.findById(hostId).get().getUserId());
         room.setLiveDate(dateTime);
         return roomRepository.save(room);
     }
@@ -45,7 +46,7 @@ public class RoomService {
 
     public Room createScheduledPrivateRoom(Room room, Long hostId, LocalDateTime dateTime, List<User> userList) {
 
-        room.setHost(userRepository.findById(hostId).get());
+        room.setHost(userRepository.findById(hostId).get().getUserId());
         room.setLiveDate(dateTime);
         //room.setAccessible(false);
         room.setParticipants(userList);
@@ -77,12 +78,16 @@ public class RoomService {
 
     public List<Room> liveRooms() {
         List<Room> liveRooms = new ArrayList<>();
-        for (Room room : roomRepository.findAll()) {
-            if (room.getLiveDate().isBefore(LocalDateTime.now())) {
+       for (Room room : roomRepository.findAll()) {
+            log.info(room.getLiveDate());
+            if(room.getLiveDate()!=null) {
+            } else if (room.getLiveDate().isBefore(LocalDateTime.now())){
+                log.info("found");
                 liveRooms.add(room);
             }
         }
         return liveRooms;
+        //return null;
     }
 
     public List<Room> upcomingRooms() {
@@ -99,8 +104,8 @@ public class RoomService {
         List<Room> rooms = upcomingRooms();
         List<Room> hostedRooms = new ArrayList<>();
         for (Room room : rooms) {
-            if (room.getHost().getUserId().equals(hostId)) {
-
+           // if (room.getHost().getUserId().equals(hostId)) {
+                if(room.getHost().equals(hostId)){
                 hostedRooms.add(room);
             }
         }
